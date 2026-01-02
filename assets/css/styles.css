@@ -1334,13 +1334,20 @@ select.form-input:focus {
 .mb-lg { margin-bottom: var(--spacing-lg); }
 .mb-xl { margin-bottom: var(--spacing-xl); }
 
+/* Par défaut, les éléments sont visibles (pour fonctionner sans JS) */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
-.fade-in.visible {
+/* Si JavaScript est disponible, on cache d'abord puis on anime au scroll */
+.js-enabled .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.js-enabled .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }

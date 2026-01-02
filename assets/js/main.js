@@ -6,6 +6,9 @@
 (function() {
   'use strict';
 
+  // Marquer que JavaScript est disponible pour les animations
+  document.documentElement.classList.add('js-enabled');
+
   // === MENU MOBILE ===
   const navbarToggle = document.querySelector('.navbar-toggle');
   const navCenter = document.querySelector('.nav-center');
