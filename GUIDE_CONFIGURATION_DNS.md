@@ -9,6 +9,10 @@ Netlify doit vérifier que votre domaine (`lumeacommunication.ch` et `lumeacommu
 
 **Sans DNS correctement configurés, le certificat SSL ne peut pas être généré !**
 
+## 📌 Votre registrar : o2switch
+
+Si vous utilisez **o2switch** comme registrar, consultez le guide spécifique : **`GUIDE_DNS_O2SWITCH.md`**
+
 ## 📋 Configuration DNS selon Netlify
 
 D'après votre écran Netlify, voici ce qu'il faut faire :
