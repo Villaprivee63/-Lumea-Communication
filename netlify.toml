@@ -18,6 +18,31 @@
 [build.processing.html]
   pretty_urls = true
 
+# Redirection HTTP vers HTTPS (sécurité)
+[[redirects]]
+  from = "http://lumeacommunication.ch/*"
+  to = "https://lumeacommunication.ch/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.lumeacommunication.ch/*"
+  to = "https://www.lumeacommunication.ch/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://lumeacommunication.fr/*"
+  to = "https://lumeacommunication.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.lumeacommunication.fr/*"
+  to = "https://www.lumeacommunication.fr/:splat"
+  status = 301
+  force = true
+
 # Redirections pour les dossiers de pays (sans slash final)
 [[redirects]]
   from = "/ch"
