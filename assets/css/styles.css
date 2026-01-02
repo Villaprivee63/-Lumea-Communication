@@ -969,14 +969,16 @@ p {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-slow);
+  transition: max-height 0.5s ease, padding 0.5s ease;
   padding: 0 var(--spacing-md);
+  opacity: 0;
 }
 
 .faq-answer.active {
   max-height: 1000px;
   padding: var(--spacing-md);
   color: var(--color-text-secondary);
+  opacity: 1;
 }
 
 /* === BADGES === */
