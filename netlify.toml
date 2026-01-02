@@ -35,58 +35,53 @@
   status = 301
 
 # Redirections basées sur le domaine
-# IMPORTANT: Remplacez "lumea.ch", "lumea.fr", "lumea.es" par vos vrais domaines
-# 
-# Si vous avez trois domaines différents, Netlify redirigera automatiquement
-# vers la bonne version selon le domaine utilisé par le visiteur
+# Configuration pour les domaines : lumeacommunication.ch, lumeacommunication.fr
+# Le domaine .es sera ajouté plus tard
 
-# Pour le domaine CH - Redirige vers /ch/
-# Remplacez "lumea.ch" par votre vrai domaine CH
-[[redirects]]
-  from = "/*"
-  to = "/ch/:splat"
-  status = 200
-  force = false
-  conditions = {Host = "lumea.ch"}
+# IMPORTANT: Les assets (CSS, JS, images) ne doivent PAS être redirigés
+# Ils restent à la racine (assets/) et sont accessibles depuis tous les domaines
 
+# Pour le domaine CH - Redirige uniquement la racine vers /ch/
+# Les autres pages et assets ne sont pas redirigés
 [[redirects]]
-  from = "/*"
-  to = "/ch/:splat"
-  status = 200
+  from = "https://lumeacommunication.ch/"
+  to = "/ch/"
+  status = 301
   force = false
-  conditions = {Host = "www.lumea.ch"}
-
-# Pour le domaine FR - Redirige vers /fr/
-# Remplacez "lumea.fr" par votre vrai domaine FR
-[[redirects]]
-  from = "/*"
-  to = "/fr/:splat"
-  status = 200
-  force = false
-  conditions = {Host = "lumea.fr"}
 
 [[redirects]]
-  from = "/*"
-  to = "/fr/:splat"
-  status = 200
+  from = "https://www.lumeacommunication.ch/"
+  to = "/ch/"
+  status = 301
   force = false
-  conditions = {Host = "www.lumea.fr"}
 
-# Pour le domaine ES - Redirige vers /es/
-# Remplacez "lumea.es" par votre vrai domaine ES
+# Pour le domaine FR - Redirige uniquement la racine vers /fr/
 [[redirects]]
-  from = "/*"
-  to = "/es/:splat"
-  status = 200
+  from = "https://lumeacommunication.fr/"
+  to = "/fr/"
+  status = 301
   force = false
-  conditions = {Host = "lumea.es"}
 
 [[redirects]]
-  from = "/*"
-  to = "/es/:splat"
-  status = 200
+  from = "https://www.lumeacommunication.fr/"
+  to = "/fr/"
+  status = 301
   force = false
-  conditions = {Host = "www.lumea.es"}
+
+# Pour le domaine ES - Redirige vers /es/ (à activer quand le domaine sera acheté)
+# [[redirects]]
+#   from = "/*"
+#   to = "/es/:splat"
+#   status = 200
+#   force = false
+#   conditions = {Host = "lumeacommunication.es"}
+#
+# [[redirects]]
+#   from = "/*"
+#   to = "/es/:splat"
+#   status = 200
+#   force = false
+#   conditions = {Host = "www.lumeacommunication.es"}
 
 # Note: Si aucun domaine spécifique ne correspond, 
 # Netlify affichera index.html (sélecteur de pays) par défaut
