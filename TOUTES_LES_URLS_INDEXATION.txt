@@ -1,0 +1,77 @@
+==========================================
+LISTE COMPLÈTE - TOUTES LES URLS À INDEXER
+==========================================
+
+📋 Pour lumeacommunication.fr :
+==========================================
+
+https://lumeacommunication.fr/fr/
+https://lumeacommunication.fr/fr/index.html
+https://lumeacommunication.fr/fr/consulting.html
+https://lumeacommunication.fr/fr/formation.html
+https://lumeacommunication.fr/fr/cybersecurite.html
+https://lumeacommunication.fr/fr/sites-branding.html
+https://lumeacommunication.fr/fr/developpement.html
+https://lumeacommunication.fr/fr/blog.html
+https://lumeacommunication.fr/fr/article.html
+https://lumeacommunication.fr/fr/contact.html
+https://lumeacommunication.fr/fr/mentions-legales.html
+https://lumeacommunication.fr/fr/confidentialite.html
+https://lumeacommunication.fr/fr/cookies.html
+https://lumeacommunication.fr/fr/404.html
+
+==========================================
+📋 Pour lumeacommunication.ch :
+==========================================
+
+https://lumeacommunication.ch/ch/
+https://lumeacommunication.ch/ch/index.html
+https://lumeacommunication.ch/ch/consulting.html
+https://lumeacommunication.ch/ch/formation.html
+https://lumeacommunication.ch/ch/cybersecurite.html
+https://lumeacommunication.ch/ch/sites-branding.html
+https://lumeacommunication.ch/ch/developpement.html
+https://lumeacommunication.ch/ch/blog.html
+https://lumeacommunication.ch/ch/article.html
+https://lumeacommunication.ch/ch/contact.html
+https://lumeacommunication.ch/ch/mentions-legales.html
+https://lumeacommunication.ch/ch/confidentialite.html
+https://lumeacommunication.ch/ch/cookies.html
+https://lumeacommunication.ch/ch/404.html
+
+==========================================
+📋 Version ESPAGNE (si vous l'ajoutez plus tard) :
+==========================================
+
+https://lumeacommunication.ch/es/index.html
+https://lumeacommunication.ch/es/consultoria.html
+https://lumeacommunication.ch/es/formacion.html
+https://lumeacommunication.ch/es/ciberseguridad.html
+https://lumeacommunication.ch/es/sitios-branding.html
+https://lumeacommunication.ch/es/desarrollo.html
+https://lumeacommunication.ch/es/blog.html
+https://lumeacommunication.ch/es/articulo.html
+https://lumeacommunication.ch/es/contacto.html
+https://lumeacommunication.ch/es/aviso-legal.html
+https://lumeacommunication.ch/es/privacidad.html
+https://lumeacommunication.ch/es/cookies.html
+https://lumeacommunication.ch/es/404.html
+
+==========================================
+⚠️ IMPORTANT :
+==========================================
+
+- Google limite à ~10 demandes d'indexation par jour et par propriété
+- Commencez par les pages les plus importantes (accueil, services, contact)
+- Les autres pages seront indexées automatiquement via le sitemap
+- Ne demandez pas l'indexation de la page 404 (elle n'est pas nécessaire)
+
+==========================================
+🎯 RECOMMANDATION :
+==========================================
+
+Jour 1 : Pages essentielles (10 URLs max)
+Jour 2 : Pages de services (10 URLs max)
+Jour 3 : Pages légales et autres (si nécessaire)
+
+==========================================
