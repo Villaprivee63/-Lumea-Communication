@@ -1,0 +1,32 @@
+# Fichiers à exclure du déploiement Netlify
+
+# Documentation
+*.md
+!README.md
+
+# Scripts de développement
+*.ps1
+*.js
+!assets/js/*.js
+migrate-*.js
+create-*.js
+
+# Configuration Node.js (si pas nécessaire)
+node_modules/
+package-lock.json
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers temporaires
+*.tmp
+*.log

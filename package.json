@@ -1,0 +1,12 @@
+{
+  "name": "lumea-international-migration",
+  "version": "1.0.0",
+  "description": "Script de migration vers structure internationale",
+  "main": "migrate-to-international.js",
+  "scripts": {
+    "migrate": "node migrate-to-international.js"
+  },
+  "keywords": ["migration", "international", "i18n"],
+  "author": "",
+  "license": "ISC"
+}

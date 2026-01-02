@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luméa Communication – Accompagnement digital international pour dirigeants et PME. Consulting, formation et cybersécurité en Suisse, France et Espagne.">
+  <meta name="robots" content="index, follow">
+  <title>Luméa Communication – Accompagnement digital international</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/img/logo/logo.jpg">
+  <link rel="apple-touch-icon" href="assets/img/logo/logo.jpg">
+  
+  <!-- Preload -->
+  <link rel="preload" href="assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/">
+  <link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/">
+  <link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/">
+  <link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    .country-selector {
+      text-align: center;
+      padding: 2rem;
+      max-width: 700px;
+      width: 100%;
+    }
+    .welcome-message {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+    .country-selector h1 {
+      color: #fff;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .country-selector p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .country-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .country-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #3b82f6;
+      transform: translateY(-4px);
+    }
+    .country-flag {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .country-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .country-desc {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="country-selector">
+    <div class="welcome-message">Bienvenue chez Luméa Communication</div>
+    <h1>Luméa Communication</h1>
+    <p class="subtitle">Accompagnement digital pour dirigeants et PME. Consulting, formation et cybersécurité en Suisse, France et Espagne.</p>
+    <p>Choisissez votre pays / Choose your country / Elija su país</p>
+    <div class="country-grid">
+      <a href="ch/index.html" class="country-card">
+        <div class="country-flag">🇨🇭</div>
+        <div class="country-name">Suisse</div>
+        <div class="country-desc">Français</div>
+      </a>
+      <a href="fr/index.html" class="country-card">
+        <div class="country-flag">🇫🇷</div>
+        <div class="country-name">France</div>
+        <div class="country-desc">Français</div>
+      </a>
+      <a href="es/index.html" class="country-card">
+        <div class="country-flag">🇪🇸</div>
+        <div class="country-name">España</div>
+        <div class="country-desc">Español</div>
+      </a>
+    </div>
+  </div>
+  
+  <script>
+    // Sauvegarder le choix de l'utilisateur
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.country-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          localStorage.setItem('lumea-country', href);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

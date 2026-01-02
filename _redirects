@@ -1,0 +1,12 @@
+# Redirections Netlify pour Luméa Communication
+
+# Redirections pour les dossiers de pays (sans slash final)
+/ch /ch/ 301
+/fr /fr/ 301
+/es /es/ 301
+
+# Redirection 404 personnalisée
+/* /404.html 404
+
+# Note: Les redirections basées sur le domaine sont gérées dans netlify.toml
+# avec les conditions {Host = "domaine.com"}
