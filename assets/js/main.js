@@ -6,167 +6,183 @@
 (function() {
   'use strict';
 
-  // Marquer que JavaScript est disponible pour les animations
-  document.documentElement.classList.add('js-enabled');
+  // Attendre que le DOM soit complètement chargé
+  function init() {
+    // Marquer que JavaScript est disponible pour les animations
+    document.documentElement.classList.add('js-enabled');
 
-  // === MENU MOBILE ===
-  const navbarToggle = document.querySelector('.navbar-toggle');
-  const navCenter = document.querySelector('.nav-center');
-  
-  if (navbarToggle && navCenter) {
-    navbarToggle.addEventListener('click', function() {
-      navCenter.classList.toggle('active');
-      const icon = navbarToggle.querySelector('i') || navbarToggle;
-      if (navCenter.classList.contains('active')) {
-        icon.textContent = '✕';
-      } else {
-        icon.textContent = '☰';
-      }
-    });
-
-    // Fermer le menu en cliquant sur un lien
-    const navbarLinks = navCenter.querySelectorAll('.navbar-link');
-    navbarLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navCenter.classList.remove('active');
+    // === MENU MOBILE ===
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navCenter = document.querySelector('.nav-center');
+    
+    if (navbarToggle && navCenter) {
+      navbarToggle.addEventListener('click', function() {
+        navCenter.classList.toggle('active');
         const icon = navbarToggle.querySelector('i') || navbarToggle;
-        icon.textContent = '☰';
-      });
-    });
-
-    // Fermer le menu en cliquant en dehors
-    document.addEventListener('click', function(e) {
-      if (!navbarToggle.contains(e.target) && !navCenter.contains(e.target)) {
-        navCenter.classList.remove('active');
-        const icon = navbarToggle.querySelector('i') || navbarToggle;
-        icon.textContent = '☰';
-      }
-    });
-  }
-
-  // === SCROLL REVEAL ===
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, observerOptions);
-
-  // Observer tous les éléments avec la classe fade-in
-  document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-  });
-
-  // === ACCORDÉON FAQ ===
-  const faqQuestions = document.querySelectorAll('.faq-question');
-  
-  faqQuestions.forEach(question => {
-    question.addEventListener('click', function() {
-      const isActive = this.classList.contains('active');
-      const answer = this.nextElementSibling;
-      
-      // Fermer toutes les autres questions
-      faqQuestions.forEach(q => {
-        if (q !== this) {
-          q.classList.remove('active');
-          q.nextElementSibling.classList.remove('active');
+        if (navCenter.classList.contains('active')) {
+          icon.textContent = '✕';
+        } else {
+          icon.textContent = '☰';
         }
       });
-      
-      // Toggle la question actuelle
-      if (isActive) {
-        this.classList.remove('active');
-        answer.classList.remove('active');
-      } else {
-        this.classList.add('active');
-        answer.classList.add('active');
-      }
-    });
-  });
 
-  // === COOKIE BANNER ===
-  const cookieBanner = document.querySelector('.cookie-banner');
-  const cookieAccept = document.querySelector('.cookie-accept');
-  const cookieDecline = document.querySelector('.cookie-decline');
-  
-  // Vérifier si les cookies ont déjà été acceptés
-  function checkCookieConsent() {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent && cookieBanner) {
-      cookieBanner.classList.add('active');
-    }
-  }
-  
-  if (cookieAccept) {
-    cookieAccept.addEventListener('click', function() {
-      localStorage.setItem('cookieConsent', 'accepted');
-      if (cookieBanner) {
-        cookieBanner.classList.remove('active');
-      }
-    });
-  }
-  
-  if (cookieDecline) {
-    cookieDecline.addEventListener('click', function() {
-      localStorage.setItem('cookieConsent', 'declined');
-      if (cookieBanner) {
-        cookieBanner.classList.remove('active');
-      }
-    });
-  }
-  
-  // Vérifier au chargement
-  checkCookieConsent();
-
-  // === SMOOTH SCROLL POUR ANCRES ===
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === '#' || href === '') return;
-      
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        const offsetTop = target.offsetTop - 80; // Compenser la navbar sticky
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
+      // Fermer le menu en cliquant sur un lien
+      const navbarLinks = navCenter.querySelectorAll('.navbar-link');
+      navbarLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navCenter.classList.remove('active');
+          const icon = navbarToggle.querySelector('i') || navbarToggle;
+          icon.textContent = '☰';
         });
+      });
+
+      // Fermer le menu en cliquant en dehors
+      document.addEventListener('click', function(e) {
+        if (!navbarToggle.contains(e.target) && !navCenter.contains(e.target)) {
+          navCenter.classList.remove('active');
+          const icon = navbarToggle.querySelector('i') || navbarToggle;
+          icon.textContent = '☰';
+        }
+      });
+    }
+
+    // === SCROLL REVEAL ===
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observer tous les éléments avec la classe fade-in
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // === ACCORDÉON FAQ ===
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    console.log('FAQ questions trouvées:', faqQuestions.length);
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const isActive = this.classList.contains('active');
+        const answer = this.nextElementSibling;
+        
+        console.log('FAQ cliquée:', this.textContent, 'Active:', isActive);
+        
+        // Fermer toutes les autres questions
+        faqQuestions.forEach(q => {
+          if (q !== this) {
+            q.classList.remove('active');
+            const otherAnswer = q.nextElementSibling;
+            if (otherAnswer && otherAnswer.classList.contains('faq-answer')) {
+              otherAnswer.classList.remove('active');
+            }
+          }
+        });
+        
+        // Toggle la question actuelle
+        if (isActive) {
+          this.classList.remove('active');
+          if (answer) {
+            answer.classList.remove('active');
+          }
+        } else {
+          this.classList.add('active');
+          if (answer) {
+            answer.classList.add('active');
+          }
+        }
+      });
+    });
+
+    // === COOKIE BANNER ===
+    const cookieBanner = document.querySelector('.cookie-banner');
+    const cookieAccept = document.querySelector('.cookie-accept');
+    const cookieDecline = document.querySelector('.cookie-decline');
+    
+    // Vérifier si les cookies ont déjà été acceptés
+    function checkCookieConsent() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (!consent && cookieBanner) {
+        cookieBanner.classList.add('active');
+      }
+    }
+    
+    if (cookieAccept) {
+      cookieAccept.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        if (cookieBanner) {
+          cookieBanner.classList.remove('active');
+        }
+      });
+    }
+    
+    if (cookieDecline) {
+      cookieDecline.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'declined');
+        if (cookieBanner) {
+          cookieBanner.classList.remove('active');
+        }
+      });
+    }
+    
+    // Vérifier au chargement
+    checkCookieConsent();
+
+    // === SMOOTH SCROLL POUR ANCRES ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#' || href === '') return;
+        
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const offsetTop = target.offsetTop - 80; // Compenser la navbar sticky
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // === ACTIVE NAV LINK ===
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar-link');
+    
+    navLinks.forEach(link => {
+      const linkPath = new URL(link.href).pathname;
+      if (linkPath === currentPath || (currentPath === '/' && linkPath.includes('index.html'))) {
+        link.classList.add('active');
       }
     });
-  });
 
-  // === ACTIVE NAV LINK ===
-  const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('.navbar-link');
-  
-  navLinks.forEach(link => {
-    const linkPath = new URL(link.href).pathname;
-    if (linkPath === currentPath || (currentPath === '/' && linkPath.includes('index.html'))) {
-      link.classList.add('active');
+    // === FORMULAIRE CONTACT ===
+    // Configuration EmailJS - CONFIGURÉ ✅
+    const EMAILJS_SERVICE_ID = 'service_h5cz56a';
+    const EMAILJS_TEMPLATE_ID = 'template_1lznmjc'; // ID correct depuis les paramètres du template
+    const EMAILJS_PUBLIC_KEY = 'CVJWmgYc1uNOsPXCK';
+    
+    // Vérifier si EmailJS est chargé
+    if (typeof emailjs === 'undefined') {
+      console.warn('EmailJS n\'est pas chargé. Assurez-vous d\'inclure le script EmailJS dans vos pages HTML.');
     }
-  });
-
-  // === FORMULAIRE CONTACT ===
-  // Configuration EmailJS - CONFIGURÉ ✅
-  const EMAILJS_SERVICE_ID = 'service_h5cz56a';
-  const EMAILJS_TEMPLATE_ID = 'template_1lznmjc'; // ID correct depuis les paramètres du template
-  const EMAILJS_PUBLIC_KEY = 'CVJWmgYc1uNOsPXCK';
-  
-  // Vérifier si EmailJS est chargé
-  if (typeof emailjs === 'undefined') {
-    console.warn('EmailJS n\'est pas chargé. Assurez-vous d\'inclure le script EmailJS dans vos pages HTML.');
-  }
-  
-  const contactForm = document.querySelector('#contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
+    
+    const contactForm = document.querySelector('#contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       
       const formMessage = document.querySelector('.form-message');
@@ -329,12 +345,20 @@
           submitButton.textContent = originalButtonText;
         }
       }
-    });
+      });
+    }
+
+    // === INITIALISATION ===
+    console.log('Luméa Communication - Site chargé');
   }
 
-
-  // === INITIALISATION ===
-  console.log('Luméa Communication - Site chargé');
+  // Initialiser quand le DOM est prêt
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    // DOM déjà chargé
+    init();
+  }
 })();
 
 
