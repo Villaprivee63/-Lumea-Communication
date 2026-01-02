@@ -66,60 +66,74 @@
     });
 
     // === ACCORDÉON FAQ ===
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    console.log('FAQ questions trouvées:', faqQuestions.length);
-    
-    if (faqQuestions.length > 0) {
-      faqQuestions.forEach((question, index) => {
-        // Vérifier que l'élément suivant est bien la réponse
-        const answer = question.nextElementSibling;
-        
-        if (!answer || !answer.classList.contains('faq-answer')) {
-          console.warn('FAQ question', index, 'n\'a pas de réponse trouvée');
-          return;
-        }
-        
-        // Ajouter l'événement click
-        question.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
+    // Attendre un peu pour s'assurer que tous les éléments sont dans le DOM
+    setTimeout(function() {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      console.log('FAQ questions trouvées:', faqQuestions.length);
+      
+      if (faqQuestions.length > 0) {
+        faqQuestions.forEach((question, index) => {
+          // Vérifier que l'élément suivant est bien la réponse
+          const answer = question.nextElementSibling;
           
-          const isActive = this.classList.contains('active');
-          const currentAnswer = this.nextElementSibling;
+          if (!answer || !answer.classList.contains('faq-answer')) {
+            console.warn('FAQ question', index, 'n\'a pas de réponse trouvée. Élément suivant:', answer);
+            return;
+          }
           
-          console.log('FAQ cliquée:', this.textContent.trim(), 'Active:', isActive, 'Answer:', currentAnswer);
+          console.log('FAQ', index, 'configurée:', question.textContent.trim().substring(0, 30));
           
-          // Fermer toutes les autres questions
-          faqQuestions.forEach(q => {
-            if (q !== this) {
-              q.classList.remove('active');
-              const otherAnswer = q.nextElementSibling;
-              if (otherAnswer && otherAnswer.classList.contains('faq-answer')) {
-                otherAnswer.classList.remove('active');
+          // Ajouter l'événement click
+          question.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const isActive = this.classList.contains('active');
+            const currentAnswer = this.nextElementSibling;
+            
+            console.log('FAQ cliquée:', this.textContent.trim(), 'Active:', isActive, 'Answer trouvée:', !!currentAnswer);
+            
+            // Fermer toutes les autres questions
+            faqQuestions.forEach(q => {
+              if (q !== this) {
+                q.classList.remove('active');
+                const otherAnswer = q.nextElementSibling;
+                if (otherAnswer && otherAnswer.classList.contains('faq-answer')) {
+                  otherAnswer.classList.remove('active');
+                }
+              }
+            });
+            
+            // Toggle la question actuelle
+            if (isActive) {
+              this.classList.remove('active');
+              this.setAttribute('aria-expanded', 'false');
+              if (currentAnswer) {
+                currentAnswer.classList.remove('active');
+                console.log('FAQ fermée');
+              }
+            } else {
+              this.classList.add('active');
+              this.setAttribute('aria-expanded', 'true');
+              if (currentAnswer) {
+                currentAnswer.classList.add('active');
+                console.log('FAQ ouverte, classes:', currentAnswer.className);
               }
             }
           });
-          
-          // Toggle la question actuelle
-          if (isActive) {
-            this.classList.remove('active');
-            this.setAttribute('aria-expanded', 'false');
-            if (currentAnswer) {
-              currentAnswer.classList.remove('active');
-            }
-          } else {
-            this.classList.add('active');
-            this.setAttribute('aria-expanded', 'true');
-            if (currentAnswer) {
-              currentAnswer.classList.add('active');
-            }
-          }
         });
-      });
-    } else {
-      console.warn('Aucune question FAQ trouvée');
-    }
+      } else {
+        console.warn('Aucune question FAQ trouvée. Vérification du DOM...');
+        // Vérifier si les éléments existent mais avec un autre sélecteur
+        const faqContainer = document.querySelector('.faq');
+        if (faqContainer) {
+          console.log('Container FAQ trouvé:', faqContainer);
+          const allButtons = faqContainer.querySelectorAll('button');
+          console.log('Boutons trouvés dans FAQ:', allButtons.length);
+        }
+      }
+    }, 100); // Petit délai pour s'assurer que tout est chargé
 
     // === COOKIE BANNER ===
     const cookieBanner = document.querySelector('.cookie-banner');
@@ -368,10 +382,23 @@
   }
 
   // Initialiser quand le DOM est prêt
+  // Avec defer, le script s'exécute après le parsing, mais on s'assure que tout est prêt
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
+  } else if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    // DOM déjà chargé ou en cours de chargement
+    // Attendre un peu pour s'assurer que tous les éléments sont disponibles
+    if (document.body) {
+      // Utiliser requestAnimationFrame pour s'assurer que le DOM est complètement prêt
+      requestAnimationFrame(function() {
+        setTimeout(init, 0);
+      });
+    } else {
+      // Si body n'est pas encore là, attendre DOMContentLoaded
+      document.addEventListener('DOMContentLoaded', init);
+    }
   } else {
-    // DOM déjà chargé
+    // Fallback
     init();
   }
 })();
