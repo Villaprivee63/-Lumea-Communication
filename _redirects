@@ -5,14 +5,5 @@
 /fr /fr/ 301
 /es /es/ 301
 
-# Redirection 404 personnalisée - EXCLURE les assets et fichiers existants
-# Ne rediriger vers 404 que si le fichier n'existe pas
-/assets/* /assets/:splat 200
-/ch/* /ch/:splat 200
-/fr/* /fr/:splat 200
-/es/* /es/:splat 200
-/*.html /:splat 200
-/* /404.html 404
-
-# Note: Les redirections basées sur le domaine sont gérées dans netlify.toml
-# avec les conditions {Host = "domaine.com"}
+# Note: La redirection 404 est gérée automatiquement par Netlify
+# Les redirections basées sur le domaine sont gérées dans netlify.toml
