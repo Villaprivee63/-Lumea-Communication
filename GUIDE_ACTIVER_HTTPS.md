@@ -18,23 +18,38 @@ Activer HTTPS (SSL/TLS) pour sécuriser votre site `lumeacommunication.ch` et `l
 - Ajoutez `lumeacommunication.ch`
 - Ajoutez `lumeacommunication.fr`
 
-### Étape 2 : Vérifier la configuration DNS
+### Étape 2 : Configurer les DNS (OBLIGATOIRE)
 
-Pour que Netlify puisse générer le certificat SSL, les DNS doivent pointer vers Netlify.
+**⚠️ IMPORTANT :** Netlify ne peut pas générer le certificat SSL tant que les DNS ne sont pas configurés et vérifiés !
 
-**Vérifiez dans Netlify :**
-1. Dans "Domain settings", cliquez sur votre domaine
-2. Regardez la section **"DNS configuration"**
-3. Vérifiez que les DNS sont correctement configurés :
-   - **Option A** : Serveurs de noms Netlify (recommandé)
-     - Les serveurs doivent être configurés chez votre registrar
-   - **Option B** : Enregistrements DNS
-     - Un enregistrement A ou CNAME doit pointer vers Netlify
+**Vous voyez "Vérification DNS externe en attente" ?** → Il faut configurer les DNS d'abord.
 
-**Si les DNS ne sont pas configurés :**
-- Suivez les instructions affichées dans Netlify
-- Configurez les DNS chez votre registrar de domaine
-- Attendez la propagation DNS (quelques minutes à 48h)
+**Deux options selon votre registrar :**
+
+#### Option A : ALIAS/ANAME (Recommandé)
+Si votre registrar supporte ALIAS/ANAME :
+- Créez un enregistrement **ALIAS** pour `lumeacommunication.ch` → `apex-loadbalancer.netlify.com`
+- Créez un enregistrement **ALIAS** pour `lumeacommunication.fr` → `apex-loadbalancer.netlify.com`
+
+#### Option B : Enregistrement A (Solution de secours)
+Si votre registrar ne supporte pas ALIAS :
+- Créez un enregistrement **A** pour `lumeacommunication.ch` → `75.2.60.5`
+- Créez un enregistrement **A** pour `lumeacommunication.fr` → `75.2.60.5`
+
+**Pour www :**
+- `www.lumeacommunication.ch` → CNAME vers `lumeacommunication.ch`
+- `www.lumeacommunication.fr` → CNAME vers `lumeacommunication.fr`
+
+**Où configurer ?**
+- Chez votre registrar de domaine (là où vous avez acheté le domaine)
+- Cherchez "Gestion DNS" ou "DNS" dans votre compte
+
+**Après configuration :**
+- Attendez la propagation DNS (5 min à 48h, généralement 15-30 min)
+- Vérifiez sur [whatsmydns.net](https://www.whatsmydns.net)
+- Netlify vérifiera automatiquement les DNS
+
+**📖 Guide détaillé :** Voir `GUIDE_CONFIGURATION_DNS.md` pour les instructions complètes.
 
 ### Étape 3 : Forcer HTTPS dans Netlify
 
