@@ -273,9 +273,7 @@
       const reasonSelect = this.querySelector('[name="reason"]');
       const reason = reasonSelect ? reasonSelect.value : '';
       
-      // Traduire la raison selon la langue
-      const lang = document.documentElement.lang || 'fr';
-      const isSpanish = lang.includes('es');
+      // Traduire la raison selon la langue (lang et isSpanish déjà déclarés plus haut)
       let reasonLabel = '';
       if (reason) {
         const reasons = {
