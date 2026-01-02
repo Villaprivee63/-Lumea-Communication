@@ -42,15 +42,17 @@
 
 ---
 
-## 🔍 Vérifier l'état du site
+## 🔍 État du site
 
-**Même si le projet est en pause, votre site devrait toujours être accessible :**
+**⚠️ Le site est maintenant INACCESSIBLE** car Netlify a mis en pause le site lui-même.
 
-1. Visitez `https://lumeacommunication.ch`
-2. Visitez `https://lumeacommunication.fr`
-3. Vérifiez que le site fonctionne
+**Message affiché :**
+- "Site non disponible"
+- "Ce site a été mis en pause lorsqu'il a atteint ses limites d'utilisation"
 
-**Le site en ligne ne devrait pas être affecté**, seules les nouvelles mises à jour sont bloquées.
+**Le site ne fonctionne plus** jusqu'à ce que vous :
+- Mettiez à niveau votre plan Netlify, OU
+- Attendiez le mois prochain (réinitialisation automatique)
 
 ---
 
@@ -86,20 +88,30 @@
 
 ---
 
-## 📋 Plan d'action recommandé
+## 📋 Plan d'action URGENT
 
-### Si vous voulez continuer maintenant :
+### ⚠️ Le site est INACCESSIBLE - Action immédiate requise
 
-1. **Mettez à niveau** votre équipe Netlify (Option 1)
+**Pour restaurer le site MAINTENANT :**
+
+1. **Connectez-vous à Netlify** : [app.netlify.com](https://app.netlify.com)
+2. **Cliquez sur "Équipe de mise à niveau"** (Upgrade team)
+3. **Choisissez un plan payant** :
+   - **Pro** : ~$19/mois (recommandé pour un site professionnel)
+   - **Business** : ~$99/mois (pour plusieurs sites)
+4. **Le site sera restauré immédiatement** après la mise à niveau
+
+**Si vous ne pouvez pas mettre à niveau maintenant :**
+
+- ⏳ Le site sera **automatiquement restauré le mois prochain**
+- ⏳ Quand les crédits se réinitialisent (début du mois)
+- ⏳ **Aucun coût**, mais vous devez attendre
+
+### Après restauration :
+
+1. **Vérifiez que le site fonctionne** : `https://lumeacommunication.ch`
 2. **Vérifiez HTTPS** dans Domain settings
 3. **Continuez avec Google Search Console**
-
-### Si vous pouvez attendre :
-
-1. **Vérifiez que le site fonctionne** toujours en ligne
-2. **Vérifiez HTTPS** (devrait toujours fonctionner)
-3. **Ajoutez le site dans Google Search Console** (vous pouvez le faire maintenant)
-4. **Attendez le mois prochain** pour les mises à jour
 
 ---
 
