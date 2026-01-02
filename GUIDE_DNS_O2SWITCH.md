@@ -14,26 +14,27 @@ Vous avez **2 options**. Si Netlify ne vous a pas donné de serveurs DNS, utilis
 
 ## ✅ Option A : Utiliser les serveurs de noms Netlify
 
-**⚠️ Cette option nécessite que Netlify vous fournisse des serveurs DNS. Si vous ne les avez pas, utilisez l'Option B !**
+**⚠️ Si o2switch ne permet QUE de changer les serveurs DNS, c'est cette option qu'il faut utiliser !**
 
-**Avantages :**
-- Netlify gère automatiquement tous les enregistrements DNS
-- Plus simple à configurer
-- Gestion centralisée dans Netlify
+**Comment obtenir les serveurs DNS de Netlify :**
 
-**Comment faire :**
+1. **Dans Netlify :**
+   - Allez dans "Domain settings" → Votre domaine (`lumeacommunication.fr` ou `.ch`)
+   - Cherchez la section **"DNS configuration"** ou **"Nameservers"**
+   - Netlify devrait afficher des serveurs DNS (ex: `dns1.p01.nsone.net`, `dns2.p01.nsone.net`)
+   
+2. **Si vous ne voyez pas les serveurs DNS dans Netlify :**
+   - Netlify utilise parfois des enregistrements DNS au lieu de serveurs DNS
+   - Dans ce cas, contactez le support Netlify pour demander les serveurs DNS
+   - Ou utilisez cette méthode alternative : Dans Netlify, allez dans "Domain settings" → "DNS" → Activez "Netlify DNS" si disponible
 
-1. Dans Netlify :
-   - Allez dans "Domain settings" → Votre domaine
-   - Cherchez la section "DNS configuration"
-   - Netlify vous donnera des serveurs de noms (ex: `dns1.p01.nsone.net`, `dns2.p01.nsone.net`)
+3. **Dans o2switch :**
+   - Cliquez sur **"Changer les serveurs DNS"**
+   - Remplacez les 4 serveurs actuels par ceux fournis par Netlify
+   - Vous n'avez besoin que de 2 serveurs DNS de Netlify (laissez les 2 autres vides ou mettez les mêmes)
+   - Cliquez sur **"Changer les DNS"**
 
-2. Dans o2switch :
-   - Cliquez sur "Changer les serveurs DNS"
-   - Remplacez les serveurs actuels par ceux fournis par Netlify
-   - Sauvegardez
-
-3. Attendez la propagation (15-30 minutes)
+4. **Attendez la propagation** : 15-30 minutes (parfois jusqu'à 48h)
 
 ---
 
