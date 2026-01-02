@@ -2,399 +2,399 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lumea.ch/</loc>
+    <loc>https://lumeacommunication.ch/</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/index.html</loc>
+    <loc>https://lumeacommunication.ch/ch/index.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/index.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/index.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/index.html</loc>
+    <loc>https://lumeacommunication.ch/fr/index.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/index.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/index.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/index.html</loc>
+    <loc>https://lumeacommunication.ch/es/index.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/index.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/index.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/consulting.html</loc>
+    <loc>https://lumeacommunication.ch/ch/consulting.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/consultoria.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/consultoria.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/consulting.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/consulting.html</loc>
+    <loc>https://lumeacommunication.ch/fr/consulting.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/consultoria.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/consultoria.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/consulting.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/consultoria.html</loc>
+    <loc>https://lumeacommunication.ch/es/consultoria.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/consultoria.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/consultoria.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/consulting.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/formation.html</loc>
+    <loc>https://lumeacommunication.ch/ch/formation.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/formation.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/formation.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/formacion.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/formacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/formation.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/formation.html</loc>
+    <loc>https://lumeacommunication.ch/fr/formation.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/formation.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/formation.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/formacion.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/formacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/formation.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/formacion.html</loc>
+    <loc>https://lumeacommunication.ch/es/formacion.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/formation.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/formation.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/formacion.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/formation.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/formacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/formation.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/cybersecurite.html</loc>
+    <loc>https://lumeacommunication.ch/ch/cybersecurite.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/cybersecurite.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/cybersecurite.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/ciberseguridad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/ciberseguridad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/cybersecurite.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/cybersecurite.html</loc>
+    <loc>https://lumeacommunication.ch/fr/cybersecurite.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/cybersecurite.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/cybersecurite.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/ciberseguridad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/ciberseguridad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/cybersecurite.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/ciberseguridad.html</loc>
+    <loc>https://lumeacommunication.ch/es/ciberseguridad.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/cybersecurite.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/cybersecurite.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/ciberseguridad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/cybersecurite.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/ciberseguridad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/cybersecurite.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/sites-branding.html</loc>
+    <loc>https://lumeacommunication.ch/ch/sites-branding.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/sites-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/sites-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/sitios-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/sitios-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/sites-branding.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/sites-branding.html</loc>
+    <loc>https://lumeacommunication.ch/fr/sites-branding.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/sites-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/sites-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/sitios-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/sitios-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/sites-branding.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/sitios-branding.html</loc>
+    <loc>https://lumeacommunication.ch/es/sitios-branding.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/sites-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/sites-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/sitios-branding.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/sites-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/sitios-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/sites-branding.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/developpement.html</loc>
+    <loc>https://lumeacommunication.ch/ch/developpement.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/developpement.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/developpement.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/desarrollo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/desarrollo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/developpement.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/developpement.html</loc>
+    <loc>https://lumeacommunication.ch/fr/developpement.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/developpement.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/developpement.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/desarrollo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/desarrollo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/developpement.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/desarrollo.html</loc>
+    <loc>https://lumeacommunication.ch/es/desarrollo.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/developpement.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/developpement.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/desarrollo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/desarrollo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/developpement.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/blog.html</loc>
+    <loc>https://lumeacommunication.ch/ch/blog.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/blog.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/blog.html</loc>
+    <loc>https://lumeacommunication.ch/fr/blog.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/blog.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/blog.html</loc>
+    <loc>https://lumeacommunication.ch/es/blog.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/blog.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/article.html</loc>
+    <loc>https://lumeacommunication.ch/ch/article.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/article.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/article.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/articulo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/article.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/article.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/article.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/articulo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/article.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/article.html</loc>
+    <loc>https://lumeacommunication.ch/fr/article.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/article.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/article.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/articulo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/article.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/article.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/article.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/articulo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/article.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/articulo.html</loc>
+    <loc>https://lumeacommunication.ch/es/articulo.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/article.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/article.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/articulo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/article.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/article.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/article.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/articulo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/article.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/contact.html</loc>
+    <loc>https://lumeacommunication.ch/ch/contact.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/contact.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/contact.html</loc>
+    <loc>https://lumeacommunication.ch/fr/contact.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/contact.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/contacto.html</loc>
+    <loc>https://lumeacommunication.ch/es/contacto.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/contact.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/mentions-legales.html</loc>
+    <loc>https://lumeacommunication.ch/ch/mentions-legales.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/aviso-legal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/mentions-legales.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/mentions-legales.html</loc>
+    <loc>https://lumeacommunication.ch/fr/mentions-legales.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/aviso-legal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/mentions-legales.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/aviso-legal.html</loc>
+    <loc>https://lumeacommunication.ch/es/aviso-legal.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/aviso-legal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/mentions-legales.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/confidentialite.html</loc>
+    <loc>https://lumeacommunication.ch/ch/confidentialite.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/confidentialite.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/confidentialite.html</loc>
+    <loc>https://lumeacommunication.ch/fr/confidentialite.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/confidentialite.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/privacidad.html</loc>
+    <loc>https://lumeacommunication.ch/es/privacidad.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/confidentialite.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/cookies.html</loc>
+    <loc>https://lumeacommunication.ch/ch/cookies.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/cookies.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/cookies.html</loc>
+    <loc>https://lumeacommunication.ch/fr/cookies.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/cookies.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/cookies.html</loc>
+    <loc>https://lumeacommunication.ch/es/cookies.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/cookies.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/ch/404.html</loc>
+    <loc>https://lumeacommunication.ch/ch/404.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/404.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/404.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/404.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/404.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/404.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/404.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/404.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/404.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/fr/404.html</loc>
+    <loc>https://lumeacommunication.ch/fr/404.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/404.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/404.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/404.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/404.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/404.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/404.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/404.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/404.html"/>
   </url>
   <url>
-    <loc>https://lumea.ch/es/404.html</loc>
+    <loc>https://lumeacommunication.ch/es/404.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumea.ch/ch/404.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumea.ch/fr/404.html"/>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumea.ch/es/404.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumea.ch/ch/404.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/404.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/404.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/404.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/404.html"/>
   </url>
 </urlset>

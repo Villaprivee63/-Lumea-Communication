@@ -5,7 +5,8 @@ Allow: /es/
 Allow: /
 
 # Sitemap
-Sitemap: https://lumea.ch/sitemap.xml
+Sitemap: https://lumeacommunication.ch/sitemap.xml
+Sitemap: https://lumeacommunication.fr/sitemap.xml
 
 # Disallow admin or private areas if any
 # Disallow: /admin/
