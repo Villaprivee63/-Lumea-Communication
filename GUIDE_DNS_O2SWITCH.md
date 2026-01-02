@@ -6,19 +6,15 @@ Configurer les DNS de `lumeacommunication.fr` (et `.ch`) dans o2switch pour poin
 
 ## 📋 Étapes dans o2switch
 
-### Étape 1 : Accéder à la gestion DNS
+### ⚠️ IMPORTANT : Deux méthodes possibles
 
-1. Dans votre interface o2switch, vous êtes déjà sur la page du domaine
-2. Cliquez sur **"Changer les serveurs DNS"** (Change DNS servers)
-   - Ou cherchez "Gestion DNS" / "DNS" dans le menu
-
-### Étape 2 : Choisir la méthode
-
-Vous avez **2 options** :
+Vous avez **2 options**. Si Netlify ne vous a pas donné de serveurs DNS, utilisez l'**Option B** (enregistrements DNS) qui est plus simple !
 
 ---
 
-## ✅ Option A : Utiliser les serveurs de noms Netlify (Recommandé)
+## ✅ Option A : Utiliser les serveurs de noms Netlify
+
+**⚠️ Cette option nécessite que Netlify vous fournisse des serveurs DNS. Si vous ne les avez pas, utilisez l'Option B !**
 
 **Avantages :**
 - Netlify gère automatiquement tous les enregistrements DNS
@@ -41,27 +37,36 @@ Vous avez **2 options** :
 
 ---
 
-## ✅ Option B : Configurer les enregistrements DNS (Alternative)
+## ✅ Option B : Configurer les enregistrements DNS (RECOMMANDÉ si pas de serveurs DNS)
 
-**Si vous préférez garder la gestion DNS dans o2switch :**
+**Cette option est plus simple et ne nécessite pas de changer les serveurs DNS !**
+
+**Avantages :**
+- ✅ Pas besoin de serveurs DNS de Netlify
+- ✅ Gardez la gestion DNS dans o2switch
+- ✅ Plus rapide à configurer
+- ✅ Moins de risques d'erreur
 
 ### Pour `lumeacommunication.fr` :
 
-1. Dans o2switch, allez dans "Gestion DNS" ou "Zone DNS"
-2. Vérifiez si o2switch supporte **ALIAS** ou **ANAME** :
-   - **Si OUI** : Créez un enregistrement ALIAS/ANAME
-     - Type : ALIAS (ou ANAME)
-     - Nom : `@` ou vide (pour la racine)
-     - Valeur : `apex-loadbalancer.netlify.com`
-   - **Si NON** : Créez un enregistrement A
-     - Type : A
-     - Nom : `@` ou vide (pour la racine)
-     - Valeur : `75.2.60.5` (IP fournie par Netlify)
+1. **Dans o2switch, cherchez "Gestion DNS" ou "Zone DNS"**
+   - Ne changez PAS les serveurs DNS, gardez-les comme ils sont
+   - Cherchez plutôt une section pour ajouter/modifier des enregistrements DNS
 
-3. Pour `www.lumeacommunication.fr` :
-   - Type : CNAME
-   - Nom : `www`
-   - Valeur : `lumeacommunication.fr`
+2. **Créez un enregistrement A** (c'est la méthode la plus simple) :
+   - **Type** : A
+   - **Nom** : `@` ou vide (pour la racine du domaine)
+   - **Valeur/IP** : `75.2.60.5` (c'est l'IP fournie par Netlify)
+   - **TTL** : 3600 (ou laissez la valeur par défaut)
+   - Sauvegardez
+
+3. **Pour `www.lumeacommunication.fr`** :
+   - **Type** : CNAME
+   - **Nom** : `www`
+   - **Valeur** : `lumeacommunication.fr`
+   - Sauvegardez
+
+**Note :** Si o2switch supporte ALIAS/ANAME, vous pouvez utiliser `apex-loadbalancer.netlify.com` au lieu de l'IP, mais l'enregistrement A fonctionne très bien !
 
 ### Répétez pour `lumeacommunication.ch` :
 
