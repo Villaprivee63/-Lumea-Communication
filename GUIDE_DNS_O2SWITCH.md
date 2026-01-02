@@ -4,6 +4,13 @@
 
 Configurer les DNS de `lumeacommunication.fr` (et `.ch`) dans o2switch pour pointer vers Netlify et activer HTTPS.
 
+## 📌 Instructions spécifiques de Netlify
+
+**Netlify demande de configurer :**
+- `www CNAME famous-begonia-c8571c.netlify.app.`
+
+**Voir le guide spécifique :** `CONFIGURER_CNAME_O2SWITCH.md`
+
 ## 📋 Étapes dans o2switch
 
 ### ⚠️ IMPORTANT : Deux méthodes possibles
