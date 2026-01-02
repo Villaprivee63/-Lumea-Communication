@@ -8,45 +8,51 @@ Les **crédits Netlify** sont une unité de mesure pour l'utilisation des ressou
 
 ## 📊 Ce que représentent les crédits
 
-### 1 crédit = 1 minute de build
+**Les crédits Netlify sont utilisés pour :**
 
-**Les crédits sont principalement utilisés pour :**
-- ⚙️ **Builds** (constructions) : Chaque minute de build = 1 crédit
-- 📦 **Déploiements** : Les déploiements utilisent des crédits selon leur durée
-- 🤖 **Agent Runners** : Utilisation des agents IA
-- 🔄 **Fonctions serverless** : Exécution des fonctions
+### 1. Déploiements en production
+- **1 déploiement en production = 15 crédits**
+- Peu importe la durée du build (1 minute ou 30 minutes)
+- Chaque `git push` qui déclenche un déploiement = 15 crédits
+
+### 2. Bande passante (trafic)
+- **1 GB de données servies = 10 crédits**
+- Inclut : pages web, images, CSS, JS, fichiers téléchargés
+- Chaque visite consomme de la bande passante
+
+### 3. Autres services
+- 🤖 **Agent Runners** : Selon l'utilisation
+- 🔄 **Fonctions serverless** : Selon l'exécution
+- 📊 **Analytics** : Selon le plan
 
 ### Exemples concrets :
 
-**Build simple (site statique) :**
-- Durée : ~1-2 minutes
-- Crédits utilisés : 1-2 crédits
+**Déploiement simple (site statique) :**
+- 1 déploiement = **15 crédits**
+- Peu importe si le build prend 30 secondes ou 5 minutes
 
-**Build complexe (avec compilation) :**
-- Durée : ~5-10 minutes
-- Crédits utilisés : 5-10 crédits
-
-**Build très complexe :**
-- Durée : ~15-20 minutes
-- Crédits utilisés : 15-20 crédits
+**Bande passante :**
+- 100 visiteurs × 2 MB par visite = 200 MB = 0.2 GB = **2 crédits**
+- 1 000 visiteurs × 2 MB = 2 GB = **20 crédits**
 
 ---
 
 ## 📈 Plans et crédits
 
 ### Plan Gratuit :
-- **Crédits :** Limité (varie selon l'utilisation)
-- **Problème :** Facile de dépasser la limite
+- **Crédits :** 300 crédits/mois
+- **Équivalent :** ~20 déploiements (300 ÷ 15) ou ~30 GB de bande passante
+- **Problème :** Limite très basse, facile à dépasser
 
 ### Plan "Vie personnelle" (9 $/mois) :
 - **Crédits :** 1 000 crédits/mois
-- **Équivalent :** ~1 000 minutes de build/mois
-- **Exemple :** ~33 builds de 30 minutes, ou ~100 builds de 10 minutes
+- **Équivalent :** ~66 déploiements (1 000 ÷ 15) ou ~100 GB de bande passante
+- **Exemple :** ~2 déploiements/jour ou ~3 GB de trafic/jour
 
 ### Plan Pro (20 $/mois) :
 - **Crédits :** 3 000 crédits/mois
-- **Équivalent :** ~3 000 minutes de build/mois
-- **Exemple :** ~100 builds de 30 minutes, ou ~300 builds de 10 minutes
+- **Équivalent :** ~200 déploiements (3 000 ÷ 15) ou ~300 GB de bande passante
+- **Exemple :** ~6-7 déploiements/jour ou ~10 GB de trafic/jour
 
 ---
 
@@ -55,32 +61,32 @@ Les **crédits Netlify** sont une unité de mesure pour l'utilisation des ressou
 ### Votre site "Luméa Communication" :
 
 **Type de site :** Site statique (HTML, CSS, JS)
-**Durée de build typique :** 1-3 minutes
-**Crédits par déploiement :** 1-3 crédits
+**Crédits par déploiement :** 15 crédits (fixe, peu importe la durée)
 
 ### Avec 1 000 crédits/mois (Plan "Vie personnelle") :
 
-- **~333 déploiements** de 3 minutes
-- **~1 000 déploiements** de 1 minute
-- **Suffisant pour :** Déploiements fréquents (plusieurs par jour)
+- **~66 déploiements** (1 000 ÷ 15)
+- **OU ~100 GB de bande passante** (1 000 ÷ 10)
+- **Suffisant pour :** ~2 déploiements/jour + trafic modéré
 
 ### Avec 3 000 crédits/mois (Plan Pro) :
 
-- **~1 000 déploiements** de 3 minutes
-- **~3 000 déploiements** de 1 minute
-- **Suffisant pour :** Déploiements très fréquents (plusieurs par heure)
+- **~200 déploiements** (3 000 ÷ 15)
+- **OU ~300 GB de bande passante** (3 000 ÷ 10)
+- **Suffisant pour :** ~6-7 déploiements/jour + trafic important
 
 ---
 
 ## ⚠️ Ce qui consomme des crédits
 
 ### Consommation normale :
-- ✅ **Déploiements automatiques** (git push) : 1-3 crédits
-- ✅ **Builds de site statique** : 1-5 crédits
-- ✅ **Déploiements manuels** : 1-3 crédits
+- ✅ **Déploiements automatiques** (git push) : **15 crédits** par déploiement
+- ✅ **Déploiements manuels** : **15 crédits** par déploiement
+- ✅ **Bande passante** : **10 crédits** par GB de données servies
 
 ### Consommation élevée :
-- ⚠️ **Builds complexes** (compilation, tests) : 10-30 crédits
+- ⚠️ **Beaucoup de déploiements** : Chaque déploiement = 15 crédits
+- ⚠️ **Trafic important** : 1 GB = 10 crédits
 - ⚠️ **Agent Runners** (IA) : Variable selon l'utilisation
 - ⚠️ **Fonctions serverless** : Selon l'exécution
 
@@ -105,16 +111,21 @@ Les **crédits Netlify** sont une unité de mesure pour l'utilisation des ressou
 ### Plan "Vie personnelle" (1 000 crédits) :
 
 **Scénario 1 : Déploiements quotidiens**
-- 1 déploiement/jour × 3 crédits = 3 crédits/jour
-- 30 jours × 3 = **90 crédits/mois** ✅ Suffisant
-
-**Scénario 2 : Déploiements fréquents**
-- 5 déploiements/jour × 3 crédits = 15 crédits/jour
+- 1 déploiement/jour × 15 crédits = 15 crédits/jour
 - 30 jours × 15 = **450 crédits/mois** ✅ Suffisant
 
-**Scénario 3 : Déploiements très fréquents**
-- 10 déploiements/jour × 3 crédits = 30 crédits/jour
+**Scénario 2 : Déploiements fréquents**
+- 2 déploiements/jour × 15 crédits = 30 crédits/jour
 - 30 jours × 30 = **900 crédits/mois** ⚠️ Proche de la limite
+
+**Scénario 3 : Déploiements + trafic**
+- 1 déploiement/jour = 15 crédits/jour
+- + 2 GB de trafic/jour = 20 crédits/jour
+- Total = 35 crédits/jour × 30 = **1 050 crédits/mois** ❌ Dépassement
+
+### Plan Pro (3 000 crédits) :
+
+**Tous les scénarios ci-dessus** ✅ Suffisant avec marge
 
 ### Plan Pro (3 000 crédits) :
 
@@ -141,12 +152,14 @@ Les **crédits Netlify** sont une unité de mesure pour l'utilisation des ressou
 
 ## 💡 Conclusion
 
-**100 crédits = 100 minutes de build**
+**100 crédits représentent :**
+- **~6-7 déploiements** (100 ÷ 15)
+- **OU ~10 GB de bande passante** (100 ÷ 10)
 
 **Pour votre site statique :**
-- 1 déploiement = ~1-3 crédits
-- 1 000 crédits = ~333-1 000 déploiements
-- 3 000 crédits = ~1 000-3 000 déploiements
+- 1 déploiement = **15 crédits** (fixe)
+- 1 000 crédits = **~66 déploiements** ou **~100 GB de trafic**
+- 3 000 crédits = **~200 déploiements** ou **~300 GB de trafic**
 
 **Recommandation :**
 - **Plan "Vie personnelle"** si déploiements modérés
