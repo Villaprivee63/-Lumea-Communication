@@ -395,6 +395,13 @@ p {
   
   .nav-inner {
     padding: 0 20px;
+    justify-content: space-between;
+  }
+  
+  /* Réorganisation mobile : menu à gauche, contact au milieu, langues à droite */
+  .nav-left {
+    order: 1;
+    flex: 0 0 auto;
   }
   
   .nav-center {
@@ -408,6 +415,7 @@ p {
     transition: transform var(--transition-base);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     z-index: var(--z-dropdown);
+    order: 0; /* Ne pas compter dans le flex order */
   }
   
   .nav-center.active {
@@ -421,14 +429,37 @@ p {
     width: 100%;
   }
   
+  .nav-right {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-left: 0;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Menu hamburger dans nav-left sur mobile */
   .navbar-toggle {
     display: block;
   }
   
+  /* Bouton contact au milieu sur mobile */
   .navbar-cta {
     height: 40px;
     padding: 0 16px;
     font-size: var(--font-size-xs);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  
+  /* Langues à droite sur mobile */
+  .country-selector-nav {
+    margin-left: auto;
+    margin-right: 0;
   }
 }
 
@@ -440,6 +471,16 @@ p {
   .navbar-cta {
     height: 38px;
     padding: 0 14px;
+    font-size: var(--font-size-xs);
+  }
+  
+  /* Ajustements pour très petits écrans */
+  .country-selector-nav {
+    gap: 0.25rem;
+  }
+  
+  .country-link {
+    font-size: 1.25rem !important;
   }
 }
 
