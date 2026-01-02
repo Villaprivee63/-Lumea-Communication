@@ -150,6 +150,13 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Headers pour le sitemap.xml (important pour Google Search Console)
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
 # Configuration pour les formulaires Netlify (optionnel, si vous voulez remplacer EmailJS)
 # [forms]
 #   name = "contact-form"
