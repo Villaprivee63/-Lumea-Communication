@@ -1,5 +1,21 @@
 # 🔍 Guide : Référencer votre site sur Google
 
+## ⚠️ IMPORTANT : HTTPS d'abord !
+
+**Avant de référencer votre site sur Google, assurez-vous que HTTPS est activé !**
+
+Un site "Non sécurisé" sera pénalisé par Google et peut affecter votre référencement.
+
+**Si votre site affiche "Non sécurisé" :**
+1. Vérifiez que les DNS sont correctement configurés dans Netlify
+2. Activez HTTPS dans Netlify (voir `GUIDE_ACTIVER_HTTPS.md`)
+3. Attendez que le certificat SSL soit généré (5-15 minutes)
+4. Vérifiez que le site affiche un cadenas vert
+
+**Une fois HTTPS activé, vous pouvez continuer avec ce guide.**
+
+---
+
 ## 🎯 Objectif
 
 Faire en sorte que Google découvre, indexe et affiche votre site dans les résultats de recherche.
