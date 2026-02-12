@@ -643,6 +643,8 @@ main.page-content .mb-lg {
 @media (max-width: 1024px) {
   .navbar {
     padding: var(--spacing-sm) 0;
+    /* Important mobile: éviter les bugs de position:fixed dans un élément avec backdrop-filter */
+    overflow: visible;
   }
   
   .nav-inner {
@@ -657,8 +659,8 @@ main.page-content .mb-lg {
   }
   
   .nav-center {
-    position: fixed;
-    top: 60px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     background: var(--color-bg-secondary);
@@ -668,6 +670,8 @@ main.page-content .mb-lg {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     z-index: var(--z-dropdown);
     order: 0; /* Ne pas compter dans le flex order */
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
   }
   
   .nav-center.active {
