@@ -387,8 +387,8 @@ main.page-content .mb-lg {
   padding: var(--spacing-sm) var(--container-padding);
   width: 100%;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: var(--spacing-md);
   position: relative;
@@ -397,15 +397,14 @@ main.page-content .mb-lg {
 
 @media (max-width: 520px) {
   .realisations-banner {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
 .realisations-banner-link {
   display: inline-flex;
   align-items: center;
-  justify-self: center;
   color: var(--color-accent-blue);
   font-size: var(--font-size-sm);
   font-weight: 600;
@@ -434,7 +433,6 @@ main.page-content .mb-lg {
   letter-spacing: 0.06em;
   border-radius: var(--radius-full);
   white-space: nowrap;
-  justify-self: center;
 }
 
 /* Blocs catégories réalisations (2 blocs sur une ligne) */
