@@ -645,11 +645,13 @@ main.page-content .mb-lg {
     padding: var(--spacing-sm) 0;
     /* Important mobile: éviter les bugs de position:fixed dans un élément avec backdrop-filter */
     overflow: visible;
+    overflow-x: visible;
   }
   
   .nav-inner {
     padding: 0 20px;
     justify-content: space-between;
+    position: relative; /* ancre du menu déroulant mobile */
   }
   
   /* Réorganisation mobile : menu à gauche, contact au milieu, langues à droite */
