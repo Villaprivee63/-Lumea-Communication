@@ -25,16 +25,22 @@
     }
 
     if (navCenter && navbarToggles.length) {
-      // Ouvrir/fermer au clic sur n'importe quel bouton hamburger (évite les pages avec doublon)
-      navbarToggles.forEach(function(toggleBtn) {
-        toggleBtn.addEventListener('click', function(e) {
+      function toggleMobileMenu(e) {
+        if (e) {
           e.preventDefault();
           e.stopPropagation();
-          navCenter.classList.toggle('active');
-          const isOpen = navCenter.classList.contains('active');
-          setMenuIcon(isOpen);
-        });
-        // Touch: éviter délai 300ms sur mobile
+        }
+        navCenter.classList.toggle('active');
+        const isOpen = navCenter.classList.contains('active');
+        setMenuIcon(isOpen);
+        document.body.classList.toggle('nav-open', isOpen);
+      }
+
+      // Ouvrir/fermer au clic sur n'importe quel bouton hamburger (évite les pages avec doublon)
+      navbarToggles.forEach(function(toggleBtn) {
+        toggleBtn.addEventListener('click', toggleMobileMenu);
+        // iOS Safari: le click peut être capricieux -> touchstart non-passif
+        toggleBtn.addEventListener('touchstart', toggleMobileMenu, { passive: false });
       });
 
       // Fermer le menu en cliquant sur un lien
@@ -43,6 +49,7 @@
         link.addEventListener('click', function() {
           navCenter.classList.remove('active');
           setMenuIcon(false);
+          document.body.classList.remove('nav-open');
         });
       });
 
@@ -52,6 +59,7 @@
         if (!clickedToggle && !navCenter.contains(e.target)) {
           navCenter.classList.remove('active');
           setMenuIcon(false);
+          document.body.classList.remove('nav-open');
         }
       });
     }

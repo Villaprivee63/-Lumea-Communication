@@ -646,6 +646,9 @@ main.page-content .mb-lg {
     /* Important mobile: éviter les bugs de position:fixed dans un élément avec backdrop-filter */
     overflow: visible;
     overflow-x: visible;
+    /* iOS Safari: sticky + backdrop-filter peut casser les overlays */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
   
   .nav-inner {
@@ -667,17 +670,25 @@ main.page-content .mb-lg {
     right: 0;
     background: var(--color-bg-secondary);
     padding: var(--spacing-lg);
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
     transition: transform var(--transition-base);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    z-index: var(--z-dropdown);
+    z-index: var(--z-modal);
     order: 0; /* Ne pas compter dans le flex order */
     max-height: calc(100vh - 72px);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
   
   .nav-center.active {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
   
   .navbar-menu {
