@@ -12,18 +12,29 @@
     document.documentElement.classList.add('js-enabled');
 
     // === MENU MOBILE ===
-    const navbarToggle = document.querySelector('.navbar-toggle');
     const navCenter = document.querySelector('.nav-center');
-    
-    if (navbarToggle && navCenter) {
-      navbarToggle.addEventListener('click', function() {
-        navCenter.classList.toggle('active');
-        const icon = navbarToggle.querySelector('i') || navbarToggle;
-        if (navCenter.classList.contains('active')) {
-          icon.textContent = '✕';
-        } else {
-          icon.textContent = '☰';
-        }
+    const navbarToggles = document.querySelectorAll('.navbar-toggle');
+
+    function setMenuIcon(open) {
+      const iconChar = open ? '✕' : '☰';
+      navbarToggles.forEach(function(btn) {
+        const icon = btn.querySelector('i') || btn;
+        icon.textContent = iconChar;
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    if (navCenter && navbarToggles.length) {
+      // Ouvrir/fermer au clic sur n'importe quel bouton hamburger (évite les pages avec doublon)
+      navbarToggles.forEach(function(toggleBtn) {
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          navCenter.classList.toggle('active');
+          const isOpen = navCenter.classList.contains('active');
+          setMenuIcon(isOpen);
+        });
+        // Touch: éviter délai 300ms sur mobile
       });
 
       // Fermer le menu en cliquant sur un lien
@@ -31,17 +42,16 @@
       navbarLinks.forEach(link => {
         link.addEventListener('click', function() {
           navCenter.classList.remove('active');
-          const icon = navbarToggle.querySelector('i') || navbarToggle;
-          icon.textContent = '☰';
+          setMenuIcon(false);
         });
       });
 
       // Fermer le menu en cliquant en dehors
       document.addEventListener('click', function(e) {
-        if (!navbarToggle.contains(e.target) && !navCenter.contains(e.target)) {
+        const clickedToggle = Array.prototype.some.call(navbarToggles, function(btn) { return btn.contains(e.target); });
+        if (!clickedToggle && !navCenter.contains(e.target)) {
           navCenter.classList.remove('active');
-          const icon = navbarToggle.querySelector('i') || navbarToggle;
-          icon.textContent = '☰';
+          setMenuIcon(false);
         }
       });
     }
@@ -187,6 +197,53 @@
       });
     });
 
+    // === FILTRE PRODUCTIONS (page Réalisations) ===
+    const productionFilterBtns = document.querySelectorAll('.production-filter-btn');
+    const productionCards = document.querySelectorAll('.production-card');
+    if (productionFilterBtns.length && productionCards.length) {
+      productionFilterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter') || 'all';
+          productionFilterBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', b === this ? 'true' : 'false');
+          });
+          this.classList.add('active');
+          this.setAttribute('aria-pressed', 'true');
+          productionCards.forEach(card => {
+            const category = card.getAttribute('data-category') || '';
+            const show = filter === 'all' || category === filter;
+            card.style.display = show ? '' : 'none';
+          });
+        });
+      });
+    }
+
+    // === CARROUSEL D'IMAGES DANS CHAQUE CARTE (page Réalisations) ===
+    document.querySelectorAll('.card-image-carousel').forEach(function(carousel) {
+      const track = carousel.querySelector('.card-carousel-track');
+      const counterEl = carousel.querySelector('.card-carousel-counter');
+      const prevBtn = carousel.querySelector('.card-carousel-prev');
+      const nextBtn = carousel.querySelector('.card-carousel-next');
+      const images = carousel.querySelectorAll('.card-carousel-track img');
+      const total = images.length;
+      let index = 0;
+
+      function update() {
+        if (track) track.style.transform = 'translateX(-' + index * 100 + '%)';
+        if (counterEl) counterEl.textContent = (index + 1) + ' / ' + total;
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', function() {
+        index = (index - 1 + total) % total;
+        update();
+      });
+      if (nextBtn) nextBtn.addEventListener('click', function() {
+        index = (index + 1) % total;
+        update();
+      });
+    });
+
     // === ACTIVE NAV LINK ===
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.navbar-link');
@@ -211,6 +268,14 @@
     
     const contactForm = document.querySelector('#contact-form');
     if (contactForm) {
+      // Pré-sélection de la raison depuis l'URL (ex: contact.html?subject=audit)
+      const urlParams = new URLSearchParams(window.location.search);
+      const subject = urlParams.get('subject');
+      const reasonSelect = contactForm.querySelector('[name="reason"]');
+      if (subject && reasonSelect && reasonSelect.querySelector('option[value="' + subject + '"]')) {
+        reasonSelect.value = subject;
+      }
+
       contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       
@@ -277,6 +342,7 @@
       let reasonLabel = '';
       if (reason) {
         const reasons = {
+          'audit': isSpanish ? 'Auditoría gratuita' : 'Audit gratuit',
           'consulting': isSpanish ? 'Consultoría' : 'Consulting',
           'formation': isSpanish ? 'Formación' : 'Formation',
           'cybersecurite': isSpanish ? 'Ciberseguridad' : 'Cybersécurité',
@@ -295,6 +361,7 @@
         reason: reasonLabel,
         message: this.querySelector('[name="message"]').value,
         to_name: 'Luméa Communication',
+        to_email: 'lumeasolution@outlook.fr',
         reply_to: this.querySelector('[name="email"]').value
       };
       

@@ -133,13 +133,13 @@
           <li role="none"><a href="formacion.html" class="navbar-link" role="menuitem">Formación</a></li>
           <li role="none"><a href="ciberseguridad.html" class="navbar-link" role="menuitem">Ciberseguridad</a></li>
           <li role="none"><a href="sitios-branding.html" class="navbar-link" role="menuitem">Sitios & Branding</a></li>
+          <li role="none"><a href="realizaciones.html" class="navbar-link" role="menuitem">Realizaciones</a></li>
           <li role="none"><a href="desarrollo.html" class="navbar-link" role="menuitem">Desarrollo</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
           <li role="none"><a href="contacto.html" class="navbar-link" role="menuitem">Contacto</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <a href="contacto.html" class="btn btn-primary navbar-cta">Contactar</a>
         <div class="country-selector-nav" style="display: flex; gap: 0.5rem; align-items: center; margin-left: 1rem;">
           <a href="../ch/index.html" class="country-link" title="Suisse" style="font-size: 1.5rem; text-decoration: none; opacity: 0.7; transition: opacity 0.3s;">🇨🇭</a>
           <a href="../fr/index.html" class="country-link" title="France" style="font-size: 1.5rem; text-decoration: none; opacity: 0.7; transition: opacity 0.3s;">🇫🇷</a>
@@ -148,6 +148,11 @@
       </div>
     </div>
   </nav>
+
+  <div class="realisations-banner" role="banner">
+    <a href="realizaciones.html" class="realisations-banner-link" aria-label="Ver nuestras realizaciones">Ver nuestras realizaciones</a>
+    <a href="contacto.html" class="btn btn-primary btn-banner-cta" aria-label="Contactar">Contactar</a>
+  </div>
 
   <main id="main-content">
   <!-- Hero Section -->
@@ -163,7 +168,7 @@
   </section>
 
   <!-- Servicios Overview -->
-  <section id="servicios" class="section section-large section-full">
+  <section id="servicios" class="section section-large section-full" style="background-image: linear-gradient(135deg, rgba(10,10,10,0.88) 0%, rgba(20,20,20,0.88) 100%), url('../assets/img/photos/section-nos-services.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Nuestros servicios</h2>
@@ -218,39 +223,85 @@
     </div>
   </section>
 
-  <!-- Por qué confiar en nosotros -->
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <!-- Por qué elegir Luméa -->
+  <section id="why" class="section section-large section-full why-section" aria-labelledby="why-title">
     <div class="container">
-      <div class="text-center mb-xl fade-in">
-        <h2>¿Por qué confiar en nosotros?</h2>
-        <p class="lead">Una experiencia española al servicio de su éxito</p>
-      </div>
-      <div class="grid grid-3 fade-in">
-        <div class="card">
-          <h4>Acompañamiento personalizado</h4>
-          <p>Cada proyecto es único. Nos tomamos el tiempo de entender sus necesidades, su contexto y sus objetivos. Un acompañamiento a medida, desde la concepción hasta la implementación.</p>
-        </div>
-        <div class="card">
-          <h4>Experiencia técnica</h4>
-          <p>Dominio de las últimas tecnologías web, optimización de rendimiento, SEO, seguridad. Sitios rápidos, fiables y bien referenciados. Una experiencia técnica al servicio de su negocio.</p>
-        </div>
-        <div class="card">
-          <h4>Fiabilidad profesional</h4>
-          <p>Respeto de los plazos, transparencia de precios, calidad del trabajo. Un enfoque profesional y confiable. Su proyecto en buenas manos.</p>
-        </div>
-        <div class="card">
-          <h4>Diseño premium</h4>
-          <p>Estética cuidada, experiencia de usuario óptima, identidad visual fuerte. Un diseño que refleja su excelencia y refuerza su credibilidad ante sus clientes.</p>
-        </div>
-        <div class="card">
-          <h4>Formación y autonomía</h4>
-          <p>Le formamos en la gestión de su sitio. Se vuelve autónomo para publicar contenido, gestionar sus productos, seguir sus rendimientos. La autonomía es la libertad.</p>
-        </div>
-        <div class="card">
-          <h4>Soporte continuo</h4>
-          <p>Un sitio es algo vivo. Seguimos disponibles para evoluciones, ajustes, preguntas. Un soporte reactivo para perennizar su inversión.</p>
-        </div>
-      </div>
+      <header class="why-header fade-in">
+        <p class="why-label">Nuestras ventajas</p>
+        <h2 id="why-title">¿Por qué confiar en nosotros?</h2>
+        <p class="why-intro">Claridad, a medida y resultados: construimos con usted una relación de confianza y entregas que rinden.</p>
+      </header>
+      <ul class="why-cards" aria-label="Razones para elegirnos">
+        <li class="why-card fade-in">
+          <span class="why-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-card-content">
+            <h3>Un enfoque claro, sin jerga innecesaria</h3>
+            <p>Explicamos las decisiones técnicas y estratégicas en términos sencillos para que siga siendo el decisor con total tranquilidad.</p>
+          </div>
+        </li>
+        <li class="why-card fade-in">
+          <span class="why-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-card-content">
+            <h3>Soluciones a medida, no estándar</h3>
+            <p>Cada proyecto es único: adaptamos nuestros métodos y entregas a sus objetivos y su contexto.</p>
+          </div>
+        </li>
+        <li class="why-card fade-in">
+          <span class="why-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-card-content">
+            <h3>Una visión orientada a resultados y rendimiento</h3>
+            <p>Buscamos el impacto concreto: visibilidad, conversiones, rapidez y mantenibilidad de sus herramientas.</p>
+          </div>
+        </li>
+        <li class="why-card fade-in">
+          <span class="why-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-card-content">
+            <h3>Acompañamiento humano y tecnológico</h3>
+            <p>Equipo atento y competencias técnicas al servicio de su éxito, desde la concepción hasta el seguimiento.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Método (4 pasos) -->
+  <section id="process" class="section section-large section-full process-section" style="background-image: linear-gradient(135deg, rgba(10,10,10,0.88) 0%, rgba(20,20,20,0.88) 100%), url('../assets/img/photos/section-notre-methode.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" aria-labelledby="process-title">
+    <div class="container">
+      <header class="process-header fade-in">
+        <p class="process-label">Nuestro método</p>
+        <h2 id="process-title">Un método sencillo y eficaz</h2>
+        <p class="process-intro">Desde el análisis de su necesidad hasta el seguimiento, avanzamos con usted paso a paso.</p>
+      </header>
+      <ol class="process-steps" aria-label="Pasos de nuestro método">
+        <li class="process-step-card fade-in">
+          <span class="process-step-number" aria-hidden="true">1</span>
+          <div class="process-step-content">
+            <h3>Análisis de su necesidad y su actividad</h3>
+            <p>Definimos sus objetivos, su mercado y sus limitaciones para sentar unas bases sólidas.</p>
+          </div>
+        </li>
+        <li class="process-step-card fade-in">
+          <span class="process-step-number" aria-hidden="true">2</span>
+          <div class="process-step-content">
+            <h3>Propuesta clara y adaptada</h3>
+            <p>Presupuesto detallado, planificación realista y alcance definido — sin sorpresas.</p>
+          </div>
+        </li>
+        <li class="process-step-card fade-in">
+          <span class="process-step-number" aria-hidden="true">3</span>
+          <div class="process-step-content">
+            <h3>Diseño y optimización</h3>
+            <p>Desarrollo, diseño y pruebas para un resultado performante y duradero.</p>
+          </div>
+        </li>
+        <li class="process-step-card fade-in">
+          <span class="process-step-number" aria-hidden="true">4</span>
+          <div class="process-step-content">
+            <h3>Puesta en línea y seguimiento</h3>
+            <p>Despliegue seguro y acompañamiento a largo plazo para hacer evolucionar su herramienta.</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -279,6 +330,7 @@
             <li><a href="formacion.html" class="footer-link">Formación</a></li>
             <li><a href="ciberseguridad.html" class="footer-link">Ciberseguridad</a></li>
             <li><a href="sitios-branding.html" class="footer-link">Sitios & Branding</a></li>
+            <li><a href="realizaciones.html" class="footer-link">Realizaciones</a></li>
             <li><a href="desarrollo.html" class="footer-link">Desarrollo</a></li>
             <li><a href="blog.html" class="footer-link">Blog</a></li>
             <li><a href="contacto.html" class="footer-link">Contacto</a></li>

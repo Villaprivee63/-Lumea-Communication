@@ -131,13 +131,13 @@
           <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
           <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
           <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+          <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem">Réalisations</a></li>
           <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
           <li role="none"><a href="contact.html" class="navbar-link" role="menuitem">Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <a href="contact.html" class="btn btn-primary navbar-cta">Entrer en contact</a>
         <div class="country-selector-nav" style="display: flex; gap: 0.5rem; align-items: center; margin-left: 1rem;">
           <a href="index.html" class="country-link active" title="Suisse" style="font-size: 1.5rem; text-decoration: none; opacity: 1; border-bottom: 2px solid var(--color-accent-blue);">🇨🇭</a>
           <a href="../fr/index.html" class="country-link" title="France" style="font-size: 1.5rem; text-decoration: none; opacity: 0.7; transition: opacity 0.3s;">🇫🇷</a>
@@ -146,6 +146,11 @@
       </div>
     </div>
   </nav>
+
+  <div class="realisations-banner" role="banner">
+    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
+    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
+  </div>
 
   <main id="main-content">
   <!-- Hero Section -->
@@ -161,7 +166,7 @@
   </section>
 
   <!-- Services Overview -->
-  <section id="services" class="section section-large section-full">
+  <section id="services" class="section section-large section-full" style="background-image: linear-gradient(135deg, rgba(10,10,10,0.88) 0%, rgba(20,20,20,0.88) 100%), url('../assets/img/photos/section-nos-services.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Nos services</h2>
@@ -216,39 +221,85 @@
     </div>
   </section>
 
-  <!-- Pourquoi nous choisir -->
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <!-- Pourquoi Luméa -->
+  <section id="why" class="section section-large section-full why-section" aria-labelledby="why-title">
     <div class="container">
-      <div class="text-center mb-xl fade-in">
-        <h2>Pourquoi nous faire confiance ?</h2>
-        <p class="lead">Une expertise suisse au service de votre réussite</p>
-      </div>
-      <div class="grid grid-3 fade-in">
-        <div class="card">
-          <h4>Accompagnement personnalisé</h4>
-          <p>Chaque projet est unique. Nous prenons le temps de comprendre vos besoins, votre contexte et vos objectifs. Un accompagnement sur mesure, de la conception à la mise en œuvre.</p>
-        </div>
-        <div class="card">
-          <h4>Expertise technique</h4>
-          <p>Maîtrise des dernières technologies web, optimisation performance, SEO, sécurité. Des sites rapides, fiables et bien référencés. Une expertise technique au service de votre business.</p>
-        </div>
-        <div class="card">
-          <h4>Fiabilité suisse</h4>
-          <p>Respect des délais, transparence des tarifs, qualité du travail. Une approche professionnelle et fiable, ancrée dans les valeurs suisses. Votre projet entre de bonnes mains.</p>
-        </div>
-        <div class="card">
-          <h4>Design premium</h4>
-          <p>Esthétique soignée, expérience utilisateur optimale, identité visuelle forte. Un design qui reflète votre excellence et renforce votre crédibilité auprès de vos clients.</p>
-        </div>
-        <div class="card">
-          <h4>Formation et autonomie</h4>
-          <p>Nous vous formons à la gestion de votre site. Vous devenez autonome pour publier du contenu, gérer vos produits, suivre vos performances. L'autonomie, c'est la liberté.</p>
-        </div>
-        <div class="card">
-          <h4>Support continu</h4>
-          <p>Un site, c'est vivant. Nous restons disponibles pour les évolutions, les ajustements, les questions. Un support réactif pour pérenniser votre investissement.</p>
-        </div>
-      </div>
+      <header class="why-header fade-in">
+        <p class="why-label">Nos atouts</p>
+        <h2 id="why-title">Pourquoi nous faire confiance ?</h2>
+        <p class="why-intro">Clarté, sur-mesure et résultats : une expertise suisse au service de votre réussite. Nous construisons avec vous une relation de confiance et des livrables qui performent.</p>
+      </header>
+      <ul class="why-cards" aria-label="Raisons de nous choisir">
+        <li class="why-card fade-in">
+          <span class="why-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-card-content">
+            <h3>Une approche claire, sans jargon inutile</h3>
+            <p>Nous expliquons les choix techniques et stratégiques en termes simples pour que vous restiez décideur en toute sérénité.</p>
+          </div>
+        </li>
+        <li class="why-card fade-in">
+          <span class="why-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-card-content">
+            <h3>Des solutions sur mesure, pas de modèles standards</h3>
+            <p>Chaque projet est unique : nous adaptons nos méthodes et nos livrables à vos objectifs et à votre contexte.</p>
+          </div>
+        </li>
+        <li class="why-card fade-in">
+          <span class="why-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-card-content">
+            <h3>Une vision orientée résultats et performance</h3>
+            <p>Nous visons l’impact concret : visibilité, conversions, rapidité et maintenabilité de vos outils.</p>
+          </div>
+        </li>
+        <li class="why-card fade-in">
+          <span class="why-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-card-content">
+            <h3>Un accompagnement humain + technologique</h3>
+            <p>Équipe à l’écoute et compétences techniques au service de votre réussite, de la conception au suivi.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Méthode (4 étapes) -->
+  <section id="process" class="section section-large section-full process-section" style="background-image: linear-gradient(135deg, rgba(10,10,10,0.88) 0%, rgba(20,20,20,0.88) 100%), url('../assets/img/photos/section-notre-methode.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" aria-labelledby="process-title">
+    <div class="container">
+      <header class="process-header fade-in">
+        <p class="process-label">Notre méthode</p>
+        <h2 id="process-title">Une méthode simple et efficace</h2>
+        <p class="process-intro">De l’analyse de votre besoin jusqu’au suivi, nous avançons avec vous étape par étape.</p>
+      </header>
+      <ol class="process-steps" aria-label="Étapes de notre méthode">
+        <li class="process-step-card fade-in">
+          <span class="process-step-number" aria-hidden="true">1</span>
+          <div class="process-step-content">
+            <h3>Analyse de votre besoin et de votre activité</h3>
+            <p>Nous cernons vos objectifs, votre marché et vos contraintes pour poser les bonnes bases.</p>
+          </div>
+        </li>
+        <li class="process-step-card fade-in">
+          <span class="process-step-number" aria-hidden="true">2</span>
+          <div class="process-step-content">
+            <h3>Proposition claire et adaptée</h3>
+            <p>Devis détaillé, planning réaliste et périmètre défini — sans surprise.</p>
+          </div>
+        </li>
+        <li class="process-step-card fade-in">
+          <span class="process-step-number" aria-hidden="true">3</span>
+          <div class="process-step-content">
+            <h3>Conception et optimisation</h3>
+            <p>Développement, design et tests pour un résultat performant et pérenne.</p>
+          </div>
+        </li>
+        <li class="process-step-card fade-in">
+          <span class="process-step-number" aria-hidden="true">4</span>
+          <div class="process-step-content">
+            <h3>Mise en ligne et suivi</h3>
+            <p>Déploiement sécurisé et accompagnement dans la durée pour faire évoluer votre outil.</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -277,6 +328,7 @@
             <li><a href="formation.html" class="footer-link">Formation</a></li>
             <li><a href="cybersecurite.html" class="footer-link">Cybersécurité</a></li>
             <li><a href="sites-branding.html" class="footer-link">Sites & Branding</a></li>
+            <li><a href="realisations.html" class="footer-link">Réalisations</a></li>
             <li><a href="developpement.html" class="footer-link">Développement</a></li>
             <li><a href="blog.html" class="footer-link">Blog</a></li>
             <li><a href="contact.html" class="footer-link">Contact</a></li>
@@ -286,6 +338,8 @@
           <h4>Services</h4>
           <ul class="footer-links">
             <li><a href="consulting.html" class="footer-link">Stratégie digitale</a></li>
+            <li><a href="sites-branding.html" class="footer-link">Sites & Branding</a></li>
+            <li><a href="realisations.html" class="footer-link">Réalisations</a></li>
             <li><a href="consulting.html" class="footer-link">Choix d'outils</a></li>
             <li><a href="formation.html" class="footer-link">Formation Shopify</a></li>
             <li><a href="formation.html" class="footer-link">Formation WordPress</a></li>

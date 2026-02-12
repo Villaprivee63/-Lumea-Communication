@@ -56,6 +56,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
+        "email": "lumeasolution@outlook.fr",
         "areaServed": "ES",
         "availableLanguage": "es"
       }
@@ -85,7 +86,7 @@
   
   <!-- Preload critical resources -->
   <link rel="preload" href="../assets/css/styles.css" as="style">
-  <link rel="preload" href="../assets/img/photos/contact.jpg" as="image" fetchpriority="high">
+  <link rel="preload" href="../assets/img/photos/hero-contact.jpg" as="image" fetchpriority="high">
   
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -112,13 +113,13 @@
           <li role="none"><a href="formacion.html" class="navbar-link" role="menuitem">Formación</a></li>
           <li role="none"><a href="ciberseguridad.html" class="navbar-link" role="menuitem">Ciberseguridad</a></li>
           <li role="none"><a href="sitios-branding.html" class="navbar-link" role="menuitem">Sitios & Branding</a></li>
+          <li role="none"><a href="realizaciones.html" class="navbar-link" role="menuitem">Realizaciones</a></li>
           <li role="none"><a href="desarrollo.html" class="navbar-link" role="menuitem">Desarrollo</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
           <li role="none"><a href="contacto.html" class="navbar-link active" role="menuitem">Contacto</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <a href="contacto.html" class="btn btn-primary navbar-cta">Contactar</a>
         <div class="country-selector-nav" style="display: flex; gap: 0.5rem; align-items: center; margin-left: 1rem;">
           <a href="../ch/index.html" class="country-link" title="Suisse" style="font-size: 1.5rem; text-decoration: none; opacity: 0.7; transition: opacity 0.3s;">🇨🇭</a>
           <a href="../fr/index.html" class="country-link" title="France" style="font-size: 1.5rem; text-decoration: none; opacity: 0.7; transition: opacity 0.3s;">🇫🇷</a>
@@ -128,8 +129,13 @@
     </div>
   </nav>
 
-  <main id="main-content">
-  <section class="hero" style="background-image: url('../assets/img/photos/contact.jpg'); min-height: 50vh;" role="banner" aria-label="Imagen hero - Contacto">
+  <div class="realisations-banner" role="banner">
+    <a href="realizaciones.html" class="realisations-banner-link" aria-label="Ver nuestras realizaciones">Ver nuestras realizaciones</a>
+    <a href="contacto.html" class="btn btn-primary btn-banner-cta" aria-label="Contactar">Contactar</a>
+  </div>
+
+  <main id="main-content" class="page-content">
+  <section class="hero" style="background-image: url('../assets/img/photos/hero-contact.jpg'); min-height: 50vh;" role="banner" aria-label="Imagen hero - Contacto">
     <div class="hero-content">
       <h1 class="hero-title">Contacto</h1>
       <p class="hero-subtitle">Hablemos de su proyecto digital</p>
@@ -147,7 +153,7 @@
             <h4 style="margin-bottom: var(--spacing-md); color: var(--color-text-primary);">Luméa Group</h4>
             <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">Contáctenos a través del formulario a continuación o directamente por correo electrónico :</p>
             <p style="margin: 0;">
-              <a href="mailto:bustholding@outlook.fr" style="color: var(--color-accent-blue); text-decoration: none; font-weight: 600; font-size: var(--font-size-base);">bustholding@outlook.fr</a>
+              <a href="mailto:lumeasolution@outlook.fr" style="color: var(--color-accent-blue); text-decoration: none; font-weight: 600; font-size: var(--font-size-base);">lumeasolution@outlook.fr</a>
             </p>
             <p style="color: var(--color-text-muted); font-size: var(--font-size-sm); margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(255, 255, 255, 0.08);">Le responderemos lo antes posible.</p>
           </div>
@@ -203,6 +209,7 @@
             <li><a href="formacion.html" class="footer-link">Formación</a></li>
             <li><a href="ciberseguridad.html" class="footer-link">Ciberseguridad</a></li>
             <li><a href="sitios-branding.html" class="footer-link">Sitios & Branding</a></li>
+            <li><a href="realizaciones.html" class="footer-link">Realizaciones</a></li>
             <li><a href="desarrollo.html" class="footer-link">Desarrollo</a></li>
             <li><a href="blog.html" class="footer-link">Blog</a></li>
             <li><a href="contacto.html" class="footer-link">Contacto</a></li>
@@ -253,5 +260,6 @@
   <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/analytics.js" defer></script>
 </body>
 </html>
