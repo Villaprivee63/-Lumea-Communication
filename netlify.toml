@@ -160,3 +160,5 @@
 # Configuration pour les formulaires Netlify (optionnel, si vous voulez remplacer EmailJS)
 # [forms]
 #   name = "contact-form"
+
+# Redeploy trigger (no-op): 2026-02-17
