@@ -11,6 +11,149 @@
     // Marquer que JavaScript est disponible pour les animations
     document.documentElement.classList.add('js-enabled');
 
+    // === DEBUG MOBILE OVERFLOW (à activer via ?overflowDebug=1) ===
+    function runOverflowDebug() {
+      try {
+        var params = new URLSearchParams(window.location.search || '');
+        if (!(params.has('overflowDebug') || params.has('overflow-debug'))) return;
+
+        var styleId = 'overflow-debug-style';
+        if (!document.getElementById(styleId)) {
+          var style = document.createElement('style');
+          style.id = styleId;
+          style.textContent = [
+            '.overflow-debug-outline { outline: 2px solid #ff2d55 !important; outline-offset: 2px !important; }',
+            '.overflow-debug-outline::before { content: attr(data-overflow-debug); position: absolute; top: -1.4em; left: 0; font-size: 10px; padding: 2px 6px; background: rgba(255,45,85,0.92); color: #fff; border-radius: 6px; z-index: 999999; }'
+          ].join('\n');
+          document.head.appendChild(style);
+        }
+
+        // Nettoyer les outlines précédents
+        document.querySelectorAll('.overflow-debug-outline').forEach(function(el) {
+          el.classList.remove('overflow-debug-outline');
+          el.removeAttribute('data-overflow-debug');
+        });
+
+        var viewportW = window.innerWidth;
+        var offenders = [];
+        document.querySelectorAll('*').forEach(function(el) {
+          // Ignorer scripts/styles et éléments invisibles
+          if (!el || el === document.documentElement || el === document.body) return;
+          var tag = (el.tagName || '').toLowerCase();
+          if (tag === 'script' || tag === 'style' || tag === 'link' || tag === 'meta' || tag === 'head') return;
+          var rect = el.getBoundingClientRect();
+          if (!rect || rect.width === 0 || rect.height === 0) return;
+
+          // Débordement à droite (ou très léger dû au subpixel)
+          var overflowRight = rect.right - viewportW;
+          var overflowLeft = 0 - rect.left;
+          if (overflowRight > 1 || overflowLeft > 1) {
+            var cls = (el.className && typeof el.className === 'string') ? el.className : '';
+            var id = el.id ? ('#' + el.id) : '';
+            offenders.push({
+              el: el,
+              tag: tag,
+              cls: cls,
+              id: id,
+              rect: { left: rect.left, right: rect.right, width: rect.width },
+              overflowRight: overflowRight,
+              overflowLeft: overflowLeft
+            });
+          }
+        });
+
+        offenders
+          .sort(function(a, b) {
+            return Math.max(b.overflowRight, b.overflowLeft) - Math.max(a.overflowRight, a.overflowLeft);
+          })
+          .slice(0, 25)
+          .forEach(function(o) {
+            try {
+              o.el.classList.add('overflow-debug-outline');
+              var label = (o.tag + (o.id || '') + (o.cls ? ('.' + String(o.cls).trim().split(/\s+/).join('.')) : ''));
+              o.el.setAttribute('data-overflow-debug', label);
+            } catch (e) {}
+          });
+
+        console.groupCollapsed('[OverflowDebug] viewport', viewportW, 'scrollWidth', document.documentElement.scrollWidth);
+        offenders.slice(0, 25).forEach(function(o, i) {
+          console.log(
+            i + 1,
+            o.tag + o.id,
+            o.cls,
+            'rect:', o.rect,
+            'overflowRight:', Math.round(o.overflowRight),
+            'overflowLeft:', Math.round(o.overflowLeft),
+            o.el
+          );
+        });
+        if (!offenders.length) console.log('Aucun élément ne dépasse la viewport (seuil > 1px).');
+        console.groupEnd();
+      } catch (e) {
+        // Ne jamais casser la page si debug foire
+      }
+    }
+
+    runOverflowDebug();
+    window.addEventListener('resize', function() {
+      // rafraîchir le debug si activé
+      runOverflowDebug();
+    });
+
+    // === NAV / FOOTER LINKS (injection globale) ===
+    function ensureNavAndFooterLinks() {
+      // Navbar: ajouter "Audit LVS" sur toutes les pages FR si absent
+      var navbarMenus = document.querySelectorAll('.navbar-menu');
+      navbarMenus.forEach(function(menu) {
+        if (!menu) return;
+        var existing = menu.querySelector('a[href*="indice-performance-digitale-locale"]');
+        if (existing) return;
+
+        var li = document.createElement('li');
+        li.setAttribute('role', 'none');
+        var a = document.createElement('a');
+        a.href = 'indice-performance-digitale-locale.html';
+        a.className = 'navbar-link';
+        a.setAttribute('role', 'menuitem');
+        a.textContent = 'Audit LVS';
+        li.appendChild(a);
+
+        // Insérer après "Sites & Branding" si possible, sinon avant "Réalisations", sinon avant "Contact"
+        var anchorAfter = menu.querySelector('a[href$="sites-branding.html"]') || menu.querySelector('a[href$="realisations.html"]');
+        if (anchorAfter && anchorAfter.parentElement && anchorAfter.parentElement.parentElement === menu) {
+          anchorAfter.parentElement.insertAdjacentElement('afterend', li);
+        } else {
+          var contact = menu.querySelector('a[href$="contact.html"]');
+          if (contact && contact.parentElement && contact.parentElement.parentElement === menu) {
+            contact.parentElement.insertAdjacentElement('beforebegin', li);
+          } else {
+            menu.appendChild(li);
+          }
+        }
+      });
+
+      // Footer: ajouter "Indice LVS" dans la colonne Services si absent
+      document.querySelectorAll('.footer-col').forEach(function(col) {
+        var title = col.querySelector('h4');
+        if (!title) return;
+        var t = (title.textContent || '').trim().toLowerCase();
+        if (t !== 'services') return;
+        var list = col.querySelector('ul.footer-links');
+        if (!list) return;
+        if (list.querySelector('a[href*="indice-performance-digitale-locale"]')) return;
+
+        var liS = document.createElement('li');
+        var aS = document.createElement('a');
+        aS.href = 'indice-performance-digitale-locale.html';
+        aS.className = 'footer-link';
+        aS.textContent = 'Indice LVS';
+        liS.appendChild(aS);
+        list.insertAdjacentElement('afterbegin', liS);
+      });
+    }
+
+    ensureNavAndFooterLinks();
+
     // === MENU MOBILE ===
     const navCenter = document.querySelector('.nav-center');
     const navbarToggles = document.querySelectorAll('.navbar-toggle');

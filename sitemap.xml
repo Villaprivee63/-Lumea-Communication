@@ -238,6 +238,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/realisations.html"/>
   </url>
   <url>
+    <loc>https://lumeacommunication.fr/fr/indice-performance-digitale-locale.html</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lumeacommunication.ch/es/realizaciones.html</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -254,6 +260,16 @@
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/realisations.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/realisation-glamup.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/realizaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/realisations.html"/>
+  </url>
+  <url>
+    <loc>https://lumeacommunication.fr/fr/realisation-ab-concept-auvergne.html</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/realisation-ab-concept-auvergne.html"/>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/realizaciones.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/realisations.html"/>
   </url>
