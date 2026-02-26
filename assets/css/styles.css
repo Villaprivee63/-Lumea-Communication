@@ -87,6 +87,17 @@
   --z-sticky: 1020;
   --z-modal: 1030;
   --z-cookie: 1040;
+
+  /* Stabilité layout (CLS) */
+  --header-min-h: 72px;
+  --hero-min-h: 90vh;
+  --hero-min-h-svh: 90svh;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-min-h: 72px; /* garde une hauteur stable (évite les “jumps”) */
+  }
 }
 
 /* === RESET & BASE === */
@@ -380,6 +391,7 @@ main.page-content .mb-lg {
   padding: var(--spacing-sm) 0;
   width: 100%;
   overflow-x: hidden;
+  min-height: var(--header-min-h);
 }
 
 /* === BANNIÈRE RÉALISATIONS (sous le header) === */
@@ -492,6 +504,7 @@ main.page-content .mb-lg {
   justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
+  min-height: calc(var(--header-min-h) - (var(--spacing-sm) * 2));
 }
 
 .nav-left {
@@ -1386,7 +1399,7 @@ main.page-content .mb-lg {
   right: auto;
   margin-left: 0;
   margin-right: 0;
-  min-height: 90vh;
+  min-height: var(--hero-min-h);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1395,6 +1408,13 @@ main.page-content .mb-lg {
   background-repeat: no-repeat;
   overflow: hidden;
   padding: var(--spacing-2xl) 0;
+}
+
+/* iOS/Safari: `vh` varie avec la barre d’adresse -> CLS au scroll. On fixe sur `svh` si supporté. */
+@supports (height: 100svh) {
+  .hero {
+    min-height: var(--hero-min-h-svh);
+  }
 }
 
 .hero::before {
