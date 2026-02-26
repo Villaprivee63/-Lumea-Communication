@@ -390,7 +390,9 @@ main.page-content .mb-lg {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding: var(--spacing-sm) 0;
   width: 100%;
-  overflow-x: hidden;
+  /* Important: le dropdown doit pouvoir dépasser le header */
+  overflow: visible;
+  isolation: isolate;
   min-height: var(--header-min-h);
 }
 
@@ -505,6 +507,7 @@ main.page-content .mb-lg {
   width: 100%;
   box-sizing: border-box;
   min-height: calc(var(--header-min-h) - (var(--spacing-sm) * 2));
+  overflow: visible;
 }
 
 .nav-left {
@@ -554,7 +557,7 @@ main.page-content .mb-lg {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
-  z-index: calc(var(--z-sticky) + 5);
+  z-index: calc(var(--z-sticky) + 50);
   list-style: none;
   margin: 0;
   opacity: 0;
