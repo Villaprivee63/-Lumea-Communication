@@ -2,87 +2,224 @@
 <html lang="fr-FR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sites web premium & branding : vitrine, e-commerce, identité visuelle. Basés à Clermont-Ferrand (Puy-de-Dôme), projets partout en France. Design, SEO, performance et conversion.">
-  <meta name="keywords" content="création site web France, site vitrine PME, e-commerce France, création logo, charte graphique, branding PME, refonte site web, agence web France">
+  <!-- AJOUT MOBILE/SEO: viewport mobile-first + zoom accessible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <!-- AJOUT SEO ON-PAGE: description légèrement raccourcie, intention claire -->
+  <meta name="description" content="Création de site vitrine, e-commerce et branding premium à Clermont-Ferrand (63) et partout en France. Design, SEO, performance et conversion pour PME.">
+  <!-- AJOUT SEO: meta keywords retirée (inutile pour Google, évite le bruit) -->
   <meta name="author" content="Luméa Communication – France">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="geo.region" content="FR">
+  <!-- AJOUT SEO LOCAL -->
+  <meta name="geo.placename" content="Clermont-Ferrand">
+  <meta name="geo.position" content="45.7772;3.087">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lumeacommunication.fr/fr/sites-branding.html">
-  <meta property="og:title" content="Sites web & Branding premium | Clermont-Ferrand | Luméa">
-  <meta property="og:description" content="Vitrine, e-commerce, identité visuelle. Basés à Clermont-Ferrand (Puy-de-Dôme), projets partout en France. Design premium + SEO + conversion.">
-  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-sites-branding.jpg">
-  <meta property="og:image:alt" content="Sites web et branding premium pour PME françaises">
+  <meta property="og:title" content="Création site vitrine & branding à Clermont-Ferrand (63) | France | Luméa">
+  <meta property="og:description" content="Création de site vitrine, e-commerce et branding premium à Clermont-Ferrand (63) et partout en France. Design, SEO, performance et conversion pour PME et dirigeants.">
+  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-sites-branding.webp">
+  <meta property="og:image:alt" content="Création de site vitrine et branding premium à Clermont-Ferrand (63) pour PME">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Luméa Communication – France">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://lumeacommunication.fr/fr/sites-branding.html">
-  <meta name="twitter:title" content="Sites web & Branding premium | Clermont-Ferrand | Luméa">
-  <meta name="twitter:description" content="Vitrine, e-commerce, identité visuelle. Basés à Clermont-Ferrand (Puy-de-Dôme), projets partout en France.">
-  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-sites-branding.jpg">
+  <meta name="twitter:title" content="Création site vitrine & branding à Clermont-Ferrand (63) | France | Luméa">
+  <meta name="twitter:description" content="Création de site vitrine, e-commerce et branding premium à Clermont-Ferrand (63) et partout en France. Design, SEO, performance et conversion.">
+  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-sites-branding.webp">
   
   <link rel="canonical" href="https://lumeacommunication.fr/fr/sites-branding.html">
-    <!-- Hreflang -->
-  <link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/sites-branding.html">
-  <link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/sites-branding.html">
-  <link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/sitios-branding.html">
-  <link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/sites-branding.html">
-    <title>Sites web & Branding premium | Clermont-Ferrand | Luméa</title>
+  <!-- Site FR-only : pas de hreflang -->
+  <meta name="theme-color" content="#0a0a0a">
+  <!-- AJOUT SEO ON-PAGE: title plus court (moins de troncature) -->
+  <title>Sites web & branding – Clermont-Ferrand (63) | Luméa</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="../assets/img/logo/logo.jpg">
-  <link rel="apple-touch-icon" href="../assets/img/logo/logo.jpg">
+  <!-- AJOUT PERF: assets absolus prod + fallback local -->
+  <link rel="icon" type="image/jpeg" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
+  <link rel="apple-touch-icon" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
   
-  <!-- Structured Data -->
+  <!-- AJOUT SCHEMA 2026: JSON-LD unique @graph (LocalBusiness + Offers) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Création de sites web et branding",
-    "provider": {
-      "@type": "Organization",
-      "name": "Luméa Communication – France",
-      "url": "https://lumeacommunication.fr/fr"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Clermont-Ferrand" },
-      { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" },
-      { "@type": "Country", "name": "France" }
-    ],
-    "description": "Sites web premium & branding : vitrine, e-commerce, logos, chartes graphiques. Basés à Clermont-Ferrand (Puy-de-Dôme), projets partout en France. Design, SEO, performance, conversion."
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Accueil",
-        "item": "https://lumeacommunication.fr/fr/"
+        "@id": "https://lumeacommunication.fr/fr/#business",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "name": "Luméa Communication – France",
+        "url": "https://lumeacommunication.fr/fr/",
+        "logo": "https://lumeacommunication.fr/assets/img/logo/logo.jpg",
+        "image": "https://lumeacommunication.fr/assets/img/photos/hero-sites-branding.webp",
+        "description": "Création de site vitrine, e-commerce et branding premium à Clermont-Ferrand (63) et partout en France. Design, SEO, performance et conversion pour PME et dirigeants.",
+        "telephone": "+33663783513",
+        "email": "lumeasolution@outlook.fr",
+        "priceRange": "Sur devis",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Clermont-Ferrand",
+          "addressRegion": "Auvergne-Rhône-Alpes",
+          "postalCode": "63000",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.7772,
+          "longitude": 3.087
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Clermont-Ferrand" },
+          { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" },
+          { "@type": "Country", "name": "France" }
+        ],
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.7772,
+            "longitude": 3.087
+          },
+          "geoRadius": "100 km"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "12:30",
+            "closes": "19:00"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+33663783513",
+            "email": "lumeasolution@outlook.fr",
+            "contactType": "sales",
+            "areaServed": "FR",
+            "availableLanguage": ["fr"]
+          }
+        ],
+        "sameAs": [
+          "https://share.google/6q08mZ9dKiHr7hZua",
+          "https://www.linkedin.com/in/"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Site vitrine professionnel",
+            "description": "Un site vitrine premium qui renforce votre crédibilité et génère des opportunités business.",
+            "url": "https://lumeacommunication.fr/fr/sites-branding.html",
+            "areaServed": "France"
+          },
+          {
+            "@type": "Offer",
+            "name": "Site e-commerce performant",
+            "description": "Une boutique en ligne sécurisée avec tunnel de vente optimisé pour vendre en ligne avec confiance.",
+            "url": "https://lumeacommunication.fr/fr/sites-branding.html",
+            "areaServed": "France"
+          },
+          {
+            "@type": "Offer",
+            "name": "Création de logo premium",
+            "description": "Un logo unique et mémorable, adapté à tous les supports, aligné avec votre positionnement.",
+            "url": "https://lumeacommunication.fr/fr/sites-branding.html",
+            "areaServed": "France"
+          },
+          {
+            "@type": "Offer",
+            "name": "Logo & charte graphique complète",
+            "description": "Une identité visuelle cohérente (palette, typographies, règles d’usage) sur tous vos supports.",
+            "url": "https://lumeacommunication.fr/fr/sites-branding.html",
+            "areaServed": "France"
+          },
+          {
+            "@type": "Offer",
+            "name": "Refonte & rebranding stratégique",
+            "description": "Moderniser votre image et votre site avec une approche structurée, durable et orientée résultats.",
+            "url": "https://lumeacommunication.fr/fr/sites-branding.html",
+            "areaServed": "France"
+          }
+        ]
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Sites & Branding",
-        "item": "https://lumeacommunication.fr/fr/sites-branding.html"
+        "@id": "https://lumeacommunication.fr/fr/#website",
+        "@type": "WebSite",
+        "name": "Luméa Communication – France",
+        "url": "https://lumeacommunication.fr/fr/",
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@id": "https://lumeacommunication.fr/fr/sites-branding.html#webpage",
+        "@type": "WebPage",
+        "name": "Création site vitrine & branding à Clermont-Ferrand (63) | France | Luméa",
+        "url": "https://lumeacommunication.fr/fr/sites-branding.html",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://lumeacommunication.fr/fr/#website" },
+        "about": { "@id": "https://lumeacommunication.fr/fr/#business" }
+      },
+      {
+        "@id": "https://lumeacommunication.fr/fr/sites-branding.html#breadcrumb",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://lumeacommunication.fr/fr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Sites & Branding",
+            "item": "https://lumeacommunication.fr/fr/sites-branding.html"
+          }
+        ]
       }
     ]
   }
   </script>
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="../assets/css/styles.css" as="style">
-  <link rel="preload" href="../assets/img/photos/hero-sites-branding.jpg" as="image" fetchpriority="high">
+  <!-- AJOUT PERF: preconnect + assets absolus (prod) + fallback local -->
+  <link rel="preconnect" href="https://lumeacommunication.fr" crossorigin>
+  <link rel="dns-prefetch" href="//lumeacommunication.fr">
+  <link rel="preload" href="https://lumeacommunication.fr/assets/css/styles.css" as="style" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+  <link rel="preload" href="https://lumeacommunication.fr/assets/img/photos/hero-sites-branding.webp" as="image" fetchpriority="high" onerror="this.onerror=null;this.href='../assets/img/photos/hero-sites-branding.webp'">
   
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://lumeacommunication.fr/assets/css/styles.css" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+
+  <!-- AJOUT MOBILE/UX: overrides très ciblés (sans refonte) -->
+  <style>
+    @media (max-width: 640px) {
+      .hero {
+        min-height: 70vh !important;
+        padding: var(--spacing-lg) 0 !important;
+      }
+      .hero-content {
+        padding: var(--spacing-lg) var(--container-padding) !important;
+      }
+      .hero-cta .btn {
+        min-height: 48px;
+        padding: 1rem 1.5rem;
+        font-size: clamp(1rem, 4vw, 1.125rem);
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Skip to main content -->
@@ -103,51 +240,79 @@
       <div class="nav-center">
         <ul class="navbar-menu" role="menubar">
           <li role="none"><a href="index.html" class="navbar-link" role="menuitem">Accueil</a></li>
-          <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting</a></li>
-          <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
-          <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
-          <li role="none"><a href="sites-branding.html" class="navbar-link active" role="menuitem">Sites & Branding</a></li>
+          <li role="none" class="nav-dropdown">
+            <a href="services.html" class="navbar-link nav-dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav-dropdown-menu" role="menu" aria-label="Services">
+              <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem" aria-current="page">Sites & Branding</a></li>
+              <li role="none"><a href="consulting.html#seo" class="navbar-link" role="menuitem">Référencement / SEO</a></li>
+              <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+              <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
+              <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting / Stratégie</a></li>
+              <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
+            </ul>
+          </li>
           <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem">Réalisations</a></li>
-          <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+          <li role="none"><a href="indice-performance-digitale-locale.html" class="navbar-link" role="menuitem">Audit LVS</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
-          <li role="none"><a href="contact.html" class="navbar-link" role="menuitem">Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <div class="country-selector-nav">
-          <a href="../ch/index.html" class="country-link" title="Suisse">🇨🇭</a>
-          <a href="index.html" class="country-link active" title="France">🇫🇷</a>
-          <a href="../es/index.html" class="country-link" title="España">🇪🇸</a>
-        </div>
+        <a href="contact.html" class="btn btn-primary navbar-cta" aria-label="Contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <div class="realisations-banner" role="banner">
-    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
-    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
-  </div>
-
+  
   <!-- Hero Full Screen -->
   <main id="main-content" class="page-content">
-  <section class="hero" style="background-image: url('../assets/img/photos/hero-sites-branding.jpg'); min-height: 100vh;" role="banner" aria-label="Image hero - Sites web et branding premium">
+  <!-- AJOUT MOBILE/PERF/A11Y: hero en <img> (alt + CLS maîtrisé) -->
+  <section class="hero" style="min-height: 100vh;" role="banner" aria-label="Image hero - Sites web et branding premium">
+    <img
+      class="hero-bg"
+      src="https://lumeacommunication.fr/assets/img/photos/hero-sites-branding.webp"
+      srcset="https://lumeacommunication.fr/assets/img/photos/hero-sites-branding.webp 1200w"
+      sizes="100vw"
+      width="1200"
+      height="800"
+      alt="Création de site vitrine premium à Clermont-Ferrand (63) : design, SEO et conversion pour PME"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      onerror="this.onerror=null;this.src='../assets/img/photos/hero-sites-branding.webp';"
+    >
     <div class="hero-content">
       <h1 class="hero-title">Sites web & Branding premium</h1>
       <p class="hero-subtitle">Une présence digitale qui reflète votre excellence. Sites professionnels et identité visuelle forte pour PME et dirigeants français.</p>
       <p class="hero-subtitle" style="font-size: var(--font-size-base); margin-top: calc(var(--spacing-md) * -0.5);">Basés à Clermont-Ferrand (Puy-de-Dôme) · projets partout en France</p>
       <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary btn-large">Demander un devis</a>
-        <a href="#realisations" class="btn btn-secondary btn-large">Voir nos réalisations</a>
+        <a href="contact.html" class="btn btn-primary btn-large" aria-label="Demander un devis">Demander un devis</a>
+        <a href="#realisations" class="btn btn-secondary btn-large" aria-label="Voir nos réalisations">Voir nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AJOUT MAILLAGE INTERNE: mini table des sections (ancres) -->
+  <section class="section section-full" aria-label="Sommaire de la page">
+    <div class="container">
+      <div class="fade-in" style="max-width: 980px; margin: 0 auto;">
+        <p class="text-muted" style="margin-bottom: var(--spacing-sm);">Aller plus vite :</p>
+        <ul style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm); list-style: none; padding: 0; margin: 0;">
+          <li><a href="#offres" aria-label="Aller à nos offres">Offres</a></li>
+          <li><a href="#processus" aria-label="Aller à notre processus">Processus</a></li>
+          <li><a href="#etudes-de-cas" aria-label="Aller aux études de cas">Études de cas</a></li>
+          <li><a href="#faq" aria-label="Aller à la FAQ">FAQ</a></li>
+          <li><a href="#contact-cta" aria-label="Aller au contact">Contact</a></li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- Section Site Vitrine -->
-  <section class="section section-large section-full">
+  <section id="vitrine" class="section section-large section-full" aria-label="Service : site vitrine">
     <div class="container">
       <div class="split-section fade-in">
         <div>
-          <img src="../assets/img/photos/site-vitrine0.jpg" alt="Site vitrine professionnel" class="split-image" loading="lazy" onerror="this.style.display='none';">
+          <img src="https://lumeacommunication.fr/assets/img/photos/site-vitrine0.webp" alt="Création de site vitrine premium à Clermont-Ferrand (63)" class="split-image" loading="lazy" decoding="async" width="1200" height="800" onerror="this.onerror=null;this.src='../assets/img/photos/site-vitrine0.webp';">
         </div>
         <div class="split-content">
           <h2>Site vitrine professionnel</h2>
@@ -176,11 +341,11 @@
   </section>
 
   <!-- Section E-commerce -->
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="ecommerce" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-label="Service : site e-commerce">
     <div class="container">
       <div class="split-section reverse fade-in">
         <div>
-          <img src="../assets/img/photos/site-ecommerce0.jpg" alt="Site e-commerce performant" class="split-image" loading="lazy" onerror="this.style.display='none';">
+          <img src="https://lumeacommunication.fr/assets/img/photos/site-ecommerce0.webp" alt="Création de site e-commerce performant pour PME en France" class="split-image" loading="lazy" decoding="async" width="1200" height="800" onerror="this.onerror=null;this.src='../assets/img/photos/site-ecommerce0.webp';">
         </div>
         <div class="split-content">
           <h2>Site e-commerce performant</h2>
@@ -201,11 +366,11 @@
   </section>
 
   <!-- Section Création Logo -->
-  <section class="section section-large section-full">
+  <section id="logo" class="section section-large section-full" aria-label="Service : création de logo">
     <div class="container">
       <div class="split-section fade-in">
         <div>
-          <img src="../assets/img/photos/logo-creation0.jpg" alt="Création de logo premium" class="split-image" loading="lazy" onerror="this.style.display='none';">
+          <img src="https://lumeacommunication.fr/assets/img/photos/logo-creation0.webp" alt="Création de logo premium pour PME à Clermont-Ferrand (63)" class="split-image" loading="lazy" decoding="async" width="1200" height="800" onerror="this.onerror=null;this.src='../assets/img/photos/logo-creation0.webp';">
         </div>
         <div class="split-content">
           <h2>Création de logo premium</h2>
@@ -226,11 +391,11 @@
   </section>
 
   <!-- Section Logo & Charte Graphique -->
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="charte" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-label="Service : charte graphique">
     <div class="container">
       <div class="split-section reverse fade-in">
         <div>
-          <img src="../assets/img/photos/logo-charte.jpg" alt="Logo et charte graphique" class="split-image" loading="lazy" onerror="this.style.display='none';">
+          <img src="https://lumeacommunication.fr/assets/img/photos/logo-charte.webp" alt="Logo et charte graphique complète pour PME en France" class="split-image" loading="lazy" decoding="async" width="1200" height="800" onerror="this.onerror=null;this.src='../assets/img/photos/logo-charte.webp';">
         </div>
         <div class="split-content">
           <h2>Logo & charte graphique complète</h2>
@@ -251,11 +416,11 @@
   </section>
 
   <!-- Section Refonte & Rebranding -->
-  <section class="section section-large section-full">
+  <section id="refonte" class="section section-large section-full" aria-label="Service : refonte et rebranding">
     <div class="container">
       <div class="split-section fade-in">
         <div>
-          <img src="../assets/img/photos/refonte-rebranding0.jpg" alt="Refonte et rebranding" class="split-image" loading="lazy" onerror="this.style.display='none';">
+          <img src="https://lumeacommunication.fr/assets/img/photos/refonte-rebranding0.webp" alt="Refonte de site et rebranding stratégique à Clermont-Ferrand (63)" class="split-image" loading="lazy" decoding="async" width="1200" height="800" onerror="this.onerror=null;this.src='../assets/img/photos/refonte-rebranding0.webp';">
         </div>
         <div class="split-content">
           <h2>Refonte & rebranding stratégique</h2>
@@ -276,7 +441,7 @@
   </section>
 
   <!-- Section Process -->
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="processus" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-label="Processus de travail">
     <div class="container">
       <div class="fade-in">
         <h2 class="text-center mb-lg">Notre processus</h2>
@@ -286,6 +451,7 @@
             <div class="timeline-content">
               <h4>Audit</h4>
               <p>Positionnement, objectifs, analyse de l'existant.</p>
+              <p class="text-muted" style="margin-top: var(--spacing-xs); font-size: var(--font-size-sm);">Durée typique : 1–3 jours (selon périmètre).</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -293,6 +459,7 @@
             <div class="timeline-content">
               <h4>Direction artistique</h4>
               <p>Moodboard, UI, identité visuelle, wireframes.</p>
+              <p class="text-muted" style="margin-top: var(--spacing-xs); font-size: var(--font-size-sm);">Durée typique : 3–10 jours (selon allers-retours).</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -300,6 +467,7 @@
             <div class="timeline-content">
               <h4>Production</h4>
               <p>Développement site, création branding, intégration.</p>
+              <p class="text-muted" style="margin-top: var(--spacing-xs); font-size: var(--font-size-sm);">Durée typique : 1–4 semaines (selon pages, fonctionnalités, contenus).</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -307,6 +475,7 @@
             <div class="timeline-content">
               <h4>Lancement</h4>
               <p>SEO, tracking, itérations, formation équipe.</p>
+              <p class="text-muted" style="margin-top: var(--spacing-xs); font-size: var(--font-size-sm);">Durée typique : 2–7 jours (tests, mises au point, formation).</p>
             </div>
           </div>
         </div>
@@ -315,7 +484,7 @@
   </section>
 
   <!-- Section Packs -->
-  <section class="section section-large section-full">
+  <section id="offres" class="section section-large section-full" aria-label="Offres et packs">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Nos offres</h2>
@@ -381,8 +550,8 @@
   </section>
 
   <!-- Section Confiance -->
-  <section class="section section-large section-full" style="position: relative; min-height: 600px; display: flex; align-items: center;">
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url("../assets/img/photos/trust.jpg'); background-size: cover; background-position: center; opacity: 0.3;" role="img" aria-label="Engagements et confiance" onerror="this.style.display='none';"></div>
+  <section id="confiance" class="section section-large section-full" style="position: relative; min-height: 600px; display: flex; align-items: center;" aria-label="Confiance et engagements">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://lumeacommunication.fr/assets/img/photos/trust.webp'), url('../assets/img/photos/trust.webp'); background-size: cover; background-position: center; opacity: 0.3;" role="img" aria-label="Engagements et confiance"></div>
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: var(--gradient-overlay);"></div>
     <div class="container" style="position: relative; z-index: 2;">
       <div class="text-center mb-xl fade-in">
@@ -418,8 +587,163 @@
     </div>
   </section>
 
+  <!-- AJOUT SEO/CONVERSION: Études de cas -->
+  <div id="realisations" aria-hidden="true"></div>
+  <section id="etudes-de-cas" class="section section-large section-full" aria-labelledby="case-studies-title">
+    <div class="container">
+      <div class="text-center mb-xl fade-in">
+        <h2 id="case-studies-title">Études de cas (exemples concrets)</h2>
+        <p class="lead" style="max-width: 860px; margin: 0 auto;">Contexte, intervention, résultat — pour comprendre ce que vous obtenez.</p>
+      </div>
+
+      <div class="grid grid-3 fade-in" aria-label="Études de cas">
+        <div class="card">
+          <h3>PME locale (Clermont-Ferrand)</h3>
+          <p><strong>Contexte :</strong> site vitrine ancien, peu lisible sur mobile, peu de demandes entrantes.</p>
+          <p><strong>Intervention :</strong> refonte UI, structure Hn, CTA, performance mobile, maillage interne.</p>
+          <p><strong>Résultat :</strong> +15% à +30% de demandes qualifiées (ordre de grandeur). <!-- TODO: valider chiffres réels --></p>
+        </div>
+        <div class="card">
+          <h3>E-commerce (France)</h3>
+          <p><strong>Contexte :</strong> tunnel de vente peu fluide, pages lourdes, abandon panier.</p>
+          <p><strong>Intervention :</strong> optimisation parcours, rassurance, vitesse, tracking, pages produits.</p>
+          <p><strong>Résultat :</strong> baisse du taux d’abandon estimée (TODO) + meilleure conversion mobile. <!-- TODO: valider métriques --></p>
+        </div>
+        <div class="card">
+          <h3>Branding & repositionnement</h3>
+          <p><strong>Contexte :</strong> identité visuelle incohérente, message peu clair, manque de crédibilité.</p>
+          <p><strong>Intervention :</strong> logo, charte, guidelines, pages services, preuves et CTA.</p>
+          <p><strong>Résultat :</strong> image premium + meilleure compréhension de l’offre (TODO retours clients). <!-- TODO: valider --></p>
+        </div>
+      </div>
+
+      <div class="text-center fade-in" style="margin-top: var(--spacing-lg);">
+        <a href="realisations.html" class="btn btn-secondary btn-ghost" aria-label="Voir toutes nos réalisations">Voir toutes nos réalisations</a>
+        <a href="contact.html?subject=audit" class="btn btn-primary" aria-label="Demander un audit">Demander un audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AJOUT SEO/UX: Livrables & méthode (checklist) -->
+  <section id="livrables" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-labelledby="deliverables-title">
+    <div class="container">
+      <div class="text-center mb-xl fade-in">
+        <h2 id="deliverables-title">Livrables & méthode (ce que vous recevez)</h2>
+        <p class="lead" style="max-width: 860px; margin: 0 auto;">Une approche claire, des livrables concrets, et un site que vous pouvez piloter.</p>
+      </div>
+
+      <div class="grid grid-3 fade-in" aria-label="Liste des livrables">
+        <div class="card">
+          <h3>Design & contenu</h3>
+          <ul style="margin-left: 1.25rem;">
+            <li>Maquettes / direction artistique</li>
+            <li>Pages services structurées (H1/H2)</li>
+            <li>Microcopy orientée conversion</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>SEO & performance</h3>
+          <ul style="margin-left: 1.25rem;">
+            <li>Structure SEO (maillage, sémantique)</li>
+            <li>Optimisation mobile (CWV)</li>
+            <li>Indexabilité & hygiène technique</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Mesure & autonomie</h3>
+          <ul style="margin-left: 1.25rem;">
+            <li>Tracking (selon besoin)</li>
+            <li>Formation à la gestion</li>
+            <li>Checklist de mise en ligne</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fade-in" style="max-width: 980px; margin: var(--spacing-lg) auto 0;">
+        <p>Pour une vision rapide de votre visibilité locale, vous pouvez aussi démarrer par l’<a href="indice-performance-digitale-locale.html">Indice LVS</a>, ou suivre nos conseils dans le <a href="blog.html">blog</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AJOUT SEO/CONVERSION: FAQ (8–12 questions) -->
+  <section id="faq" class="section section-large section-full" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="text-center mb-xl fade-in">
+        <h2 id="faq-title">FAQ : sites web & branding (Clermont-Ferrand / France)</h2>
+        <p class="lead" style="max-width: 860px; margin: 0 auto;">Des réponses utiles, concrètes, sans détour.</p>
+      </div>
+
+      <div class="faq fade-in" aria-label="Questions fréquentes">
+        <div class="faq-item">
+          <button id="faq-q1" class="faq-question" aria-expanded="false" aria-controls="faq-a1" type="button">Quel budget prévoir pour un site vitrine premium ?</button>
+          <div id="faq-a1" class="faq-answer" role="region" aria-labelledby="faq-q1">
+            <p>Tout dépend du nombre de pages, du niveau de design, des contenus et du SEO. Nous travaillons <strong>sur devis</strong> après cadrage, pour un périmètre clair.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q2" class="faq-question" aria-expanded="false" aria-controls="faq-a2" type="button">En combien de temps un site peut-il être prêt ?</button>
+          <div id="faq-a2" class="faq-answer" role="region" aria-labelledby="faq-q2">
+            <p>On avance par étapes (audit, direction artistique, production, lancement). Les délais varient selon le périmètre et la réactivité sur les validations.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q3" class="faq-question" aria-expanded="false" aria-controls="faq-a3" type="button">Est-ce que vous faites du SEO local à Clermont-Ferrand ?</button>
+          <div id="faq-a3" class="faq-answer" role="region" aria-labelledby="faq-q3">
+            <p>Oui : structure des pages, sémantique, maillage interne, signaux locaux et performance mobile. Pour un diagnostic rapide, vous pouvez démarrer par l’<a href="indice-performance-digitale-locale.html">Indice LVS</a>.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q4" class="faq-question" aria-expanded="false" aria-controls="faq-a4" type="button">Qui est propriétaire du site et des fichiers ?</button>
+          <div id="faq-a4" class="faq-answer" role="region" aria-labelledby="faq-q4">
+            <p>Vous : le site et les livrables vous reviennent. Nous privilégions des bases propres, maintenables, et une autonomie réelle via formation.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q5" class="faq-question" aria-expanded="false" aria-controls="faq-a5" type="button">Proposez-vous une maintenance ?</button>
+          <div id="faq-a5" class="faq-answer" role="region" aria-labelledby="faq-q5">
+            <p>Oui, selon vos besoins : sécurité, évolutions, corrections, suivi performance. L’objectif est de pérenniser votre investissement.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q6" class="faq-question" aria-expanded="false" aria-controls="faq-a6" type="button">Peut-on faire un site e-commerce simple et efficace ?</button>
+          <div id="faq-a6" class="faq-answer" role="region" aria-labelledby="faq-q6">
+            <p>Oui : on se concentre sur l’essentiel (catalogue, paiement, rassurance, tunnel, mobile). Le but : vendre sans friction.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q7" class="faq-question" aria-expanded="false" aria-controls="faq-a7" type="button">Logo et charte : qu’est-ce qui est inclus ?</button>
+          <div id="faq-a7" class="faq-answer" role="region" aria-labelledby="faq-q7">
+            <p>Logo, déclinaisons, palette, typographies, règles d’usage et guide. Le tout pour une communication cohérente sur vos supports.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q8" class="faq-question" aria-expanded="false" aria-controls="faq-a8" type="button">Est-ce que vous travaillez uniquement en Auvergne ?</button>
+          <div id="faq-a8" class="faq-answer" role="region" aria-labelledby="faq-q8">
+            <p>Nous sommes basés à Clermont-Ferrand (Puy-de-Dôme) et accompagnons aussi des entreprises partout en France, en présentiel ou à distance.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q9" class="faq-question" aria-expanded="false" aria-controls="faq-a9" type="button">Comment démarre-t-on sans perdre de temps ?</button>
+          <div id="faq-a9" class="faq-answer" role="region" aria-labelledby="faq-q9">
+            <p>Le plus simple : un échange + un cadrage (audit). Vous pouvez nous écrire via <a href="contact.html?subject=audit">ce formulaire</a> et on vous répond rapidement.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button id="faq-q10" class="faq-question" aria-expanded="false" aria-controls="faq-a10" type="button">Où voir des exemples avant de décider ?</button>
+          <div id="faq-a10" class="faq-answer" role="region" aria-labelledby="faq-q10">
+            <p>Vous pouvez consulter nos <a href="realisations.html">réalisations</a> et parcourir le <a href="blog.html">blog</a> pour comprendre notre approche.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center fade-in" style="margin-top: var(--spacing-lg);">
+        <a href="contact.html" class="btn btn-primary btn-large" aria-label="Demander un devis">Demander un devis</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Final -->
-  <section class="section section-large section-full" style="background: var(--gradient-overlay); text-align: center; position: relative;">
+  <section id="contact-cta" class="section section-large section-full" style="background: var(--gradient-overlay); text-align: center; position: relative;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%); border-radius: 50%; z-index: 1;"></div>
     <div class="container" style="position: relative; z-index: 2;">
       <div class="fade-in">
@@ -474,6 +798,18 @@
             <li><a href="contact.html" class="footer-link">Formulaire de contact</a></li>
             <li class="footer-link" style="color: var(--color-text-muted);">France</li>
           </ul>
+          <!-- AJOUT SEO LOCAL: NAP visible (cohérent homepage/GBP) -->
+          <address style="font-style: normal; margin-top: var(--spacing-sm);">
+            <p class="footer-link" style="margin-bottom: var(--spacing-xs);">Clermont-Ferrand (63000) · Puy-de-Dôme · Auvergne-Rhône-Alpes</p>
+            <p style="margin-bottom: var(--spacing-xs);">
+              <a class="footer-link" href="tel:+33663783513" aria-label="Appeler Luméa Communication">06 63 78 35 13</a>
+              <span class="footer-link" style="margin: 0 var(--spacing-xs);">·</span>
+              <a class="footer-link" href="mailto:lumeasolution@outlook.fr" aria-label="Envoyer un email à Luméa Communication">lumeasolution@outlook.fr</a>
+            </p>
+            <p style="margin-bottom: 0;">
+              <a class="footer-link" href="https://share.google/6q08mZ9dKiHr7hZua" target="_blank" rel="noopener noreferrer" aria-label="Notre profil Google Business">Voir sur Google</a>
+            </p>
+          </address>
         </div>
       </div>
       <div class="footer-bottom">
@@ -493,8 +829,9 @@
     </div>
   </div>
 
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/analytics.js" defer></script>
+  <!-- AJOUT PERF: assets absolus + fallback local -->
+  <script src="https://lumeacommunication.fr/assets/js/main.js" defer onerror="this.onerror=null;this.src='../assets/js/main.js';"></script>
+  <script src="https://lumeacommunication.fr/assets/js/analytics.js" defer onerror="this.onerror=null;this.src='../assets/js/analytics.js';"></script>
 </body>
 </html>
 
