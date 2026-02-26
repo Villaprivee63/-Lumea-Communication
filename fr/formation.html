@@ -2,20 +2,26 @@
 <html lang="fr-FR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Formation digitale Shopify/WordPress/SEO pour PME. Autonomie, méthodes, checklists. Basés à Clermont-Ferrand (Puy-de-Dôme), formations partout en France (sur site & visio).">
-  <meta name="keywords" content="formation Shopify France, formation WordPress, formation SEO, formation digitale PME, formation e-commerce, formation organisation digitale, cours Shopify France">
+  <!-- AJOUT MOBILE/SEO: viewport mobile-first + zoom accessible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <!-- AJOUT SEO ON-PAGE: intention + local/national -->
+  <meta name="description" content="Formation pratique Shopify, WordPress, SEO et organisation digitale pour PME. Autonomie, méthodes et checklists. Basés à Clermont-Ferrand (63, Puy-de-Dôme), formations partout en France (sur site & visio).">
+  <!-- AJOUT SEO: meta keywords retirée (inutile pour Google, évite le bruit) -->
   <meta name="author" content="Luméa Communication – France">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="geo.region" content="FR">
+  <!-- AJOUT SEO LOCAL -->
+  <meta name="geo.placename" content="Clermont-Ferrand">
+  <meta name="geo.position" content="45.7772;3.087">
+  <meta name="theme-color" content="#0a0a0a">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lumeacommunication.fr/fr/formation.html">
   <meta property="og:title" content="Formation Shopify & SEO | Clermont-Ferrand (63) | Luméa">
-  <meta property="og:description" content="Formations Shopify/WordPress/SEO pour PME. Basés à Clermont-Ferrand (Puy-de-Dôme), formations partout en France (sur site & visio).">
-  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-formation.jpg">
-  <meta property="og:image:alt" content="Formation digitale pour PME françaises">
+  <meta property="og:description" content="Formations Shopify, WordPress, SEO et organisation digitale. Clermont-Ferrand (63) · partout en France (sur site & visio).">
+  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-formation.webp">
+  <meta property="og:image:alt" content="Formation digitale pratique à Clermont-Ferrand (63) pour PME">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Luméa Communication – France">
   
@@ -24,19 +30,16 @@
   <meta name="twitter:url" content="https://lumeacommunication.fr/fr/formation.html">
   <meta name="twitter:title" content="Formation Shopify & SEO | Clermont-Ferrand (63) | Luméa">
   <meta name="twitter:description" content="Formations Shopify/WordPress/SEO pour PME. Basés à Clermont-Ferrand (Puy-de-Dôme), partout en France.">
-  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-formation.jpg">
+  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-formation.webp">
   
   <link rel="canonical" href="https://lumeacommunication.fr/fr/formation.html">
-    <!-- Hreflang -->
-  <link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/formation.html">
-  <link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/formation.html">
-  <link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/formacion.html">
-  <link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/formation.html">
+  <!-- Site FR-only : pas de hreflang -->
     <title>Formation Shopify & SEO | Clermont-Ferrand (63) | Luméa</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="../assets/img/logo/logo.jpg">
-  <link rel="apple-touch-icon" href="../assets/img/logo/logo.jpg">
+  <!-- AJOUT PERF: assets absolus prod + fallback local -->
+  <link rel="icon" type="image/jpeg" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
+  <link rel="apple-touch-icon" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -121,10 +124,48 @@
   </script>
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="../assets/css/styles.css" as="style">
-  <link rel="preload" href="../assets/img/photos/hero-formation.jpg" as="image" fetchpriority="high">
+  <!-- AJOUT PERF: preconnect + preload (sans multiplier) -->
+  <link rel="preconnect" href="https://lumeacommunication.fr" crossorigin>
+  <link rel="dns-prefetch" href="//lumeacommunication.fr">
+  <link rel="preload" href="https://lumeacommunication.fr/assets/css/styles.css" as="style" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+  <link rel="preload" href="https://lumeacommunication.fr/assets/img/photos/hero-formation.webp" as="image" fetchpriority="high" onerror="this.onerror=null;this.href='../assets/img/photos/hero-formation.webp'">
   
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://lumeacommunication.fr/assets/css/styles.css" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+
+  <!-- AJOUT MOBILE/UX: overrides très ciblés (sans refonte) -->
+  <style>
+    @media (max-width: 640px) {
+      .hero {
+        min-height: 70vh !important;
+        padding: var(--spacing-lg) 0 !important;
+      }
+      .hero-content {
+        padding: var(--spacing-lg) var(--container-padding) !important;
+      }
+      .hero-cta .btn {
+        min-height: 48px;
+        padding: 1rem 1.5rem;
+        font-size: clamp(1rem, 4vw, 1.125rem);
+      }
+      .grid.grid-2,
+      .grid.grid-3,
+      .grid.grid-4 {
+        grid-template-columns: 1fr !important;
+      }
+      .split-section {
+        flex-direction: column !important;
+      }
+    }
+    /* Table: lisible sur mobile sans casser le design */
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table {
+      width: 100%;
+      min-width: 720px;
+    }
+  </style>
 </head>
 <body>
   <!-- Skip to main content -->
@@ -140,38 +181,50 @@
   <nav class="navbar" role="navigation" aria-label="Navigation principale">
     <div class="nav-inner">
       <div class="nav-left">
-        <button class="navbar-toggle" aria-label="Menu mobile" aria-expanded="false">☰</button>
+        <!-- AJOUT A11Y: aria-controls relie le bouton au menu -->
+        <button class="navbar-toggle" aria-label="Menu mobile" aria-expanded="false" aria-controls="primary-nav">☰</button>
       </div>
-      <div class="nav-center">
+      <div class="nav-center" id="primary-nav">
         <ul class="navbar-menu" role="menubar">
           <li role="none"><a href="index.html" class="navbar-link" role="menuitem">Accueil</a></li>
-          <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting</a></li>
-          <li role="none"><a href="formation.html" class="navbar-link active" role="menuitem">Formation</a></li>
-          <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
-          <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+          <li role="none" class="nav-dropdown">
+            <a href="services.html" class="navbar-link nav-dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav-dropdown-menu" role="menu" aria-label="Services">
+              <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+              <li role="none"><a href="consulting.html#seo" class="navbar-link" role="menuitem">Référencement / SEO</a></li>
+              <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+              <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
+              <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting / Stratégie</a></li>
+              <li role="none"><a href="formation.html" class="navbar-link" role="menuitem" aria-current="page">Formation</a></li>
+            </ul>
+          </li>
           <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem">Réalisations</a></li>
-          <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+          <li role="none"><a href="indice-performance-digitale-locale.html" class="navbar-link" role="menuitem">Audit LVS</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
-          <li role="none"><a href="contact.html" class="navbar-link" role="menuitem">Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <div class="country-selector-nav">
-          <a href="../ch/index.html" class="country-link" title="Suisse">🇨🇭</a>
-          <a href="index.html" class="country-link active" title="France">🇫🇷</a>
-          <a href="../es/index.html" class="country-link" title="España">🇪🇸</a>
-        </div>
+        <a href="contact.html" class="btn btn-primary navbar-cta" aria-label="Contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <div class="realisations-banner" role="banner">
-    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
-    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
-  </div>
-
   <main id="main-content">
-  <section class="hero" style="background-image: url('../assets/img/photos/hero-formation.jpg');" role="banner" aria-label="Image hero - Formation digitale">
+  <!-- AJOUT MOBILE/PERF/A11Y: hero en <img> (alt + CLS maîtrisé) -->
+  <section class="hero" style="min-height: 100vh;" role="banner" aria-label="Image hero - Formation digitale">
+    <img
+      class="hero-bg"
+      src="https://lumeacommunication.fr/assets/img/photos/hero-formation.webp"
+      srcset="https://lumeacommunication.fr/assets/img/photos/hero-formation.webp 1200w"
+      sizes="100vw"
+      width="1200"
+      height="800"
+      alt="Formation Shopify, WordPress et SEO à Clermont-Ferrand (63) : autonomie digitale pour PME"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      onerror="this.onerror=null;this.src='../assets/img/photos/hero-formation.webp';"
+    >
     <div class="hero-content">
       <h1 class="hero-title">Formation pratique</h1>
       <p class="hero-subtitle">Autonomie sur vos outils digitaux</p>
@@ -179,7 +232,23 @@
     </div>
   </section>
 
-  <section class="section section-large section-full">
+  <!-- AJOUT MAILLAGE INTERNE: sommaire (ancres) -->
+  <section class="section section-full" aria-label="Sommaire de la page">
+    <div class="container">
+      <div class="fade-in" style="max-width: 980px; margin: 0 auto;">
+        <p class="text-muted" style="margin-bottom: var(--spacing-sm);">Aller plus vite :</p>
+        <ul style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm); list-style: none; padding: 0; margin: 0;">
+          <li><a href="#parcours" aria-label="Aller au parcours">Parcours</a></li>
+          <li><a href="#format" aria-label="Aller au format">Format</a></li>
+          <li><a href="#programme" aria-label="Aller au programme">Programme</a></li>
+          <li><a href="#faq" aria-label="Aller à la FAQ">FAQ</a></li>
+          <li><a href="#contact-cta" aria-label="Aller au contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="objectif" class="section section-large section-full" aria-label="Objectif">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Objectif : autonomie</h2>
@@ -192,13 +261,13 @@
           <p>Nos formations sont pratiques, accessibles et adaptées à votre rythme. Pas de jargon inutile, que du concret.</p>
         </div>
         <div>
-          <img src="../assets/img/photos/formation-2.jpg" alt="Formation pratique" class="split-image" loading="lazy" onerror="this.style.display='none';">
+          <img src="https://lumeacommunication.fr/assets/img/photos/formation-2.webp" alt="Formation pratique à Clermont-Ferrand pour PME : autonomie sur vos outils" class="split-image" loading="lazy" decoding="async" width="1200" height="800" onerror="this.onerror=null;this.src='../assets/img/photos/formation-2.webp';">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="parcours" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-label="Parcours de formation">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Parcours de formation</h2>
@@ -253,7 +322,7 @@
     </div>
   </section>
 
-  <section class="section section-large section-full">
+  <section id="format" class="section section-large section-full" aria-label="Format de formation">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Format</h2>
@@ -276,18 +345,19 @@
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="programme" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-label="Programme type">
     <div class="container">
       <div class="fade-in">
         <h2 class="text-center mb-lg">Programme type</h2>
-        <div style="overflow-x: auto;">
+        <div class="table-wrap">
           <table class="table">
             <thead>
               <tr>
-                <th>Module</th>
-                <th>Durée</th>
-                <th>Contenu</th>
-                <th>Livrables</th>
+                <!-- AJOUT A11Y: entêtes de colonnes -->
+                <th scope="col">Module</th>
+                <th scope="col">Durée</th>
+                <th scope="col">Contenu</th>
+                <th scope="col">Livrables</th>
               </tr>
             </thead>
             <tbody>
@@ -323,32 +393,33 @@
     </div>
   </section>
 
-  <section class="section section-large section-full">
+  <section id="faq" class="section section-large section-full" aria-labelledby="faq-title">
     <div class="container">
       <div class="fade-in">
-        <h2 class="text-center mb-lg">Questions fréquentes</h2>
+        <h2 id="faq-title" class="text-center mb-lg">Questions fréquentes</h2>
         <div class="faq">
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">Faut-il avoir des connaissances techniques ?</button>
-            <div class="faq-answer">
+            <!-- AJOUT A11Y: association question/réponse -->
+            <button id="faq-q1" class="faq-question" aria-expanded="false" aria-controls="faq-a1" type="button">Faut-il avoir des connaissances techniques ?</button>
+            <div id="faq-a1" class="faq-answer" role="region" aria-labelledby="faq-q1">
               <p>Non. Nos formations sont accessibles aux débutants. Nous partons des bases et progressons étape par étape. Si vous savez utiliser un ordinateur et naviguer sur internet, vous pouvez suivre nos formations.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">Peut-on former toute l'équipe ?</button>
-            <div class="faq-answer">
+            <button id="faq-q2" class="faq-question" aria-expanded="false" aria-controls="faq-a2" type="button">Peut-on former toute l'équipe ?</button>
+            <div id="faq-a2" class="faq-answer" role="region" aria-labelledby="faq-q2">
               <p>Oui. Nous proposons des formations en groupe (jusqu'à 8 personnes) pour former votre équipe simultanément. C'est plus efficace et plus économique. Nous adaptons le contenu aux rôles de chacun.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">Fournissez-vous de la documentation ?</button>
-            <div class="faq-answer">
+            <button id="faq-q3" class="faq-question" aria-expanded="false" aria-controls="faq-a3" type="button">Fournissez-vous de la documentation ?</button>
+            <div id="faq-a3" class="faq-answer" role="region" aria-labelledby="faq-q3">
               <p>Oui. Chaque formation inclut une documentation complète : guides pas à pas, captures d'écran, checklists, ressources complémentaires. Vous pourrez vous y référer après la formation.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">Y a-t-il un suivi après la formation ?</button>
-            <div class="faq-answer">
+            <button id="faq-q4" class="faq-question" aria-expanded="false" aria-controls="faq-a4" type="button">Y a-t-il un suivi après la formation ?</button>
+            <div id="faq-a4" class="faq-answer" role="region" aria-labelledby="faq-q4">
               <p>Oui. Nous proposons un support post-formation (questions par email, session de rappel optionnelle) pour vous assurer que vous maîtrisez bien les outils. L'objectif reste votre autonomie.</p>
             </div>
           </div>
@@ -357,7 +428,7 @@
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--gradient-overlay); text-align: center;">
+  <section id="contact-cta" class="section section-large section-full" style="background: var(--gradient-overlay); text-align: center;">
     <div class="container">
       <div class="fade-in">
         <h2>Prêt à devenir autonome ?</h2>
@@ -410,6 +481,18 @@
             <li><a href="contact.html" class="footer-link">Formulaire de contact</a></li>
             <li class="footer-link" style="color: var(--color-text-muted);">France</li>
           </ul>
+          <!-- AJOUT SEO LOCAL: NAP visible (cohérent homepage/GBP) -->
+          <address style="font-style: normal; margin-top: var(--spacing-sm);">
+            <p class="footer-link" style="margin-bottom: var(--spacing-xs);">Clermont-Ferrand (63000) · Puy-de-Dôme · Auvergne-Rhône-Alpes</p>
+            <p style="margin-bottom: var(--spacing-xs);">
+              <a class="footer-link" href="tel:+33663783513" aria-label="Appeler Luméa Communication">06 63 78 35 13</a>
+              <span class="footer-link" style="margin: 0 var(--spacing-xs);">·</span>
+              <a class="footer-link" href="mailto:lumeasolution@outlook.fr" aria-label="Envoyer un email à Luméa Communication">lumeasolution@outlook.fr</a>
+            </p>
+            <p style="margin: 0;">
+              <a class="footer-link" href="https://share.google/6q08mZ9dKiHr7hZua" target="_blank" rel="noopener noreferrer" aria-label="Voir la fiche Google Business Profile">Google Business Profile</a>
+            </p>
+          </address>
         </div>
       </div>
       <div class="footer-bottom">
@@ -428,8 +511,9 @@
     </div>
   </div>
 
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/analytics.js" defer></script>
+  <!-- AJOUT PERF: scripts absolus prod + fallback local -->
+  <script src="https://lumeacommunication.fr/assets/js/main.js" defer onerror="this.onerror=null;this.src='../assets/js/main.js';"></script>
+  <script src="https://lumeacommunication.fr/assets/js/analytics.js" defer onerror="this.onerror=null;this.src='../assets/js/analytics.js';"></script>
 </body>
 </html>
 
