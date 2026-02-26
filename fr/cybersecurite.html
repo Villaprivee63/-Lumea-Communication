@@ -42,88 +42,184 @@
   <link rel="apple-touch-icon" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
   
   <!-- Structured Data -->
+  <!-- TODO: remplacer l’URL LinkedIn par le profil complet (actuellement générique). -->
+  <!-- AJOUT SCHEMA 2026: JSON-LD unique @graph (LocalBusiness + Offers + FAQ + Breadcrumb + WebPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Cybersécurité préventive",
-    "provider": {
-      "@type": "Organization",
-      "name": "Luméa Communication – France",
-      "url": "https://lumeacommunication.fr/fr"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Clermont-Ferrand" },
-      { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" },
-      { "@type": "Country", "name": "France" }
-    ],
-    "description": "Cybersécurité préventive pour PME : mots de passe, MFA, sauvegardes, sensibilisation. Basés à Clermont-Ferrand (Puy-de-Dôme), accompagnement partout en France."
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Pourquoi ne proposez-vous pas de pentest ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Les tests d'intrusion (pentest) sont des audits de sécurité approfondis qui nécessitent des compétences spécialisées et des outils avancés. Notre approche se concentre sur l'hygiène numérique préventive : mettre en place les bonnes pratiques de base qui protègent 80% des risques courants. Pour des audits de sécurité approfondis, nous recommandons de faire appel à des spécialistes en cybersécurité."
-        }
+        "@id": "https://lumeacommunication.fr/fr/#business",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "name": "Luméa Communication – France",
+        "url": "https://lumeacommunication.fr/fr/",
+        "logo": "https://lumeacommunication.fr/assets/img/logo/logo.jpg",
+        "image": "https://lumeacommunication.fr/assets/img/photos/hero-cybersecurite.webp",
+        "description": "Cybersécurité préventive pour PME : hygiène numérique, mots de passe, MFA, sauvegardes, sensibilisation. Basés à Clermont-Ferrand (63, Puy-de-Dôme), accompagnement partout en France (sur site & visio).",
+        "telephone": "+33663783513",
+        "email": "lumeasolution@outlook.fr",
+        "priceRange": "Sur devis",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Clermont-Ferrand",
+          "addressRegion": "Auvergne-Rhône-Alpes",
+          "postalCode": "63000",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.7772,
+          "longitude": 3.087
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Clermont-Ferrand" },
+          { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" },
+          { "@type": "Country", "name": "France" }
+        ],
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.7772,
+            "longitude": 3.087
+          },
+          "geoRadius": {
+            "@type": "QuantitativeValue",
+            "value": 100,
+            "unitCode": "KMT"
+          }
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "12:30",
+            "closes": "19:00"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+33663783513",
+            "email": "lumeasolution@outlook.fr",
+            "contactType": "sales",
+            "areaServed": "FR",
+            "availableLanguage": ["fr"]
+          }
+        ],
+        "sameAs": [
+          "https://share.google/6q08mZ9dKiHr7hZua",
+          "https://www.linkedin.com/in/"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Hygiène numérique (PME)",
+            "description": "Mise en place des fondamentaux : accès, bonnes pratiques et routines simples, sans anxiété.",
+            "url": "https://lumeacommunication.fr/fr/cybersecurite.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Mots de passe & gestionnaire",
+            "description": "Gestionnaire de mots de passe, partage sécurisé, rotation et hygiène des accès.",
+            "url": "https://lumeacommunication.fr/fr/cybersecurite.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          },
+          {
+            "@type": "Offer",
+            "name": "MFA (authentification à deux facteurs)",
+            "description": "Activation et déploiement de la MFA sur les comptes critiques, avec accompagnement des équipes.",
+            "url": "https://lumeacommunication.fr/fr/cybersecurite.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Sauvegardes & restauration",
+            "description": "Sauvegardes automatisées, stockage hors site, tests de restauration et documentation.",
+            "url": "https://lumeacommunication.fr/fr/cybersecurite.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Sensibilisation & procédures",
+            "description": "Sensibilisation aux risques courants (phishing, ransomware) et procédures simples en cas d'incident.",
+            "url": "https://lumeacommunication.fr/fr/cybersecurite.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Combien de temps prend la mise en place ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La mise en place des bonnes pratiques essentielles prend généralement 2 à 4 semaines, selon la taille de votre équipe et la complexité de votre infrastructure. Nous procédons étape par étape, en priorisant les actions les plus critiques."
-        }
+        "@id": "https://lumeacommunication.fr/fr/#website",
+        "@type": "WebSite",
+        "name": "Luméa Communication – France",
+        "url": "https://lumeacommunication.fr/fr/",
+        "inLanguage": "fr-FR"
       },
       {
-        "@type": "Question",
-        "name": "Faut-il changer tous nos outils ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Non. Nous travaillons avec vos outils existants. Nous activons les fonctionnalités de sécurité déjà disponibles (MFA, sauvegardes automatiques, etc.) et ajoutons des outils complémentaires uniquement si nécessaire (gestionnaire de mots de passe, par exemple)."
-        }
+        "@id": "https://lumeacommunication.fr/fr/cybersecurite.html#webpage",
+        "@type": "WebPage",
+        "name": "Cybersécurité PME | Clermont-Ferrand (63) | Luméa",
+        "url": "https://lumeacommunication.fr/fr/cybersecurite.html",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://lumeacommunication.fr/fr/#website" },
+        "about": { "@id": "https://lumeacommunication.fr/fr/#business" }
       },
       {
-        "@type": "Question",
-        "name": "Que faire en cas d'incident de sécurité ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nous vous aidons à mettre en place des procédures d'incident : qui contacter, quelles actions prendre immédiatement, comment isoler le problème. Cependant, en cas d'incident réel (attaque, fuite de données), nous recommandons de faire appel à des spécialistes en réponse aux incidents (IR) pour une intervention rapide et professionnelle."
-        }
+        "@id": "https://lumeacommunication.fr/fr/cybersecurite.html#breadcrumb",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lumeacommunication.fr/fr/" },
+          { "@type": "ListItem", "position": 2, "name": "Cybersécurité", "item": "https://lumeacommunication.fr/fr/cybersecurite.html" }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Proposez-vous un suivi continu ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. Après la mise en place initiale, nous proposons un suivi optionnel : révision trimestrielle des accès, vérification des sauvegardes, rappels de sensibilisation, ajustements si nécessaire. L'objectif est de maintenir un niveau de sécurité constant dans le temps."
-        }
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Accueil",
-        "item": "https://lumeacommunication.fr/fr/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Cybersécurité",
-        "item": "https://lumeacommunication.fr/fr/cybersecurite.html"
+        "@id": "https://lumeacommunication.fr/fr/cybersecurite.html#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Pourquoi ne proposez-vous pas de pentest ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Les tests d'intrusion (pentest) sont des audits de sécurité approfondis qui nécessitent des compétences spécialisées et des outils avancés. Notre approche se concentre sur l'hygiène numérique préventive : mettre en place les bonnes pratiques de base qui protègent 80% des risques courants. Pour des audits de sécurité approfondis, nous recommandons de faire appel à des spécialistes en cybersécurité." }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps prend la mise en place ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "La mise en place des bonnes pratiques essentielles prend généralement 2 à 4 semaines, selon la taille de votre équipe et la complexité de votre infrastructure. Nous procédons étape par étape, en priorisant les actions les plus critiques." }
+          },
+          {
+            "@type": "Question",
+            "name": "Faut-il changer tous nos outils ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Non. Nous travaillons avec vos outils existants. Nous activons les fonctionnalités de sécurité déjà disponibles (MFA, sauvegardes automatiques, etc.) et ajoutons des outils complémentaires uniquement si nécessaire (gestionnaire de mots de passe, par exemple)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Que faire en cas d'incident de sécurité ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nous vous aidons à mettre en place des procédures d'incident : qui contacter, quelles actions prendre immédiatement, comment isoler le problème. Cependant, en cas d'incident réel (attaque, fuite de données), nous recommandons de faire appel à des spécialistes en réponse aux incidents (IR) pour une intervention rapide et professionnelle." }
+          },
+          {
+            "@type": "Question",
+            "name": "Proposez-vous un suivi continu ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Oui. Après la mise en place initiale, nous proposons un suivi optionnel : révision trimestrielle des accès, vérification des sauvegardes, rappels de sensibilisation, ajustements si nécessaire. L'objectif est de maintenir un niveau de sécurité constant dans le temps." }
+          }
+        ]
       }
     ]
   }
