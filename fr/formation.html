@@ -42,82 +42,180 @@
   <link rel="apple-touch-icon" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
   
   <!-- Structured Data -->
+  <!-- TODO: remplacer l’URL LinkedIn par le profil complet (actuellement générique). -->
+  <!-- AJOUT SCHEMA 2026: JSON-LD unique @graph (LocalBusiness + Course + Offers + FAQ + Breadcrumb + WebPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Formation digitale - Shopify, WordPress, SEO",
-    "description": "Formations pratiques pour maîtriser Shopify, WordPress, SEO et organisation digitale",
-    "provider": {
-      "@type": "Organization",
-      "name": "Luméa Communication – France",
-      "url": "https://lumeacommunication.fr/fr",
-      "areaServed": [
-        { "@type": "City", "name": "Clermont-Ferrand" },
-        { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" },
-        { "@type": "Country", "name": "France" }
-      ]
-    },
-    "courseMode": ["Présentiel", "Visioconférence"],
-    "inLanguage": "fr-FR"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Faut-il avoir des connaissances techniques ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Non. Nos formations sont accessibles aux débutants. Nous partons des bases et progressons étape par étape. Si vous savez utiliser un ordinateur et naviguer sur internet, vous pouvez suivre nos formations."
-        }
+        "@id": "https://lumeacommunication.fr/fr/#business",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "name": "Luméa Communication – France",
+        "url": "https://lumeacommunication.fr/fr/",
+        "logo": "https://lumeacommunication.fr/assets/img/logo/logo.jpg",
+        "image": "https://lumeacommunication.fr/assets/img/photos/hero-formation.webp",
+        "description": "Formation pratique Shopify, WordPress, SEO et organisation digitale pour PME. Autonomie, méthodes et checklists. Basés à Clermont-Ferrand (63, Puy-de-Dôme), formations partout en France (sur site & visio).",
+        "telephone": "+33663783513",
+        "email": "lumeasolution@outlook.fr",
+        "priceRange": "Sur devis",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Clermont-Ferrand",
+          "addressRegion": "Auvergne-Rhône-Alpes",
+          "postalCode": "63000",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.7772,
+          "longitude": 3.087
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Clermont-Ferrand" },
+          { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" },
+          { "@type": "Country", "name": "France" }
+        ],
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.7772,
+            "longitude": 3.087
+          },
+          "geoRadius": {
+            "@type": "QuantitativeValue",
+            "value": 100,
+            "unitCode": "KMT"
+          }
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "12:30",
+            "closes": "19:00"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+33663783513",
+            "email": "lumeasolution@outlook.fr",
+            "contactType": "sales",
+            "areaServed": "FR",
+            "availableLanguage": ["fr"]
+          }
+        ],
+        "sameAs": [
+          "https://share.google/6q08mZ9dKiHr7hZua",
+          "https://www.linkedin.com/in/"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Formation Shopify (pratique)",
+            "description": "E-commerce autonome : produits, commandes, paiements, apps et SEO.",
+            "url": "https://lumeacommunication.fr/fr/formation.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Formation WordPress (site & contenus)",
+            "description": "Installation, thèmes, plugins essentiels, contenus et sécurité de base.",
+            "url": "https://lumeacommunication.fr/fr/formation.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Formation SEO (bases)",
+            "description": "Fondamentaux : mots-clés, optimisation on-page, structure et mesure.",
+            "url": "https://lumeacommunication.fr/fr/formation.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Formation organisation digitale",
+            "description": "Workflows : fichiers, collaboration, automatisations basiques, productivité.",
+            "url": "https://lumeacommunication.fr/fr/formation.html",
+            "areaServed": "France",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "description": "Sur devis" }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Peut-on former toute l'équipe ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. Nous proposons des formations en groupe (jusqu'à 8 personnes) pour former votre équipe simultanément. C'est plus efficace et plus économique. Nous adaptons le contenu aux rôles de chacun."
-        }
+        "@id": "https://lumeacommunication.fr/fr/#website",
+        "@type": "WebSite",
+        "name": "Luméa Communication – France",
+        "url": "https://lumeacommunication.fr/fr/",
+        "inLanguage": "fr-FR"
       },
       {
-        "@type": "Question",
-        "name": "Fournissez-vous de la documentation ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. Chaque formation inclut une documentation complète : guides pas à pas, captures d'écran, checklists, ressources complémentaires. Vous pourrez vous y référer après la formation."
-        }
+        "@id": "https://lumeacommunication.fr/fr/formation.html#webpage",
+        "@type": "WebPage",
+        "name": "Formation Shopify & SEO | Clermont-Ferrand (63) | Luméa",
+        "url": "https://lumeacommunication.fr/fr/formation.html",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://lumeacommunication.fr/fr/#website" },
+        "about": { "@id": "https://lumeacommunication.fr/fr/#business" }
       },
       {
-        "@type": "Question",
-        "name": "Y a-t-il un suivi après la formation ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. Nous proposons un support post-formation (questions par email, session de rappel optionnelle) pour vous assurer que vous maîtrisez bien les outils. L'objectif reste votre autonomie."
-        }
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Accueil",
-        "item": "https://lumeacommunication.fr/fr/"
+        "@id": "https://lumeacommunication.fr/fr/formation.html#breadcrumb",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lumeacommunication.fr/fr/" },
+          { "@type": "ListItem", "position": 2, "name": "Formation", "item": "https://lumeacommunication.fr/fr/formation.html" }
+        ]
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Formation",
-        "item": "https://lumeacommunication.fr/fr/formation.html"
+        "@id": "https://lumeacommunication.fr/fr/formation.html#course",
+        "@type": "Course",
+        "name": "Formation digitale - Shopify, WordPress, SEO",
+        "description": "Formations pratiques pour maîtriser Shopify, WordPress, SEO et organisation digitale",
+        "provider": { "@id": "https://lumeacommunication.fr/fr/#business" },
+        "courseMode": ["Présentiel", "Visioconférence"],
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@id": "https://lumeacommunication.fr/fr/formation.html#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Faut-il avoir des connaissances techniques ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Non. Nos formations sont accessibles aux débutants. Nous partons des bases et progressons étape par étape. Si vous savez utiliser un ordinateur et naviguer sur internet, vous pouvez suivre nos formations." }
+          },
+          {
+            "@type": "Question",
+            "name": "Peut-on former toute l'équipe ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Oui. Nous proposons des formations en groupe (jusqu'à 8 personnes) pour former votre équipe simultanément. C'est plus efficace et plus économique. Nous adaptons le contenu aux rôles de chacun." }
+          },
+          {
+            "@type": "Question",
+            "name": "Fournissez-vous de la documentation ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Oui. Chaque formation inclut une documentation complète : guides pas à pas, captures d'écran, checklists, ressources complémentaires. Vous pourrez vous y référer après la formation." }
+          },
+          {
+            "@type": "Question",
+            "name": "Y a-t-il un suivi après la formation ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Oui. Nous proposons un support post-formation (questions par email, session de rappel optionnelle) pour vous assurer que vous maîtrisez bien les outils. L'objectif reste votre autonomie." }
+          }
+        ]
       }
     ]
   }
