@@ -187,10 +187,11 @@
   </script>
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="/assets/css/styles.css" as="style">
+  <!-- HOTFIX CACHE: bust cache CSS/JS (immutable) -->
+  <link rel="preload" href="/assets/css/styles.css?v=20260226" as="style">
   <link rel="preload" href="/assets/img/photos/hero-768.webp" as="image" fetchpriority="high" imagesrcset="/assets/img/photos/hero-768.webp 768w, /assets/img/photos/hero-1200.webp 1200w" imagesizes="100vw">
   
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260226">
   <!-- Fallback critique si le CSS externe ne charge pas (thème sombre de base) -->
   <style>
     :root { --color-bg-primary: #0a0a0a; --color-bg-secondary: #141414; --color-text-primary: #f5f5f5; --color-text-secondary: #b8b8b8; --color-accent-blue: #3b82f6; }
@@ -558,7 +559,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/analytics.js" defer></script>
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/analytics.js?v=20260226" defer></script>
+  <script src="/assets/js/main.js?v=20260226" defer></script>
 </body>
 </html>
