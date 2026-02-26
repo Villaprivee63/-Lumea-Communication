@@ -31,6 +31,7 @@ const URLS = [
 const OUT_DIR = path.join(ROOT, '.lighthouseci');
 const DOCS_DIR = path.join(ROOT, 'docs');
 const OUT_MD = path.join(DOCS_DIR, 'perf-latest.md');
+const CLS_THRESHOLD = 0.1;
 
 function slugify(u) {
   return u
@@ -122,6 +123,7 @@ async function main() {
     });
 
     const results = [];
+    const clsViolations = [];
 
     try {
       for (const url of URLS) {
@@ -162,6 +164,10 @@ async function main() {
           weight: fmtKb(weight),
           reqs: typeof reqs === 'number' ? String(reqs) : '—'
         });
+
+        if (typeof cls === 'number' && cls > CLS_THRESHOLD) {
+          clsViolations.push({ url, cls });
+        }
       }
     } finally {
       await chrome.kill();
@@ -197,6 +203,14 @@ async function main() {
     await fs.writeFile(OUT_MD, md.join('\n'), 'utf8');
 
     console.log(`Wrote ${path.relative(ROOT, OUT_MD)}`);
+
+    if (clsViolations.length) {
+      const lines = clsViolations
+        .sort((a, b) => b.cls - a.cls)
+        .map(v => `- ${v.url} CLS=${v.cls.toFixed(3)}`);
+      console.error(`CLS threshold failed (>${CLS_THRESHOLD}).\n` + lines.join('\n'));
+      process.exitCode = 1;
+    }
   } finally {
     serverProc.kill();
   }
