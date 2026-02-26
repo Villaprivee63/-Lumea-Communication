@@ -43,6 +43,7 @@
   <link rel="apple-touch-icon" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
   
   <!-- AJOUT SCHEMA 2026: JSON-LD unique @graph (LocalBusiness + Offers) -->
+  <!-- TODO: ajouter `sameAs` LinkedIn dès que l’URL du profil est complète. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -82,7 +83,11 @@
             "latitude": 45.7772,
             "longitude": 3.087
           },
-          "geoRadius": "100 km"
+          "geoRadius": {
+            "@type": "QuantitativeValue",
+            "value": 100,
+            "unitCode": "KMT"
+          }
         },
         "openingHoursSpecification": [
           {
@@ -115,8 +120,7 @@
           }
         ],
         "sameAs": [
-          "https://share.google/6q08mZ9dKiHr7hZua",
-          "https://www.linkedin.com/in/"
+          "https://share.google/6q08mZ9dKiHr7hZua"
         ],
         "makesOffer": [
           {
@@ -124,35 +128,60 @@
             "name": "Site vitrine professionnel",
             "description": "Un site vitrine premium qui renforce votre crédibilité et génère des opportunités business.",
             "url": "https://lumeacommunication.fr/fr/sites-branding.html",
-            "areaServed": "France"
+            "areaServed": "France",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "EUR",
+              "description": "Sur devis"
+            }
           },
           {
             "@type": "Offer",
             "name": "Site e-commerce performant",
             "description": "Une boutique en ligne sécurisée avec tunnel de vente optimisé pour vendre en ligne avec confiance.",
             "url": "https://lumeacommunication.fr/fr/sites-branding.html",
-            "areaServed": "France"
+            "areaServed": "France",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "EUR",
+              "description": "Sur devis"
+            }
           },
           {
             "@type": "Offer",
             "name": "Création de logo premium",
             "description": "Un logo unique et mémorable, adapté à tous les supports, aligné avec votre positionnement.",
             "url": "https://lumeacommunication.fr/fr/sites-branding.html",
-            "areaServed": "France"
+            "areaServed": "France",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "EUR",
+              "description": "Sur devis"
+            }
           },
           {
             "@type": "Offer",
             "name": "Logo & charte graphique complète",
             "description": "Une identité visuelle cohérente (palette, typographies, règles d’usage) sur tous vos supports.",
             "url": "https://lumeacommunication.fr/fr/sites-branding.html",
-            "areaServed": "France"
+            "areaServed": "France",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "EUR",
+              "description": "Sur devis"
+            }
           },
           {
             "@type": "Offer",
             "name": "Refonte & rebranding stratégique",
             "description": "Moderniser votre image et votre site avec une approche structurée, durable et orientée résultats.",
             "url": "https://lumeacommunication.fr/fr/sites-branding.html",
-            "areaServed": "France"
+            "areaServed": "France",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "EUR",
+              "description": "Sur devis"
+            }
           }
         ]
       },
@@ -187,6 +216,92 @@
             "position": 2,
             "name": "Sites & Branding",
             "item": "https://lumeacommunication.fr/fr/sites-branding.html"
+          }
+        ]
+      },
+      {
+        "@id": "https://lumeacommunication.fr/fr/sites-branding.html#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quel budget prévoir pour un site vitrine premium ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le budget dépend du nombre de pages, du niveau de design, des contenus et du SEO. Nous travaillons sur devis après cadrage, pour un périmètre clair."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "En combien de temps un site peut-il être prêt ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On avance par étapes (audit, direction artistique, production, lancement). Les délais varient selon le périmètre et la réactivité sur les validations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Est-ce que vous faites du SEO local à Clermont-Ferrand ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui : structure des pages, sémantique, maillage interne, signaux locaux et performance mobile. Un diagnostic rapide peut être fait via un audit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qui est propriétaire du site et des fichiers ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vous : le site et les livrables vous reviennent. Nous privilégions des bases propres, maintenables, et une autonomie réelle via formation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Proposez-vous une maintenance ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, selon vos besoins : sécurité, évolutions, corrections, suivi performance. L’objectif est de pérenniser votre investissement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Peut-on faire un site e-commerce simple et efficace ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui : on se concentre sur l’essentiel (catalogue, paiement, rassurance, tunnel, mobile) pour vendre sans friction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Logo et charte : qu’est-ce qui est inclus ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Logo, déclinaisons, palette, typographies, règles d’usage et guide, pour une communication cohérente sur vos supports."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Est-ce que vous travaillez uniquement en Auvergne ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nous sommes basés à Clermont-Ferrand (Puy-de-Dôme) et accompagnons aussi des entreprises partout en France, en présentiel ou à distance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment démarre-t-on sans perdre de temps ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le plus simple : un échange puis un cadrage (audit) pour clarifier objectifs, périmètre et priorités."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Où voir des exemples avant de décider ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vous pouvez consulter des réalisations et des ressources utiles (blog) pour comprendre l’approche et le niveau de finition."
+            }
           }
         ]
       }
