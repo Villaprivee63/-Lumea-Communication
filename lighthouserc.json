@@ -1,0 +1,45 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "node tools/perf/static-server.mjs",
+      "startServerReadyPattern": "Listening on",
+      "url": [
+        "http://localhost:8080/fr/",
+        "http://localhost:8080/fr/services.html",
+        "http://localhost:8080/fr/sites-branding.html",
+        "http://localhost:8080/fr/consulting.html",
+        "http://localhost:8080/fr/developpement.html",
+        "http://localhost:8080/fr/formation.html",
+        "http://localhost:8080/fr/realisations.html",
+        "http://localhost:8080/fr/blog.html",
+        "http://localhost:8080/fr/article.html",
+        "http://localhost:8080/fr/contact.html",
+        "http://localhost:8080/fr/mentions-legales.html",
+        "http://localhost:8080/fr/confidentialite.html",
+        "http://localhost:8080/fr/cookies.html",
+        "http://localhost:8080/fr/cgv.html",
+        "http://localhost:8080/fr/zone-intervention.html"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "onlyCategories": ["performance", "accessibility", "seo", "best-practices"],
+        "chromeFlags": [
+          "--user-data-dir=C:\\\\Users\\\\abcon\\\\AppData\\\\Local\\\\Temp\\\\lhci-profile"
+        ]
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 0.95 }],
+        "categories:seo": ["warn", { "minScore": 0.95 }],
+        "categories:accessibility": ["warn", { "minScore": 0.95 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./.lighthouseci"
+    }
+  }
+}
+

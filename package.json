@@ -1,12 +1,17 @@
 {
-  "name": "lumea-international-migration",
+  "name": "lumea-communication",
   "version": "1.0.0",
-  "description": "Script de migration vers structure internationale",
+  "description": "Site statique Luméa Communication + outils perf",
+  "private": true,
   "main": "migrate-to-international.js",
   "scripts": {
-    "migrate": "node migrate-to-international.js"
+    "migrate": "node migrate-to-international.js",
+    "perf": "node tools/perf/run-perf.mjs"
   },
   "keywords": ["migration", "international", "i18n"],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1"
+  }
 }
