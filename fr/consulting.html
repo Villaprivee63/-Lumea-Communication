@@ -2,20 +2,26 @@
 <html lang="fr-FR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Consulting digital premium pour PME : stratégie, outils, gouvernance, pilotage. Basés à Clermont-Ferrand (Puy-de-Dôme), interventions partout en France (sur site & visio).">
-  <meta name="keywords" content="consulting digital France, stratégie digitale PME, choix outils digitaux, gouvernance digitale, pilotage digital, ROI digital, accompagnement digital France">
+  <!-- AJOUT MOBILE/SEO: viewport mobile-first + zoom accessible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <!-- AJOUT SEO ON-PAGE: description orientée intention (local + national) -->
+  <meta name="description" content="Consulting digital premium pour PME : diagnostic, stratégie, outils, gouvernance, pilotage et ROI. Basés à Clermont-Ferrand (63, Puy-de-Dôme), interventions partout en France (sur site & visio).">
+  <!-- AJOUT SEO: meta keywords retirée (inutile pour Google, évite le bruit) -->
   <meta name="author" content="Luméa Communication – France">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="geo.region" content="FR">
+  <!-- AJOUT SEO LOCAL -->
+  <meta name="geo.placename" content="Clermont-Ferrand">
+  <meta name="geo.position" content="45.7772;3.087">
+  <meta name="theme-color" content="#0a0a0a">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lumeacommunication.fr/fr/consulting.html">
   <meta property="og:title" content="Consulting digital PME | Clermont-Ferrand (63) | Luméa">
-  <meta property="og:description" content="Stratégie, outils, gouvernance, pilotage. Basés à Clermont-Ferrand (Puy-de-Dôme), interventions partout en France (sur site & visio).">
-  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-consulting.jpg">
-  <meta property="og:image:alt" content="Consulting digital pour PME françaises">
+  <meta property="og:description" content="Diagnostic, stratégie, outils, gouvernance, pilotage. Clermont-Ferrand (63) · interventions partout en France (sur site & visio).">
+  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-consulting.webp">
+  <meta property="og:image:alt" content="Consulting digital et stratégie PME à Clermont-Ferrand (63)">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Luméa Communication – France">
   
@@ -24,19 +30,16 @@
   <meta name="twitter:url" content="https://lumeacommunication.fr/fr/consulting.html">
   <meta name="twitter:title" content="Consulting digital PME | Clermont-Ferrand (63) | Luméa">
   <meta name="twitter:description" content="Stratégie, outils, gouvernance, pilotage. Basés à Clermont-Ferrand (Puy-de-Dôme), interventions partout en France.">
-  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-consulting.jpg">
+  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-consulting.webp">
   
   <link rel="canonical" href="https://lumeacommunication.fr/fr/consulting.html">
   <title>Consulting digital PME | Clermont-Ferrand (63) | Luméa</title>
   
-    <!-- Hreflang -->
-  <link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/consulting.html">
-  <link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/consulting.html">
-  <link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/consultoria.html">
-  <link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/consulting.html">
+  <!-- Site FR-only : pas de hreflang -->
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="../assets/img/logo/logo.jpg">
-  <link rel="apple-touch-icon" href="../assets/img/logo/logo.jpg">
+  <!-- AJOUT PERF: assets absolus prod + fallback local -->
+  <link rel="icon" type="image/jpeg" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
+  <link rel="apple-touch-icon" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -119,10 +122,35 @@
   </script>
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="../assets/css/styles.css" as="style">
-  <link rel="preload" href="../assets/img/photos/hero-consulting.jpg" as="image" fetchpriority="high">
+  <!-- AJOUT PERF: preconnect + preload (sans multiplier) -->
+  <link rel="preconnect" href="https://lumeacommunication.fr" crossorigin>
+  <link rel="dns-prefetch" href="//lumeacommunication.fr">
+  <link rel="preload" href="https://lumeacommunication.fr/assets/css/styles.css" as="style" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+  <link rel="preload" href="https://lumeacommunication.fr/assets/img/photos/hero-consulting.webp" as="image" fetchpriority="high" onerror="this.onerror=null;this.href='../assets/img/photos/hero-consulting.webp'">
   
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://lumeacommunication.fr/assets/css/styles.css" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+
+  <!-- AJOUT MOBILE/UX: overrides très ciblés (sans refonte) -->
+  <style>
+    @media (max-width: 640px) {
+      .hero {
+        min-height: 70vh !important;
+        padding: var(--spacing-lg) 0 !important;
+      }
+      .hero-content {
+        padding: var(--spacing-lg) var(--container-padding) !important;
+      }
+      .hero-cta .btn {
+        min-height: 48px;
+        padding: 1rem 1.5rem;
+        font-size: clamp(1rem, 4vw, 1.125rem);
+      }
+      .grid.grid-2,
+      .grid.grid-3 {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Skip to main content -->
@@ -138,38 +166,50 @@
   <nav class="navbar" role="navigation" aria-label="Navigation principale">
     <div class="nav-inner">
       <div class="nav-left">
-        <button class="navbar-toggle" aria-label="Menu mobile" aria-expanded="false">☰</button>
+        <!-- AJOUT A11Y: aria-controls relie le bouton au menu -->
+        <button class="navbar-toggle" aria-label="Menu mobile" aria-expanded="false" aria-controls="primary-nav">☰</button>
       </div>
-      <div class="nav-center">
+      <div class="nav-center" id="primary-nav">
         <ul class="navbar-menu" role="menubar">
           <li role="none"><a href="index.html" class="navbar-link" role="menuitem">Accueil</a></li>
-          <li role="none"><a href="consulting.html" class="navbar-link active" role="menuitem">Consulting</a></li>
-          <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
-          <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
-          <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+          <li role="none" class="nav-dropdown">
+            <a href="services.html" class="navbar-link nav-dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav-dropdown-menu" role="menu" aria-label="Services">
+              <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+              <li role="none"><a href="consulting.html#seo" class="navbar-link" role="menuitem">Référencement / SEO</a></li>
+              <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+              <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
+              <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem" aria-current="page">Consulting / Stratégie</a></li>
+              <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
+            </ul>
+          </li>
           <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem">Réalisations</a></li>
-          <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+          <li role="none"><a href="indice-performance-digitale-locale.html" class="navbar-link" role="menuitem">Audit LVS</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
-          <li role="none"><a href="contact.html" class="navbar-link" role="menuitem">Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <div class="country-selector-nav">
-          <a href="../ch/index.html" class="country-link" title="Suisse">🇨🇭</a>
-          <a href="index.html" class="country-link active" title="France">🇫🇷</a>
-          <a href="../es/index.html" class="country-link" title="España">🇪🇸</a>
-        </div>
+        <a href="contact.html" class="btn btn-primary navbar-cta" aria-label="Contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <div class="realisations-banner" role="banner">
-    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
-    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
-  </div>
-
   <main id="main-content" class="page-content">
-  <section class="hero" style="background-image: url('../assets/img/photos/hero-consulting.jpg');" role="banner" aria-label="Image hero - Consulting digital">
+  <!-- AJOUT MOBILE/PERF/A11Y: hero en <img> (alt + CLS maîtrisé) -->
+  <section class="hero" style="min-height: 100vh;" role="banner" aria-label="Image hero - Consulting digital">
+    <img
+      class="hero-bg"
+      src="https://lumeacommunication.fr/assets/img/photos/hero-consulting.webp"
+      srcset="https://lumeacommunication.fr/assets/img/photos/hero-consulting.webp 1200w"
+      sizes="100vw"
+      width="1200"
+      height="800"
+      alt="Consulting digital et stratégie PME à Clermont-Ferrand (63) : outils, gouvernance et pilotage"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      onerror="this.onerror=null;this.src='../assets/img/photos/hero-consulting.webp';"
+    >
     <div class="hero-content">
       <h1 class="hero-title">Consulting digital</h1>
       <p class="hero-subtitle">Stratégie, outils et gouvernance pour un digital rentable et maîtrisé</p>
@@ -177,7 +217,23 @@
     </div>
   </section>
 
-  <section class="section section-large section-full">
+  <!-- AJOUT MAILLAGE INTERNE: sommaire (ancres) -->
+  <section class="section section-full" aria-label="Sommaire de la page">
+    <div class="container">
+      <div class="fade-in" style="max-width: 980px; margin: 0 auto;">
+        <p class="text-muted" style="margin-bottom: var(--spacing-sm);">Aller plus vite :</p>
+        <ul style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm); list-style: none; padding: 0; margin: 0;">
+          <li><a href="#seo" aria-label="Aller à la section SEO">SEO</a></li>
+          <li><a href="#cas-usage" aria-label="Aller aux cas d'usage">Cas d’usage</a></li>
+          <li><a href="#processus" aria-label="Aller au processus">Processus</a></li>
+          <li><a href="#faq" aria-label="Aller à la FAQ">FAQ</a></li>
+          <li><a href="#contact-cta" aria-label="Aller au contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="pour-qui" class="section section-large section-full" aria-label="Pour qui">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Pour qui ?</h2>
@@ -196,11 +252,18 @@
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="seo" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-labelledby="seo-title">
     <div class="container">
       <div class="text-center mb-xl fade-in">
-        <h2>Ce que vous obtenez</h2>
-        <p class="lead">Des livrables concrets pour votre autonomie</p>
+        <h2 id="seo-title">Référencement / SEO : visibilité locale et acquisition</h2>
+        <p class="lead">Un site utile, c’est un site trouvé par les bonnes personnes — puis capable de convertir.</p>
+      </div>
+      <div class="fade-in" style="max-width: 960px; margin: 0 auto var(--spacing-lg);">
+        <p>On structure votre présence pour gagner en clarté et en performance : pages services solides, maillage interne, vitesse, signaux locaux et plan d’action. Pas de promesses irréalistes : une approche méthodique, mesurable et orientée demandes.</p>
+        <div class="text-center" style="margin-top: var(--spacing-md); display: flex; justify-content: center; gap: var(--spacing-sm); flex-wrap: wrap;">
+          <a href="contact.html?subject=audit" class="btn btn-primary" aria-label="Demander un audit">Demander un audit</a>
+          <a href="indice-performance-digitale-locale.html" class="btn btn-secondary btn-ghost" aria-label="Découvrir l'audit LVS">Découvrir l’audit LVS</a>
+        </div>
       </div>
       <div class="grid grid-3 fade-in">
         <div class="card">
@@ -231,7 +294,7 @@
     </div>
   </section>
 
-  <section class="section section-large section-full">
+  <section id="cas-usage" class="section section-large section-full" aria-label="Cas d'usage">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Cas d'usage</h2>
@@ -257,7 +320,7 @@
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="processus" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-label="Notre processus">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Notre processus</h2>
@@ -286,32 +349,33 @@
     </div>
   </section>
 
-  <section class="section section-large section-full">
+  <section id="faq" class="section section-large section-full" aria-labelledby="faq-title">
     <div class="container">
       <div class="fade-in">
-        <h2 class="text-center mb-lg">Questions fréquentes</h2>
+        <h2 id="faq-title" class="text-center mb-lg">Questions fréquentes</h2>
         <div class="faq">
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">Combien coûte un accompagnement consulting ?</button>
-            <div class="faq-answer">
+            <!-- AJOUT A11Y: association question/réponse -->
+            <button id="faq-q1" class="faq-question" aria-expanded="false" aria-controls="faq-a1" type="button">Combien coûte un accompagnement consulting ?</button>
+            <div id="faq-a1" class="faq-answer" role="region" aria-labelledby="faq-q1">
               <p>Les tarifs varient selon la complexité de votre situation et la durée de l'accompagnement. Nous proposons des forfaits pour les missions complètes (diagnostic + stratégie + mise en œuvre) et des tarifs horaires pour les interventions ponctuelles. Un devis détaillé vous est fourni après un premier échange.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">Dois-je changer tous mes outils ?</button>
-            <div class="faq-answer">
+            <button id="faq-q2" class="faq-question" aria-expanded="false" aria-controls="faq-a2" type="button">Dois-je changer tous mes outils ?</button>
+            <div id="faq-a2" class="faq-answer" role="region" aria-labelledby="faq-q2">
               <p>Non. Nous analysons d'abord ce que vous avez déjà. Si vos outils actuels répondent à vos besoins, nous les optimisons. Si des changements sont nécessaires, nous les recommandons avec justification claire. L'objectif est l'efficacité, pas le changement pour le changement.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">Quelle est la différence avec une agence digitale ?</button>
-            <div class="faq-answer">
+            <button id="faq-q3" class="faq-question" aria-expanded="false" aria-controls="faq-a3" type="button">Quelle est la différence avec une agence digitale ?</button>
+            <div id="faq-a3" class="faq-answer" role="region" aria-labelledby="faq-q3">
               <p>Nous ne créons pas de sites web ou d'applications pour vous. Nous vous accompagnons pour définir votre stratégie, choisir vos outils et devenir autonome. Nous formons votre équipe plutôt que de faire à sa place. L'objectif : votre autonomie, pas votre dépendance.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">Intervenez-vous sur place ou à distance ?</button>
-            <div class="faq-answer">
+            <button id="faq-q4" class="faq-question" aria-expanded="false" aria-controls="faq-a4" type="button">Intervenez-vous sur place ou à distance ?</button>
+            <div id="faq-a4" class="faq-answer" role="region" aria-labelledby="faq-q4">
               <p>Les deux. Nous privilégions les rencontres en présentiel pour le diagnostic et les formations, mais nous pouvons également intervenir en visioconférence selon vos préférences et contraintes. Nous nous adaptons à votre contexte.</p>
             </div>
           </div>
@@ -320,7 +384,7 @@
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--gradient-overlay); text-align: center;">
+  <section id="contact-cta" class="section section-large section-full" style="background: var(--gradient-overlay); text-align: center;">
     <div class="container">
       <div class="fade-in">
         <h2>Prêt à structurer votre digital ?</h2>
@@ -373,6 +437,18 @@
             <li><a href="contact.html" class="footer-link">Formulaire de contact</a></li>
             <li class="footer-link" style="color: var(--color-text-muted);">France</li>
           </ul>
+          <!-- AJOUT SEO LOCAL: NAP visible (cohérent homepage/GBP) -->
+          <address style="font-style: normal; margin-top: var(--spacing-sm);">
+            <p class="footer-link" style="margin-bottom: var(--spacing-xs);">Clermont-Ferrand (63000) · Puy-de-Dôme · Auvergne-Rhône-Alpes</p>
+            <p style="margin-bottom: var(--spacing-xs);">
+              <a class="footer-link" href="tel:+33663783513" aria-label="Appeler Luméa Communication">06 63 78 35 13</a>
+              <span class="footer-link" style="margin: 0 var(--spacing-xs);">·</span>
+              <a class="footer-link" href="mailto:lumeasolution@outlook.fr" aria-label="Envoyer un email à Luméa Communication">lumeasolution@outlook.fr</a>
+            </p>
+            <p style="margin: 0;">
+              <a class="footer-link" href="https://share.google/6q08mZ9dKiHr7hZua" target="_blank" rel="noopener noreferrer" aria-label="Voir la fiche Google Business Profile">Google Business Profile</a>
+            </p>
+          </address>
         </div>
       </div>
       <div class="footer-bottom">
@@ -391,7 +467,8 @@
     </div>
   </div>
 
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/analytics.js" defer></script>
+  <!-- AJOUT PERF: scripts absolus prod + fallback local -->
+  <script src="https://lumeacommunication.fr/assets/js/main.js" defer onerror="this.onerror=null;this.src='../assets/js/main.js';"></script>
+  <script src="https://lumeacommunication.fr/assets/js/analytics.js" defer onerror="this.onerror=null;this.src='../assets/js/analytics.js';"></script>
 </body>
 </html>
