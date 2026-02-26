@@ -43,30 +43,27 @@
       <div class="nav-center">
         <ul class="navbar-menu" role="menubar">
           <li role="none"><a href="index.html" class="navbar-link" role="menuitem">Accueil</a></li>
-          <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting</a></li>
-          <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
-          <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
-          <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
-          <li role="none"><a href="realisations.html" class="navbar-link active" role="menuitem">Réalisations</a></li>
-          <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+          <li role="none" class="nav-dropdown">
+            <a href="services.html" class="navbar-link nav-dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav-dropdown-menu" role="menu" aria-label="Services">
+              <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+              <li role="none"><a href="consulting.html#seo" class="navbar-link" role="menuitem">Référencement / SEO</a></li>
+              <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+              <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
+              <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting / Stratégie</a></li>
+              <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
+            </ul>
+          </li>
+          <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem" aria-current="page">Réalisations</a></li>
+          <li role="none"><a href="indice-performance-digitale-locale.html" class="navbar-link" role="menuitem">Audit LVS</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
-          <li role="none"><a href="contact.html" class="navbar-link" role="menuitem">Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <div class="country-selector-nav">
-          <a href="../ch/index.html" class="country-link" title="Suisse">🇨🇭</a>
-          <a href="index.html" class="country-link active" title="France">🇫🇷</a>
-          <a href="../es/index.html" class="country-link" title="España">🇪🇸</a>
-        </div>
+        <a href="contact.html" class="btn btn-primary navbar-cta" aria-label="Contact">Contact</a>
       </div>
     </div>
   </nav>
-
-  <div class="realisations-banner" role="banner">
-    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
-    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
-  </div>
 
   <main id="main-content" class="page-content">
     <!-- 1. Hero / introduction -->
