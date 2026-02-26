@@ -2,20 +2,26 @@
 <html lang="fr-FR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Luméa : consulting, formation, cybersécurité, web. Basés à Clermont-Ferrand (Puy-de-Dôme), nous intervenons partout en France (sur site & visio). Réponse sous 24h ouvrées.">
-  <meta name="keywords" content="contact agence digitale France, devis consulting digital, formation digitale France, contact PME France">
+  <!-- AJOUT MOBILE/SEO: viewport mobile-first + zoom accessible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <!-- AJOUT SEO ON-PAGE: intention (contact/devis/audit) + local/national -->
+  <meta name="description" content="Contact (devis / audit / projet web & SaaS) : Basés à Clermont-Ferrand (63, Puy-de-Dôme), interventions partout en France (sur site & visio). Réponse sous 24h ouvrées.">
+  <!-- AJOUT SEO: meta keywords retirée (inutile Google) -->
   <meta name="author" content="Luméa Communication – France">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="geo.region" content="FR">
+  <!-- AJOUT SEO LOCAL: metas géo -->
+  <meta name="geo.placename" content="Clermont-Ferrand">
+  <meta name="geo.position" content="45.7772;3.087">
+  <meta name="theme-color" content="#0a0a0a">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lumeacommunication.fr/fr/contact.html">
   <meta property="og:title" content="Contact | Clermont-Ferrand (63) | Luméa">
-  <meta property="og:description" content="Basés à Clermont-Ferrand (Puy-de-Dôme), interventions partout en France. Discutons de votre projet. Réponse sous 24h ouvrées.">
-  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-contact.jpg">
-  <meta property="og:image:alt" content="Contact Luméa Communication – France">
+  <meta property="og:description" content="Contact (devis / audit) : Clermont-Ferrand (63) · Puy-de-Dôme · interventions partout en France (sur site & visio). Réponse sous 24h ouvrées.">
+  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-contact.webp">
+  <meta property="og:image:alt" content="Contact Luméa Communication à Clermont-Ferrand (63)">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Luméa Communication – France">
   
@@ -23,60 +29,176 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://lumeacommunication.fr/fr/contact.html">
   <meta name="twitter:title" content="Contact | Clermont-Ferrand (63) | Luméa">
-  <meta name="twitter:description" content="Basés à Clermont-Ferrand (Puy-de-Dôme), interventions partout en France. Discutons de votre projet.">
-  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-contact.jpg">
+  <meta name="twitter:description" content="Contact (devis / audit) : Clermont-Ferrand (63) · interventions partout en France. Réponse sous 24h ouvrées.">
+  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-contact.webp">
   
   <link rel="canonical" href="https://lumeacommunication.fr/fr/contact.html">
-    <!-- Hreflang -->
-  <link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/contact.html">
-  <link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/contact.html">
-  <link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/contacto.html">
-  <link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/contact.html">
-    <title>Contact | Clermont-Ferrand (63) | Luméa</title>
+  <!-- Site FR-only : pas de hreflang -->
+  <title>Contact (devis / audit) | Clermont-Ferrand (63) | Luméa</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="../assets/img/logo/logo.jpg">
-  <link rel="apple-touch-icon" href="../assets/img/logo/logo.jpg">
+  <!-- AJOUT PERF: assets absolus prod + fallback local -->
+  <link rel="icon" type="image/jpeg" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
+  <link rel="apple-touch-icon" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
+
+  <!-- AJOUT PERF: preconnect/dns-prefetch -->
+  <link rel="dns-prefetch" href="https://lumeacommunication.fr">
+  <link rel="preconnect" href="https://lumeacommunication.fr" crossorigin>
 
   <!-- Structured Data -->
+  <!-- TODO: remplacer l’URL LinkedIn par le profil complet (actuellement générique). -->
+  <!-- AJOUT SCHEMA 2026: JSON-LD unique @graph (LocalBusiness + ContactPoint + Offer + WebPage + Breadcrumb + FAQPage + WebSite) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Luméa Communication – France",
-    "url": "https://lumeacommunication.fr/fr/",
-    "email": "lumeasolution@outlook.fr",
-    "areaServed": [
-      { "@type": "City", "name": "Clermont-Ferrand" },
-      { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" },
-      { "@type": "Country", "name": "France" }
-    ],
-    "knowsAbout": [
-      "Consulting digital",
-      "Formation digitale",
-      "Cybersécurité",
-      "Création de sites web",
-      "Branding",
-      "Développement web"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lumeacommunication.fr/fr/" },
-      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://lumeacommunication.fr/fr/contact.html" }
+    "@graph": [
+      {
+        "@id": "https://lumeacommunication.fr/fr/#business",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "name": "Luméa Communication – France",
+        "url": "https://lumeacommunication.fr/fr/",
+        "logo": "https://lumeacommunication.fr/assets/img/logo/logo.jpg",
+        "image": "https://lumeacommunication.fr/assets/img/photos/hero-contact.webp",
+        "description": "Agence web à Clermont-Ferrand (63) : sites premium, SEO local et développement sur mesure pour PME, partout en France. Contact & devis sur demande, réponse sous 24h ouvrées.",
+        "telephone": "+33663783513",
+        "email": "lumeasolution@outlook.fr",
+        "priceRange": "Sur devis",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Clermont-Ferrand",
+          "addressRegion": "Auvergne-Rhône-Alpes",
+          "postalCode": "63000",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.7772,
+          "longitude": 3.087
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Clermont-Ferrand" },
+          { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" },
+          { "@type": "Country", "name": "France" }
+        ],
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.7772,
+            "longitude": 3.087
+          },
+          "geoRadius": {
+            "@type": "QuantitativeValue",
+            "value": 100,
+            "unitCode": "KMT"
+          }
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "12:30",
+            "closes": "19:00"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+33663783513",
+            "email": "lumeasolution@outlook.fr",
+            "contactType": "customer service",
+            "areaServed": "FR",
+            "availableLanguage": ["fr"]
+          }
+        ],
+        "sameAs": [
+          "https://share.google/6q08mZ9dKiHr7hZua",
+          "https://www.linkedin.com/in/"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Contact & devis gratuit",
+            "description": "Échange initial, cadrage du besoin et devis sur demande. Réponse sous 24h ouvrées.",
+            "url": "https://lumeacommunication.fr/fr/contact.html",
+            "areaServed": { "@type": "Country", "name": "France" },
+            "priceSpecification": { "@type": "PriceSpecification", "description": "Sur devis" }
+          }
+        ]
+      },
+      {
+        "@id": "https://lumeacommunication.fr/fr/#website",
+        "@type": "WebSite",
+        "name": "Luméa Communication – France",
+        "url": "https://lumeacommunication.fr/fr/",
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@id": "https://lumeacommunication.fr/fr/contact.html#webpage",
+        "@type": "WebPage",
+        "name": "Contact (devis / audit) | Clermont-Ferrand (63) | Luméa",
+        "url": "https://lumeacommunication.fr/fr/contact.html",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://lumeacommunication.fr/fr/#website" },
+        "about": { "@id": "https://lumeacommunication.fr/fr/#business" },
+        "breadcrumb": { "@id": "https://lumeacommunication.fr/fr/contact.html#breadcrumb" }
+      },
+      {
+        "@id": "https://lumeacommunication.fr/fr/contact.html#breadcrumb",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lumeacommunication.fr/fr/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://lumeacommunication.fr/fr/contact.html" }
+        ]
+      },
+      {
+        "@id": "https://lumeacommunication.fr/fr/contact.html#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Sous quel délai répondez-vous ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nous répondons sous 24h ouvrées. Si votre demande est urgente, vous pouvez aussi nous appeler." }
+          },
+          {
+            "@type": "Question",
+            "name": "Intervenez-vous sur site ou en visio ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Les échanges peuvent se faire en visio partout en France, et sur site selon le projet (Clermont-Ferrand / Puy-de-Dôme et déplacements ponctuels)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Le devis est-il gratuit ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Oui : après un premier échange de cadrage, nous vous envoyons un devis clair, sans engagement." }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelles informations fournir pour aller plus vite ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Indiquez votre contexte, vos objectifs (leads, vente, visibilité locale), votre échéance, et des exemples de sites que vous aimez. Cela nous permet de répondre plus précisément." }
+          }
+        ]
+      }
     ]
   }
   </script>
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="../assets/css/styles.css" as="style">
-  <link rel="preload" href="../assets/img/photos/hero-contact.jpg" as="image" fetchpriority="high">
+  <!-- AJOUT PERF: preload CSS + assets absolus prod + fallback local -->
+  <link rel="preload" href="https://lumeacommunication.fr/assets/css/styles.css" as="style" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+  <link rel="preload" as="image" href="https://lumeacommunication.fr/assets/img/photos/hero-contact.webp" fetchpriority="high">
   
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://lumeacommunication.fr/assets/css/styles.css" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
 </head>
 <body>
   <!-- Skip to main content -->
@@ -97,39 +219,53 @@
       <div class="nav-center">
         <ul class="navbar-menu" role="menubar">
           <li role="none"><a href="index.html" class="navbar-link" role="menuitem">Accueil</a></li>
-          <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting</a></li>
-          <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
-          <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
-          <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+          <li role="none" class="nav-dropdown">
+            <a href="services.html" class="navbar-link nav-dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav-dropdown-menu" role="menu" aria-label="Services">
+              <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+              <li role="none"><a href="consulting.html#seo" class="navbar-link" role="menuitem">Référencement / SEO</a></li>
+              <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+              <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
+              <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting / Stratégie</a></li>
+              <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
+            </ul>
+          </li>
           <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem">Réalisations</a></li>
-          <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+          <li role="none"><a href="indice-performance-digitale-locale.html" class="navbar-link" role="menuitem">Audit LVS</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
-          <li role="none"><a href="contact.html" class="navbar-link active" role="menuitem">Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <div class="country-selector-nav">
-          <a href="../ch/index.html" class="country-link" title="Suisse">🇨🇭</a>
-          <a href="index.html" class="country-link active" title="France">🇫🇷</a>
-          <a href="../es/index.html" class="country-link" title="España">🇪🇸</a>
-        </div>
+        <a href="contact.html" class="btn btn-primary navbar-cta" aria-label="Contact" aria-current="page">Contact</a>
       </div>
     </div>
   </nav>
 
-  <div class="realisations-banner" role="banner">
-    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
-    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
-  </div>
-
-  <main id="main-content" class="page-content">
-  <section class="hero" style="background-image: url('../assets/img/photos/hero-contact.jpg'); min-height: 50vh;" role="banner" aria-label="Image hero - Contact">
+  <main id="main-content" class="page-content" role="main">
+  <section class="hero" role="banner" aria-label="Contact">
+    <!-- AJOUT PERF/CWV: hero bg en <img> (meilleur LCP + dimensions) -->
+    <img class="hero-bg"
+         src="https://lumeacommunication.fr/assets/img/photos/hero-contact.webp"
+         srcset="https://lumeacommunication.fr/assets/img/photos/hero-contact.webp 480w, https://lumeacommunication.fr/assets/img/photos/hero-contact.webp 768w, https://lumeacommunication.fr/assets/img/photos/hero-contact.webp 1200w"
+         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
+         width="1200" height="800"
+         alt="Contact Luméa Communication à Clermont-Ferrand (63)"
+         loading="eager" decoding="async" fetchpriority="high"
+         onerror="this.onerror=null;this.src='../assets/img/photos/hero-contact.webp';this.srcset='../assets/img/photos/hero-contact.webp 480w, ../assets/img/photos/hero-contact.webp 768w, ../assets/img/photos/hero-contact.webp 1200w';">
     <div class="hero-content">
       <h1 class="hero-title">Contact</h1>
       <p class="hero-subtitle">Discutons de votre projet digital</p>
       <p class="hero-subtitle" style="font-size: var(--font-size-base); margin-top: calc(var(--spacing-md) * -0.5);">Basés à Clermont-Ferrand (Puy-de-Dôme) · interventions partout en France (sur site & visio)</p>
     </div>
   </section>
+
+  <!-- AJOUT MOBILE/CWV: micro-ajustements (hero + CTA) -->
+  <style>
+    @media (max-width: 640px) {
+      .hero { min-height: 70vh; padding: var(--spacing-lg) 0; }
+      .hero-cta .btn { min-height: 48px; padding: 1rem 1.5rem; font-size: clamp(1rem, 4vw, 1.125rem); }
+    }
+  </style>
 
   <section class="section section-large section-full">
     <div class="container">
@@ -140,32 +276,41 @@
           <p><strong>Local SEO :</strong> Clermont-Ferrand (63), Puy-de-Dôme, Auvergne-Rhône-Alpes — accompagnement digital pour PME partout en France.</p>
           <p>Que vous souhaitiez discuter d'un projet de consulting, organiser une formation pour votre équipe, ou mettre en place des bonnes pratiques de cybersécurité, nous sommes là pour vous accompagner.</p>
           <div style="margin-top: var(--spacing-xl); padding: var(--spacing-lg); background: var(--color-bg-secondary); border-radius: var(--radius-lg); border: 1px solid rgba(59, 130, 246, 0.1);">
-            <h4 style="margin-bottom: var(--spacing-md); color: var(--color-text-primary);">Luméa Group</h4>
+            <h4 style="margin-bottom: var(--spacing-md); color: var(--color-text-primary);">Lumée Solutions</h4>
             <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">Contactez-nous via le formulaire ci-contre ou directement par email :</p>
+            <!-- AJOUT SEO LOCAL/CONVERSION: bloc NAP visible (exact) -->
+            <div style="margin-top: var(--spacing-lg); padding: var(--spacing-md); background: rgba(0,0,0,0.3); border-radius: var(--radius-md); text-align: center; font-size: var(--font-size-sm); line-height: 1.6;">
+              Clermont-Ferrand (63000) · Puy-de-Dôme · Auvergne-Rhône-Alpes<br>
+              <a href="tel:+33663783513" style="color: var(--color-accent-blue); text-decoration: none;">06 63 78 35 13</a> · 
+              <a href="mailto:lumeasolution@outlook.fr" style="color: var(--color-accent-blue); text-decoration: none;">lumeasolution@outlook.fr</a><br>
+              <a href="https://share.google/6q08mZ9dKiHr7hZua" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-blue); text-decoration: none;">Voir sur Google</a>
+            </div>
             <p style="margin: 0;">
               <a href="mailto:lumeasolution@outlook.fr" style="color: var(--color-accent-blue); text-decoration: none; font-weight: 600; font-size: var(--font-size-base);">lumeasolution@outlook.fr</a>
             </p>
-            <p style="color: var(--color-text-muted); font-size: var(--font-size-sm); margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(255, 255, 255, 0.08);">Nous vous répondrons dans les plus brefs délais.</p>
+            <p style="color: var(--color-text-muted); font-size: var(--font-size-sm); margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(255, 255, 255, 0.08);">Réponse sous 24h ouvrées.</p>
           </div>
         </div>
         <div class="fade-in" style="opacity: 1; transform: none;">
-          <form id="contact-form" class="card" style="padding: var(--spacing-xl); background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%); border: 1px solid rgba(59, 130, 246, 0.15); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.05);">
-            <div class="form-message"></div>
+          <!-- AJOUT A11Y: titre formulaire (sr-only) + aria-labelledby -->
+          <form id="contact-form" class="card" aria-label="Formulaire de contact" aria-labelledby="contact-form-title" novalidate style="padding: var(--spacing-xl); background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%); border: 1px solid rgba(59, 130, 246, 0.15); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.05);">
+            <h2 id="contact-form-title" class="sr-only">Formulaire de contact</h2>
+            <div class="form-message" role="status" aria-live="polite" aria-atomic="true"></div>
             <div class="form-group">
               <label for="name" class="form-label">Nom ou entreprise *</label>
-              <input type="text" id="name" name="name" class="form-input" required aria-required="true" autocomplete="name">
+              <input type="text" id="name" name="name" class="form-input" required aria-required="true" aria-invalid="false" autocomplete="name">
             </div>
             <div class="form-group">
               <label for="email" class="form-label">Email *</label>
-              <input type="email" id="email" name="email" class="form-input" required aria-required="true" autocomplete="email">
+              <input type="email" id="email" name="email" class="form-input" required aria-required="true" aria-invalid="false" autocomplete="email">
             </div>
             <div class="form-group">
               <label for="phone" class="form-label">Téléphone</label>
-              <input type="tel" id="phone" name="phone" class="form-input" placeholder="(+33) 6 12 34 56 78" autocomplete="tel">
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="(+33) 6 12 34 56 78" inputmode="tel" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="reason" class="form-label">Raison de contact</label>
-              <select id="reason" name="reason" class="form-input">
+              <select id="reason" name="reason" class="form-input" aria-invalid="false">
                 <option value="">Sélectionnez une raison</option>
                 <option value="audit">Audit gratuit</option>
                 <option value="consulting">Consulting</option>
@@ -179,7 +324,7 @@
             </div>
             <div class="form-group">
               <label for="message" class="form-label">Message *</label>
-              <textarea id="message" name="message" class="form-textarea" required aria-required="true"></textarea>
+              <textarea id="message" name="message" class="form-textarea" required aria-required="true" aria-invalid="false" autocomplete="off"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%; padding: var(--spacing-md) var(--spacing-xl); font-size: var(--font-size-lg); font-weight: 600; letter-spacing: 0.5px; margin-top: var(--spacing-md); box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); transition: all var(--transition-base);">Envoyer le message</button>
             <p style="font-size: var(--font-size-xs); color: var(--color-text-muted); margin-top: var(--spacing-sm);">* Champs obligatoires</p>
@@ -223,6 +368,7 @@
             <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
             <li><a href="confidentialite.html" class="footer-link">Confidentialité</a></li>
             <li><a href="cookies.html" class="footer-link">Cookies</a></li>
+            <li><a href="cgv.html" class="footer-link">CGV</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -231,6 +377,14 @@
             <li><a href="contact.html" class="footer-link">Formulaire de contact</a></li>
             <li class="footer-link" style="color: var(--color-text-muted);">France</li>
           </ul>
+          <!-- AJOUT SEO LOCAL: NAP visible footer (cohérent home) -->
+          <address style="margin-top: var(--spacing-md); font-style: normal; color: var(--color-text-secondary);">
+            <strong style="color: var(--color-text-primary);">Luméa Communication – France</strong><br>
+            Clermont-Ferrand 63000, Auvergne-Rhône-Alpes, FR<br>
+            <a href="tel:+33663783513" class="footer-link" style="display: inline-block; margin-top: var(--spacing-xs);">06 63 78 35 13</a><br>
+            <a href="mailto:lumeasolution@outlook.fr" class="footer-link">lumeasolution@outlook.fr</a><br>
+            <a href="https://share.google/6q08mZ9dKiHr7hZua" class="footer-link" rel="noopener" target="_blank">Google Business Profile</a>
+          </address>
         </div>
       </div>
       <div class="footer-bottom">
@@ -250,9 +404,10 @@
   </div>
 
   <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/analytics.js" defer></script>
+  <!-- PERF: chargé à la demande dans `assets/js/main.js` (soumission formulaire) -->
+  <!-- AJOUT PERF: scripts absolus prod + fallback local -->
+  <script src="https://lumeacommunication.fr/assets/js/main.js" defer onerror="this.onerror=null;this.src='../assets/js/main.js'"></script>
+  <script src="https://lumeacommunication.fr/assets/js/analytics.js" defer onerror="this.onerror=null;this.src='../assets/js/analytics.js'"></script>
 </body>
 </html>
 

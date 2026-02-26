@@ -12,10 +12,13 @@
     document.documentElement.classList.add('js-enabled');
 
     // === DEBUG MOBILE OVERFLOW (à activer via ?overflowDebug=1) ===
+    var params = null;
+    try { params = new URLSearchParams(window.location.search || ''); } catch (e) {}
+    var isOverflowDebug = !!(params && (params.has('overflowDebug') || params.has('overflow-debug')));
+
     function runOverflowDebug() {
       try {
-        var params = new URLSearchParams(window.location.search || '');
-        if (!(params.has('overflowDebug') || params.has('overflow-debug'))) return;
+        if (!isOverflowDebug) return;
 
         var styleId = 'overflow-debug-style';
         if (!document.getElementById(styleId)) {
@@ -75,30 +78,34 @@
             } catch (e) {}
           });
 
-        console.groupCollapsed('[OverflowDebug] viewport', viewportW, 'scrollWidth', document.documentElement.scrollWidth);
-        offenders.slice(0, 25).forEach(function(o, i) {
-          console.log(
-            i + 1,
-            o.tag + o.id,
-            o.cls,
-            'rect:', o.rect,
-            'overflowRight:', Math.round(o.overflowRight),
-            'overflowLeft:', Math.round(o.overflowLeft),
-            o.el
-          );
-        });
-        if (!offenders.length) console.log('Aucun élément ne dépasse la viewport (seuil > 1px).');
-        console.groupEnd();
+        // Affichage console uniquement en mode debug
+        if (window.console && console.groupCollapsed) {
+          console.groupCollapsed('[OverflowDebug] viewport', viewportW, 'scrollWidth', document.documentElement.scrollWidth);
+          offenders.slice(0, 25).forEach(function(o, i) {
+            console.log(
+              i + 1,
+              o.tag + o.id,
+              o.cls,
+              'rect:', o.rect,
+              'overflowRight:', Math.round(o.overflowRight),
+              'overflowLeft:', Math.round(o.overflowLeft),
+              o.el
+            );
+          });
+          if (!offenders.length) console.log('Aucun élément ne dépasse la viewport (seuil > 1px).');
+          console.groupEnd();
+        }
       } catch (e) {
         // Ne jamais casser la page si debug foire
       }
     }
 
-    runOverflowDebug();
-    window.addEventListener('resize', function() {
-      // rafraîchir le debug si activé
+    if (isOverflowDebug) {
       runOverflowDebug();
-    });
+      window.addEventListener('resize', function() {
+        runOverflowDebug();
+      });
+    }
 
     // === NAV ACTIVE STATES + DROPDOWN A11Y ===
     function normalizePath(p) {
@@ -259,75 +266,82 @@
       observer.observe(el);
     });
 
+    // === LAZY BACKGROUNDS (data-bg) ===
+    function initLazyBackgrounds() {
+      var nodes = document.querySelectorAll('[data-bg]');
+      if (!nodes.length) return;
+
+      function applyBg(el) {
+        if (!el || el.dataset.bgLoaded === 'true') return;
+        var bgUrl = el.getAttribute('data-bg');
+        if (!bgUrl) return;
+        var baseBg = '';
+        try { baseBg = window.getComputedStyle(el).backgroundImage || ''; } catch (e) {}
+        var nextBg;
+        if (!baseBg || baseBg === 'none') nextBg = 'url("' + bgUrl + '")';
+        else if (baseBg.indexOf('url(') !== -1) nextBg = baseBg; // déjà chargé
+        else nextBg = baseBg + ', url("' + bgUrl + '")';
+        el.style.backgroundImage = nextBg;
+        el.dataset.bgLoaded = 'true';
+      }
+
+      if (!('IntersectionObserver' in window)) {
+        nodes.forEach(function(el) { applyBg(el); });
+        return;
+      }
+
+      var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          applyBg(entry.target);
+          try { io.unobserve(entry.target); } catch (e) {}
+        });
+      }, { rootMargin: '250px 0px', threshold: 0.01 });
+
+      nodes.forEach(function(el) { io.observe(el); });
+    }
+
+    initLazyBackgrounds();
+
     // === ACCORDÉON FAQ ===
-    // Attendre un peu pour s'assurer que tous les éléments sont dans le DOM
-    setTimeout(function() {
-      const faqQuestions = document.querySelectorAll('.faq-question');
-      
-      console.log('FAQ questions trouvées:', faqQuestions.length);
-      
-      if (faqQuestions.length > 0) {
-        faqQuestions.forEach((question, index) => {
-          // Vérifier que l'élément suivant est bien la réponse
-          const answer = question.nextElementSibling;
-          
-          if (!answer || !answer.classList.contains('faq-answer')) {
-            console.warn('FAQ question', index, 'n\'a pas de réponse trouvée. Élément suivant:', answer);
-            return;
-          }
-          
-          console.log('FAQ', index, 'configurée:', question.textContent.trim().substring(0, 30));
-          
-          // Ajouter l'événement click
-          question.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const isActive = this.classList.contains('active');
-            const currentAnswer = this.nextElementSibling;
-            
-            console.log('FAQ cliquée:', this.textContent.trim(), 'Active:', isActive, 'Answer trouvée:', !!currentAnswer);
-            
-            // Fermer toutes les autres questions
-            faqQuestions.forEach(q => {
-              if (q !== this) {
-                q.classList.remove('active');
-                const otherAnswer = q.nextElementSibling;
-                if (otherAnswer && otherAnswer.classList.contains('faq-answer')) {
-                  otherAnswer.classList.remove('active');
-                }
-              }
-            });
-            
-            // Toggle la question actuelle
-            if (isActive) {
-              this.classList.remove('active');
-              this.setAttribute('aria-expanded', 'false');
-              if (currentAnswer) {
-                currentAnswer.classList.remove('active');
-                console.log('FAQ fermée');
-              }
-            } else {
-              this.classList.add('active');
-              this.setAttribute('aria-expanded', 'true');
-              if (currentAnswer) {
-                currentAnswer.classList.add('active');
-                console.log('FAQ ouverte, classes:', currentAnswer.className);
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    if (faqQuestions.length > 0) {
+      faqQuestions.forEach((question) => {
+        const answer = question.nextElementSibling;
+        if (!answer || !answer.classList.contains('faq-answer')) return;
+
+        question.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          const isActive = this.classList.contains('active');
+          const currentAnswer = this.nextElementSibling;
+
+          // Fermer toutes les autres questions
+          faqQuestions.forEach(q => {
+            if (q !== this) {
+              q.classList.remove('active');
+              q.setAttribute('aria-expanded', 'false');
+              const otherAnswer = q.nextElementSibling;
+              if (otherAnswer && otherAnswer.classList.contains('faq-answer')) {
+                otherAnswer.classList.remove('active');
               }
             }
           });
-        });
-      } else {
-        console.warn('Aucune question FAQ trouvée. Vérification du DOM...');
-        // Vérifier si les éléments existent mais avec un autre sélecteur
-        const faqContainer = document.querySelector('.faq');
-        if (faqContainer) {
-          console.log('Container FAQ trouvé:', faqContainer);
-          const allButtons = faqContainer.querySelectorAll('button');
-          console.log('Boutons trouvés dans FAQ:', allButtons.length);
-        }
-      }
-    }, 100); // Petit délai pour s'assurer que tout est chargé
+
+          // Toggle la question actuelle
+          if (isActive) {
+            this.classList.remove('active');
+            this.setAttribute('aria-expanded', 'false');
+            if (currentAnswer) currentAnswer.classList.remove('active');
+          } else {
+            this.classList.add('active');
+            this.setAttribute('aria-expanded', 'true');
+            if (currentAnswer) currentAnswer.classList.add('active');
+          }
+        }, { passive: false });
+      });
+    }
 
     // === COOKIE BANNER ===
     const cookieBanner = document.querySelector('.cookie-banner');
@@ -415,7 +429,10 @@
 
       function update() {
         if (track) track.style.transform = 'translateX(-' + index * 100 + '%)';
-        if (counterEl) counterEl.textContent = (index + 1) + ' / ' + total;
+        if (counterEl) {
+          counterEl.textContent = (index + 1) + ' / ' + total;
+          counterEl.setAttribute('aria-label', 'Image ' + (index + 1) + ' sur ' + total);
+        }
       }
 
       if (prevBtn) prevBtn.addEventListener('click', function() {
@@ -426,17 +443,23 @@
         index = (index + 1) % total;
         update();
       });
-    });
 
-    // === ACTIVE NAV LINK ===
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar-link');
-    
-    navLinks.forEach(link => {
-      const linkPath = new URL(link.href).pathname;
-      if (linkPath === currentPath || (currentPath === '/' && linkPath.includes('index.html'))) {
-        link.classList.add('active');
-      }
+      // A11Y: navigation clavier sur le carrousel (focusable via tabindex sur la page)
+      carousel.addEventListener('keydown', function(e) {
+        if (!total) return;
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          index = (index - 1 + total) % total;
+          update();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          index = (index + 1) % total;
+          update();
+        }
+      });
+
+      // Init
+      update();
     });
 
     // === FORMULAIRE CONTACT ===
@@ -445,9 +468,25 @@
     const EMAILJS_TEMPLATE_ID = 'template_1lznmjc'; // ID correct depuis les paramètres du template
     const EMAILJS_PUBLIC_KEY = 'CVJWmgYc1uNOsPXCK';
     
-    // Vérifier si EmailJS est chargé
-    if (typeof emailjs === 'undefined') {
-      console.warn('EmailJS n\'est pas chargé. Assurez-vous d\'inclure le script EmailJS dans vos pages HTML.');
+    // Charger EmailJS à la demande (perf): évite un script tiers bloquant si l’utilisateur ne soumet pas le formulaire.
+    function loadEmailJs() {
+      if (typeof emailjs !== 'undefined') return Promise.resolve();
+      if (window.__lumeaEmailJsLoading) return window.__lumeaEmailJsLoading;
+
+      window.__lumeaEmailJsLoading = new Promise(function(resolve, reject) {
+        try {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+          s.onload = function() { resolve(); };
+          s.onerror = function() { reject(new Error('EmailJS failed to load')); };
+          document.head.appendChild(s);
+        } catch (e) {
+          reject(e);
+        }
+      });
+
+      return window.__lumeaEmailJsLoading;
     }
     
     const contactForm = document.querySelector('#contact-form');
@@ -487,16 +526,30 @@
         formMessage.classList.remove('success', 'error');
       }
       
-      // Vérifier que EmailJS est disponible
-      if (typeof emailjs === 'undefined') {
-        console.error('EmailJS n\'est pas chargé');
+      // Vérifier que EmailJS est disponible (lazy-load si nécessaire)
+      try {
+        await loadEmailJs();
+      } catch (loadErr) {
         if (formMessage) {
           formMessage.classList.add('error');
-          if (isSpanish) {
-            formMessage.textContent = 'Error de configuración. Por favor, contacte al administrador.';
-          } else {
-            formMessage.textContent = 'Erreur de configuration. Veuillez contacter l\'administrateur.';
-          }
+          formMessage.textContent = isSpanish
+            ? 'Error de configuración. Por favor, contacte al administrador.'
+            : 'Erreur de configuration. Veuillez contacter l\'administrateur.';
+          formMessage.style.display = 'block';
+        }
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+        return;
+      }
+
+      if (typeof emailjs === 'undefined') {
+        if (formMessage) {
+          formMessage.classList.add('error');
+          formMessage.textContent = isSpanish
+            ? 'Error de configuración. Por favor, contacte al administrador.'
+            : 'Erreur de configuration. Veuillez contacter l\'administrateur.';
           formMessage.style.display = 'block';
         }
         if (submitButton) {
@@ -549,12 +602,6 @@
         reply_to: this.querySelector('[name="email"]').value
       };
       
-      console.log('Envoi email avec paramètres:', {
-        serviceId: EMAILJS_SERVICE_ID,
-        templateId: EMAILJS_TEMPLATE_ID,
-        params: templateParams
-      });
-      
       try {
         // Envoyer l'email via EmailJS
         const response = await emailjs.send(
@@ -562,8 +609,6 @@
           EMAILJS_TEMPLATE_ID,
           templateParams
         );
-        
-        console.log('Réponse EmailJS:', response);
         
         // EmailJS v4 peut retourner status 200 ou text 'OK'
         if (response.status === 200 || response.text === 'OK' || (response.status >= 200 && response.status < 300)) {
@@ -590,14 +635,6 @@
         }
       } catch (error) {
         // Erreur réseau ou autre
-        console.error('Erreur formulaire complète:', error);
-        console.error('Détails erreur:', {
-          message: error.text || error.message,
-          status: error.status,
-          serviceId: EMAILJS_SERVICE_ID,
-          templateId: EMAILJS_TEMPLATE_ID
-        });
-        
         if (formMessage) {
           formMessage.classList.add('error');
           let errorMessage = 'Erreur lors de l\'envoi du message. Veuillez réessayer ou nous contacter directement par email.';
@@ -627,7 +664,6 @@
     }
 
     // === INITIALISATION ===
-    console.log('Luméa Communication - Site chargé');
   }
 
   // Initialiser quand le DOM est prêt
