@@ -100,63 +100,93 @@
       runOverflowDebug();
     });
 
-    // === NAV / FOOTER LINKS (injection globale) ===
-    function ensureNavAndFooterLinks() {
-      // Navbar: ajouter "Audit LVS" sur toutes les pages FR si absent
-      var navbarMenus = document.querySelectorAll('.navbar-menu');
-      navbarMenus.forEach(function(menu) {
-        if (!menu) return;
-        var existing = menu.querySelector('a[href*="indice-performance-digitale-locale"]');
-        if (existing) return;
+    // === NAV ACTIVE STATES + DROPDOWN A11Y ===
+    function normalizePath(p) {
+      return String(p || '')
+        .split('?')[0]
+        .split('#')[0]
+        .replace(/\/+$/, '');
+    }
 
-        var li = document.createElement('li');
-        li.setAttribute('role', 'none');
-        var a = document.createElement('a');
-        a.href = 'indice-performance-digitale-locale.html';
-        a.className = 'navbar-link';
-        a.setAttribute('role', 'menuitem');
-        a.textContent = 'Audit LVS';
-        li.appendChild(a);
+    function setActiveNav() {
+      var path = normalizePath(window.location.pathname);
 
-        // Insérer après "Sites & Branding" si possible, sinon avant "Réalisations", sinon avant "Contact"
-        var anchorAfter = menu.querySelector('a[href$="sites-branding.html"]') || menu.querySelector('a[href$="realisations.html"]');
-        if (anchorAfter && anchorAfter.parentElement && anchorAfter.parentElement.parentElement === menu) {
-          anchorAfter.parentElement.insertAdjacentElement('afterend', li);
-        } else {
-          var contact = menu.querySelector('a[href$="contact.html"]');
-          if (contact && contact.parentElement && contact.parentElement.parentElement === menu) {
-            contact.parentElement.insertAdjacentElement('beforebegin', li);
-          } else {
-            menu.appendChild(li);
-          }
-        }
+      // Local dev: /fr/index.html ; prod pretty urls: /fr/ ou /fr/contact
+      var isHome = /\/fr$/.test(path) || /\/fr\/?$/.test(window.location.pathname) || /\/fr\/index\.html$/.test(path);
+      var isRealisations = /\/fr\/realisations(\.html)?$/.test(path) || /\/fr\/realisation-/.test(path);
+      var isAudit = /\/fr\/indice-performance-digitale-locale(\.html)?$/.test(path);
+      var isBlog = /\/fr\/blog(\.html)?$/.test(path) || /\/fr\/article(\.html)?$/.test(path);
+      var isContact = /\/fr\/contact(\.html)?$/.test(path);
+      var isServices = /\/fr\/services(\.html)?$/.test(path) || /\/fr\/(sites-branding|developpement|cybersecurite|consulting|formation)(\.html)?$/.test(path);
+
+      document.querySelectorAll('.navbar-link.active').forEach(function(el) {
+        el.classList.remove('active');
       });
 
-      // Footer: ajouter "Indice LVS" dans la colonne Services si absent
-      document.querySelectorAll('.footer-col').forEach(function(col) {
-        var title = col.querySelector('h4');
-        if (!title) return;
-        var t = (title.textContent || '').trim().toLowerCase();
-        if (t !== 'services') return;
-        var list = col.querySelector('ul.footer-links');
-        if (!list) return;
-        if (list.querySelector('a[href*="indice-performance-digitale-locale"]')) return;
+      function activate(selector) {
+        var el = document.querySelector(selector);
+        if (el) el.classList.add('active');
+      }
 
-        var liS = document.createElement('li');
-        var aS = document.createElement('a');
-        aS.href = 'indice-performance-digitale-locale.html';
-        aS.className = 'footer-link';
-        aS.textContent = 'Indice LVS';
-        liS.appendChild(aS);
-        list.insertAdjacentElement('afterbegin', liS);
+      if (isHome) activate('.navbar-menu a[href$="index.html"]');
+      else if (isServices) activate('.navbar-menu a[href$="services.html"]');
+      else if (isRealisations) activate('.navbar-menu a[href$="realisations.html"]');
+      else if (isAudit) activate('.navbar-menu a[href$="indice-performance-digitale-locale.html"]');
+      else if (isBlog) activate('.navbar-menu a[href$="blog.html"]');
+
+      if (isContact) {
+        var cta = document.querySelector('.navbar-cta');
+        if (cta) cta.classList.add('is-active');
+      } else {
+        var cta2 = document.querySelector('.navbar-cta');
+        if (cta2) cta2.classList.remove('is-active');
+      }
+    }
+
+    function initNavDropdownA11y() {
+      var dropdowns = document.querySelectorAll('.nav-dropdown');
+      dropdowns.forEach(function(dd) {
+        var toggle = dd.querySelector('.nav-dropdown-toggle');
+        var menu = dd.querySelector('.nav-dropdown-menu');
+        if (!toggle || !menu) return;
+
+        function setExpanded(open) {
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+
+        dd.addEventListener('mouseenter', function() { setExpanded(true); });
+        dd.addEventListener('mouseleave', function() { setExpanded(false); });
+        dd.addEventListener('focusin', function() { setExpanded(true); });
+        dd.addEventListener('focusout', function(e) {
+          if (!dd.contains(e.relatedTarget)) setExpanded(false);
+        });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key !== 'Escape') return;
+        document.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach(function(t) {
+          t.setAttribute('aria-expanded', 'false');
+          try { t.blur(); } catch (err) {}
+        });
       });
     }
 
-    ensureNavAndFooterLinks();
+    setActiveNav();
+    initNavDropdownA11y();
 
     // === MENU MOBILE ===
     const navCenter = document.querySelector('.nav-center');
     const navbarToggles = document.querySelectorAll('.navbar-toggle');
+
+    // A11Y: relier le bouton au menu contrôlé
+    if (navCenter && !navCenter.id) {
+      navCenter.id = 'primary-nav';
+    }
+    if (navCenter && navbarToggles.length) {
+      navbarToggles.forEach(function(btn) {
+        btn.setAttribute('aria-controls', navCenter.id);
+      });
+    }
 
     function setMenuIcon(open) {
       const iconChar = open ? '✕' : '☰';
@@ -168,6 +198,9 @@
     }
 
     if (navCenter && navbarToggles.length) {
+      // Synchronise l'état initial (au cas où une page injecte .active)
+      setMenuIcon(navCenter.classList.contains('active'));
+
       function toggleMobileMenu(e) {
         if (e) {
           e.preventDefault();
@@ -186,8 +219,8 @@
         toggleBtn.addEventListener('touchstart', toggleMobileMenu, { passive: false });
       });
 
-      // Fermer le menu en cliquant sur un lien
-      const navbarLinks = navCenter.querySelectorAll('.navbar-link');
+      // Fermer le menu en cliquant sur un lien (pas sur les sous-menus desktop)
+      const navbarLinks = navCenter.querySelectorAll('a.navbar-link');
       navbarLinks.forEach(link => {
         link.addEventListener('click', function() {
           navCenter.classList.remove('active');
