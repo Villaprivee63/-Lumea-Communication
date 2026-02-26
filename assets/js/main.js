@@ -152,29 +152,58 @@
 
     function initNavDropdownA11y() {
       var dropdowns = document.querySelectorAll('.nav-dropdown');
+      function closeAll() {
+        dropdowns.forEach(function(dd) {
+          var t = dd.querySelector('.nav-dropdown-toggle');
+          if (t) t.setAttribute('aria-expanded', 'false');
+          dd.classList.remove('is-open');
+        });
+      }
+
       dropdowns.forEach(function(dd) {
         var toggle = dd.querySelector('.nav-dropdown-toggle');
         var menu = dd.querySelector('.nav-dropdown-menu');
         if (!toggle || !menu) return;
 
-        function setExpanded(open) {
+        function setOpen(open) {
           toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          if (open) dd.classList.add('is-open');
+          else dd.classList.remove('is-open');
         }
 
-        dd.addEventListener('mouseenter', function() { setExpanded(true); });
-        dd.addEventListener('mouseleave', function() { setExpanded(false); });
-        dd.addEventListener('focusin', function() { setExpanded(true); });
+        // Desktop: hover/focus keep overlay stable (no layout shifts)
+        dd.addEventListener('mouseenter', function() { setOpen(true); });
+        dd.addEventListener('mouseleave', function() { setOpen(false); });
+        dd.addEventListener('focusin', function() { setOpen(true); });
         dd.addEventListener('focusout', function(e) {
-          if (!dd.contains(e.relatedTarget)) setExpanded(false);
+          if (!dd.contains(e.relatedTarget)) setOpen(false);
         });
+
+        // Touch/mobile: first tap opens, second tap navigates
+        toggle.addEventListener('click', function(e) {
+          var isOpen = dd.classList.contains('is-open');
+          if (!isOpen) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeAll();
+            setOpen(true);
+          }
+        }, { passive: false });
+      });
+
+      // Click outside closes
+      document.addEventListener('click', function(e) {
+        var clickedInside = false;
+        dropdowns.forEach(function(dd) {
+          if (dd.contains(e.target)) clickedInside = true;
+        });
+        if (!clickedInside) closeAll();
       });
 
       document.addEventListener('keydown', function(e) {
         if (e.key !== 'Escape') return;
-        document.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach(function(t) {
-          t.setAttribute('aria-expanded', 'false');
-          try { t.blur(); } catch (err) {}
-        });
+        closeAll();
+        try { document.activeElement && document.activeElement.blur && document.activeElement.blur(); } catch (err) {}
       });
     }
 
