@@ -2,20 +2,26 @@
 <html lang="fr-FR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cybersécurité préventive pour PME : mots de passe, MFA, sauvegardes, sensibilisation. Basés à Clermont-Ferrand (Puy-de-Dôme), accompagnement partout en France (sur site & visio).">
-  <meta name="keywords" content="cybersécurité PME France, hygiène numérique, sécurité informatique PME, protection données PME, MFA authentification, gestionnaire mots de passe, sauvegardes automatiques">
+  <!-- AJOUT MOBILE/SEO: viewport mobile-first + zoom accessible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <!-- AJOUT SEO ON-PAGE: ton serein + local/national -->
+  <meta name="description" content="Cybersécurité préventive pour PME : hygiène numérique, mots de passe, MFA, sauvegardes, sensibilisation. Basés à Clermont-Ferrand (63, Puy-de-Dôme), accompagnement partout en France (sur site & visio).">
+  <!-- AJOUT SEO: meta keywords retirée (inutile pour Google, évite le bruit) -->
   <meta name="author" content="Luméa Communication – France">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="geo.region" content="FR">
+  <!-- AJOUT SEO LOCAL -->
+  <meta name="geo.placename" content="Clermont-Ferrand">
+  <meta name="geo.position" content="45.7772;3.087">
+  <meta name="theme-color" content="#0a0a0a">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lumeacommunication.fr/fr/cybersecurite.html">
   <meta property="og:title" content="Cybersécurité PME | Clermont-Ferrand (63) | Luméa">
-  <meta property="og:description" content="Mots de passe, MFA, sauvegardes, sensibilisation. Basés à Clermont-Ferrand (Puy-de-Dôme), accompagnement partout en France.">
-  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-cybersecurite.jpg">
-  <meta property="og:image:alt" content="Cybersécurité préventive pour PME françaises">
+  <meta property="og:description" content="Hygiène numérique, mots de passe, MFA, sauvegardes, sensibilisation. Clermont-Ferrand (63) · partout en France.">
+  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-cybersecurite.webp">
+  <meta property="og:image:alt" content="Cybersécurité préventive à Clermont-Ferrand (63) pour PME">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Luméa Communication – France">
   
@@ -24,19 +30,16 @@
   <meta name="twitter:url" content="https://lumeacommunication.fr/fr/cybersecurite.html">
   <meta name="twitter:title" content="Cybersécurité PME | Clermont-Ferrand (63) | Luméa">
   <meta name="twitter:description" content="Mots de passe, MFA, sauvegardes, sensibilisation. Basés à Clermont-Ferrand (Puy-de-Dôme), partout en France.">
-  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-cybersecurite.jpg">
+  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-cybersecurite.webp">
   
   <link rel="canonical" href="https://lumeacommunication.fr/fr/cybersecurite.html">
-    <!-- Hreflang -->
-  <link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/cybersecurite.html">
-  <link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/cybersecurite.html">
-  <link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/ciberseguridad.html">
-  <link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/cybersecurite.html">
+  <!-- Site FR-only : pas de hreflang -->
     <title>Cybersécurité PME | Clermont-Ferrand (63) | Luméa</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="../assets/img/logo/logo.jpg">
-  <link rel="apple-touch-icon" href="../assets/img/logo/logo.jpg">
+  <!-- AJOUT PERF: assets absolus prod + fallback local -->
+  <link rel="icon" type="image/jpeg" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
+  <link rel="apple-touch-icon" href="https://lumeacommunication.fr/assets/img/logo/logo.jpg" onerror="this.onerror=null;this.href='../assets/img/logo/logo.jpg'">
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -127,10 +130,38 @@
   </script>
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="../assets/css/styles.css" as="style">
-  <link rel="preload" href="../assets/img/photos/hero-cybersecurite.jpg" as="image" fetchpriority="high">
+  <!-- AJOUT PERF: preconnect + preload (sans multiplier) -->
+  <link rel="preconnect" href="https://lumeacommunication.fr" crossorigin>
+  <link rel="dns-prefetch" href="//lumeacommunication.fr">
+  <link rel="preload" href="https://lumeacommunication.fr/assets/css/styles.css" as="style" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+  <link rel="preload" href="https://lumeacommunication.fr/assets/img/photos/hero-cybersecurite.webp" as="image" fetchpriority="high" onerror="this.onerror=null;this.href='../assets/img/photos/hero-cybersecurite.webp'">
   
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://lumeacommunication.fr/assets/css/styles.css" onerror="this.onerror=null;this.href='../assets/css/styles.css'">
+
+  <!-- AJOUT MOBILE/UX: overrides très ciblés (sans refonte) -->
+  <style>
+    @media (max-width: 640px) {
+      .hero {
+        min-height: 70vh !important;
+        padding: var(--spacing-lg) 0 !important;
+      }
+      .hero-content {
+        padding: var(--spacing-lg) var(--container-padding) !important;
+      }
+      .hero-cta .btn {
+        min-height: 48px;
+        padding: 1rem 1.5rem;
+        font-size: clamp(1rem, 4vw, 1.125rem);
+      }
+      .grid.grid-2,
+      .grid.grid-3 {
+        grid-template-columns: 1fr !important;
+      }
+      .split-section {
+        flex-direction: column !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Skip to main content -->
@@ -146,38 +177,50 @@
   <nav class="navbar" role="navigation" aria-label="Navigation principale">
     <div class="nav-inner">
       <div class="nav-left">
-        <button class="navbar-toggle" aria-label="Menu mobile" aria-expanded="false">☰</button>
+        <!-- AJOUT A11Y: aria-controls relie le bouton au menu -->
+        <button class="navbar-toggle" aria-label="Menu mobile" aria-expanded="false" aria-controls="primary-nav">☰</button>
       </div>
-      <div class="nav-center">
+      <div class="nav-center" id="primary-nav">
         <ul class="navbar-menu" role="menubar">
           <li role="none"><a href="index.html" class="navbar-link" role="menuitem">Accueil</a></li>
-          <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting</a></li>
-          <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
-          <li role="none"><a href="cybersecurite.html" class="navbar-link active" role="menuitem">Cybersécurité</a></li>
-          <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+          <li role="none" class="nav-dropdown">
+            <a href="services.html" class="navbar-link nav-dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav-dropdown-menu" role="menu" aria-label="Services">
+              <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+              <li role="none"><a href="consulting.html#seo" class="navbar-link" role="menuitem">Référencement / SEO</a></li>
+              <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+              <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem" aria-current="page">Cybersécurité</a></li>
+              <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting / Stratégie</a></li>
+              <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
+            </ul>
+          </li>
           <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem">Réalisations</a></li>
-          <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+          <li role="none"><a href="indice-performance-digitale-locale.html" class="navbar-link" role="menuitem">Audit LVS</a></li>
           <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
-          <li role="none"><a href="contact.html" class="navbar-link" role="menuitem">Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <div class="country-selector-nav">
-          <a href="../ch/index.html" class="country-link" title="Suisse">🇨🇭</a>
-          <a href="index.html" class="country-link active" title="France">🇫🇷</a>
-          <a href="../es/index.html" class="country-link" title="España">🇪🇸</a>
-        </div>
+        <a href="contact.html" class="btn btn-primary navbar-cta" aria-label="Contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <div class="realisations-banner" role="banner">
-    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
-    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
-  </div>
-
   <main id="main-content" class="page-content">
-  <section class="hero" style="background-image: url('../assets/img/photos/hero-cybersecurite.jpg');" role="banner" aria-label="Image hero - Cybersécurité préventive">
+  <!-- AJOUT MOBILE/PERF/A11Y: hero en <img> (alt + CLS maîtrisé) -->
+  <section class="hero" style="min-height: 100vh;" role="banner" aria-label="Image hero - Cybersécurité préventive">
+    <img
+      class="hero-bg"
+      src="https://lumeacommunication.fr/assets/img/photos/hero-cybersecurite.webp"
+      srcset="https://lumeacommunication.fr/assets/img/photos/hero-cybersecurite.webp 1200w"
+      sizes="100vw"
+      width="1200"
+      height="800"
+      alt="Hygiène numérique et cybersécurité préventive à Clermont-Ferrand (63) pour PME"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      onerror="this.onerror=null;this.src='../assets/img/photos/hero-cybersecurite.webp';"
+    >
     <div class="hero-content">
       <h1 class="hero-title">Cybersécurité préventive</h1>
       <p class="hero-subtitle">Hygiène numérique sans anxiété</p>
@@ -185,7 +228,22 @@
     </div>
   </section>
 
-  <section class="section section-large section-full">
+  <!-- AJOUT MAILLAGE INTERNE: sommaire (ancres) -->
+  <section class="section section-full" aria-label="Sommaire de la page">
+    <div class="container">
+      <div class="fade-in" style="max-width: 980px; margin: 0 auto;">
+        <p class="text-muted" style="margin-bottom: var(--spacing-sm);">Aller plus vite :</p>
+        <ul style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm); list-style: none; padding: 0; margin: 0;">
+          <li><a href="#diagnostic" aria-label="Aller au diagnostic">Diagnostic</a></li>
+          <li><a href="#mise-en-place" aria-label="Aller à la mise en place">Mise en place</a></li>
+          <li><a href="#faq" aria-label="Aller à la FAQ">FAQ</a></li>
+          <li><a href="#contact-cta" aria-label="Aller au contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="pourquoi" class="section section-large section-full" aria-label="Pourquoi">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Pourquoi ?</h2>
@@ -199,13 +257,13 @@
           <p style="font-size: var(--font-size-sm); color: var(--color-text-muted); margin-top: var(--spacing-md); padding: var(--spacing-md); background: var(--color-bg-secondary); border-radius: var(--radius-md); border-left: 3px solid var(--color-accent-blue);"><strong>Important :</strong> Nous ne proposons pas de tests d'intrusion (pentest) ni d'audits de sécurité approfondis. Notre mission est l'hygiène numérique préventive, pas la sécurité offensive.</p>
         </div>
         <div>
-          <img src="../assets/img/photos/cyber-2.jpg" alt="Cybersécurité préventive" class="split-image" loading="lazy" onerror="this.style.display='none';">
+          <img src="https://lumeacommunication.fr/assets/img/photos/cyber-2.webp" alt="Cybersécurité préventive sereine pour PME à Clermont-Ferrand" class="split-image" loading="lazy" decoding="async" width="1200" height="800" onerror="this.onerror=null;this.src='../assets/img/photos/cyber-2.webp';">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="diagnostic" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-label="Diagnostic cybersécurité">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Diagnostic</h2>
@@ -267,7 +325,7 @@
     </div>
   </section>
 
-  <section class="section section-large section-full">
+  <section id="mise-en-place" class="section section-large section-full" aria-label="Mise en place">
     <div class="container">
       <div class="text-center mb-xl fade-in">
         <h2>Mise en place</h2>
@@ -308,38 +366,39 @@
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--color-bg-secondary);">
+  <section id="faq" class="section section-large section-full" style="background: var(--color-bg-secondary);" aria-labelledby="faq-title">
     <div class="container">
       <div class="fade-in">
-        <h2 class="text-center mb-lg">Questions fréquentes</h2>
+        <h2 id="faq-title" class="text-center mb-lg">Questions fréquentes</h2>
         <div class="faq">
           <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false">Pourquoi ne proposez-vous pas de pentest ?</button>
-            <div class="faq-answer">
+            <!-- AJOUT A11Y: association question/réponse -->
+            <button id="faq-q1" type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a1">Pourquoi ne proposez-vous pas de pentest ?</button>
+            <div id="faq-a1" class="faq-answer" role="region" aria-labelledby="faq-q1">
               <p>Les tests d'intrusion (pentest) sont des audits de sécurité approfondis qui nécessitent des compétences spécialisées et des outils avancés. Notre approche se concentre sur l'hygiène numérique préventive : mettre en place les bonnes pratiques de base qui protègent 80% des risques courants. Pour des audits de sécurité approfondis, nous recommandons de faire appel à des spécialistes en cybersécurité.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false">Combien de temps prend la mise en place ?</button>
-            <div class="faq-answer">
+            <button id="faq-q2" type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a2">Combien de temps prend la mise en place ?</button>
+            <div id="faq-a2" class="faq-answer" role="region" aria-labelledby="faq-q2">
               <p>La mise en place des bonnes pratiques essentielles prend généralement 2 à 4 semaines, selon la taille de votre équipe et la complexité de votre infrastructure. Nous procédons étape par étape, en priorisant les actions les plus critiques.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false">Faut-il changer tous nos outils ?</button>
-            <div class="faq-answer">
+            <button id="faq-q3" type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a3">Faut-il changer tous nos outils ?</button>
+            <div id="faq-a3" class="faq-answer" role="region" aria-labelledby="faq-q3">
               <p>Non. Nous travaillons avec vos outils existants. Nous activons les fonctionnalités de sécurité déjà disponibles (MFA, sauvegardes automatiques, etc.) et ajoutons des outils complémentaires uniquement si nécessaire (gestionnaire de mots de passe, par exemple).</p>
             </div>
           </div>
           <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false">Que faire en cas d'incident de sécurité ?</button>
-            <div class="faq-answer">
+            <button id="faq-q4" type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a4">Que faire en cas d'incident de sécurité ?</button>
+            <div id="faq-a4" class="faq-answer" role="region" aria-labelledby="faq-q4">
               <p>Nous vous aidons à mettre en place des procédures d'incident : qui contacter, quelles actions prendre immédiatement, comment isoler le problème. Cependant, en cas d'incident réel (attaque, fuite de données), nous recommandons de faire appel à des spécialistes en réponse aux incidents (IR) pour une intervention rapide et professionnelle.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false">Proposez-vous un suivi continu ?</button>
-            <div class="faq-answer">
+            <button id="faq-q5" type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a5">Proposez-vous un suivi continu ?</button>
+            <div id="faq-a5" class="faq-answer" role="region" aria-labelledby="faq-q5">
               <p>Oui. Après la mise en place initiale, nous proposons un suivi optionnel : révision trimestrielle des accès, vérification des sauvegardes, rappels de sensibilisation, ajustements si nécessaire. L'objectif est de maintenir un niveau de sécurité constant dans le temps.</p>
             </div>
           </div>
@@ -348,7 +407,7 @@
     </div>
   </section>
 
-  <section class="section section-large section-full" style="background: var(--gradient-overlay); text-align: center;">
+  <section id="contact-cta" class="section section-large section-full" style="background: var(--gradient-overlay); text-align: center;">
     <div class="container">
       <div class="fade-in">
         <h2>Prêt à sécuriser votre activité ?</h2>
@@ -401,6 +460,18 @@
             <li><a href="contact.html" class="footer-link">Formulaire de contact</a></li>
             <li class="footer-link" style="color: var(--color-text-muted);">France</li>
           </ul>
+          <!-- AJOUT SEO LOCAL: NAP visible (cohérent homepage/GBP) -->
+          <address style="font-style: normal; margin-top: var(--spacing-sm);">
+            <p class="footer-link" style="margin-bottom: var(--spacing-xs);">Clermont-Ferrand (63000) · Puy-de-Dôme · Auvergne-Rhône-Alpes</p>
+            <p style="margin-bottom: var(--spacing-xs);">
+              <a class="footer-link" href="tel:+33663783513" aria-label="Appeler Luméa Communication">06 63 78 35 13</a>
+              <span class="footer-link" style="margin: 0 var(--spacing-xs);">·</span>
+              <a class="footer-link" href="mailto:lumeasolution@outlook.fr" aria-label="Envoyer un email à Luméa Communication">lumeasolution@outlook.fr</a>
+            </p>
+            <p style="margin: 0;">
+              <a class="footer-link" href="https://share.google/6q08mZ9dKiHr7hZua" target="_blank" rel="noopener noreferrer" aria-label="Voir la fiche Google Business Profile">Google Business Profile</a>
+            </p>
+          </address>
         </div>
       </div>
       <div class="footer-bottom">
@@ -419,8 +490,9 @@
     </div>
   </div>
 
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/analytics.js" defer></script>
+  <!-- AJOUT PERF: scripts absolus prod + fallback local -->
+  <script src="https://lumeacommunication.fr/assets/js/main.js" defer onerror="this.onerror=null;this.src='../assets/js/main.js';"></script>
+  <script src="https://lumeacommunication.fr/assets/js/analytics.js" defer onerror="this.onerror=null;this.src='../assets/js/analytics.js';"></script>
 </body>
 </html>
 
