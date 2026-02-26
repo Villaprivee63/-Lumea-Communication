@@ -125,7 +125,9 @@
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    # IMPORTANT (prod parity): éviter de figer CSS/JS sans fingerprint.
+    # Les règles plus spécifiques (img/css/js) affinent ensuite.
+    Cache-Control = "public, max-age=604800"
 
 # Headers pour les images
 [[headers]]
@@ -139,12 +141,12 @@
   [headers.values]
     # IMPORTANT CLS: éviter le “stale CSS” (cache long immutable) qui casse le layout.
     # Sans fichiers hashés, on ne met PAS immutable sur CSS/JS.
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/assets/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # Headers pour les fichiers HTML (pas de cache pour faciliter les mises à jour)
 [[headers]]

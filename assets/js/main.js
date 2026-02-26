@@ -11,7 +11,7 @@
     // Marquer que JavaScript est disponible pour les animations
     document.documentElement.classList.add('js-enabled');
 
-    // === DEBUG MOBILE OVERFLOW (à activer via ?overflowDebug=1) ===
+    // === DEBUG OVERFLOW / PROD LAYOUT (à activer via ?overflowDebug=1) ===
     var params = null;
     try { params = new URLSearchParams(window.location.search || ''); } catch (e) {}
     var isOverflowDebug = !!(params && (params.has('overflowDebug') || params.has('overflow-debug')));
@@ -37,7 +37,9 @@
           el.removeAttribute('data-overflow-debug');
         });
 
-        var viewportW = window.innerWidth;
+        var viewportW = document.documentElement.clientWidth || window.innerWidth;
+        var docSW = document.documentElement.scrollWidth;
+        var docCW = document.documentElement.clientWidth;
         var offenders = [];
         document.querySelectorAll('*').forEach(function(el) {
           // Ignorer scripts/styles et éléments invisibles
@@ -50,9 +52,26 @@
           // Débordement à droite (ou très léger dû au subpixel)
           var overflowRight = rect.right - viewportW;
           var overflowLeft = 0 - rect.left;
-          if (overflowRight > 1 || overflowLeft > 1) {
+          var elSW = 0;
+          var elCW = 0;
+          try { elSW = el.scrollWidth || 0; elCW = el.clientWidth || 0; } catch (e) {}
+          var isScrollOverflow = (elSW > elCW + 1);
+          if (overflowRight > 1 || overflowLeft > 1 || isScrollOverflow) {
             var cls = (el.className && typeof el.className === 'string') ? el.className : '';
             var id = el.id ? ('#' + el.id) : '';
+            var cs = null;
+            try { cs = window.getComputedStyle(el); } catch (e) {}
+            var styles = cs ? {
+              position: cs.position,
+              display: cs.display,
+              width: cs.width,
+              maxWidth: cs.maxWidth,
+              left: cs.left,
+              right: cs.right,
+              transform: cs.transform,
+              overflowX: cs.overflowX,
+              boxSizing: cs.boxSizing
+            } : null;
             offenders.push({
               el: el,
               tag: tag,
@@ -60,7 +79,10 @@
               id: id,
               rect: { left: rect.left, right: rect.right, width: rect.width },
               overflowRight: overflowRight,
-              overflowLeft: overflowLeft
+              overflowLeft: overflowLeft,
+              scrollWidth: elSW,
+              clientWidth: elCW,
+              styles: styles
             });
           }
         });
@@ -80,8 +102,20 @@
 
         // Affichage console uniquement en mode debug
         if (window.console && console.groupCollapsed) {
-          console.groupCollapsed('[OverflowDebug] viewport', viewportW, 'scrollWidth', document.documentElement.scrollWidth);
-          offenders.slice(0, 25).forEach(function(o, i) {
+          console.groupCollapsed('[OverflowDebug] doc clientWidth', docCW, 'doc scrollWidth', docSW);
+
+          // Check rapide: HERO bg doit être en position absolute (si CSS à jour)
+          try {
+            var heroBg = document.querySelector('.hero .hero-bg');
+            if (heroBg) {
+              var hcs = window.getComputedStyle(heroBg);
+              console.log('[OverflowDebug] hero-bg computed', { position: hcs.position, width: hcs.width, height: hcs.height, transform: hcs.transform });
+            } else {
+              console.log('[OverflowDebug] hero-bg: aucun <img class="hero-bg"> détecté sur la page');
+            }
+          } catch (e) {}
+
+          offenders.slice(0, 30).forEach(function(o, i) {
             console.log(
               i + 1,
               o.tag + o.id,
@@ -89,6 +123,9 @@
               'rect:', o.rect,
               'overflowRight:', Math.round(o.overflowRight),
               'overflowLeft:', Math.round(o.overflowLeft),
+              'el.clientWidth:', o.clientWidth,
+              'el.scrollWidth:', o.scrollWidth,
+              'styles:', o.styles,
               o.el
             );
           });
@@ -102,6 +139,10 @@
 
     if (isOverflowDebug) {
       runOverflowDebug();
+      // Rejouer après load (images/fonts) pour reproduire un bug prod-only
+      window.addEventListener('load', function() {
+        try { setTimeout(runOverflowDebug, 0); } catch (e) {}
+      }, { once: true });
       window.addEventListener('resize', function() {
         runOverflowDebug();
       });
