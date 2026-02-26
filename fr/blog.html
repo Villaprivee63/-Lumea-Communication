@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://lumeacommunication.fr/fr/blog.html">
   <meta property="og:title" content="Blog digital PME | Clermont-Ferrand | Luméa">
   <meta property="og:description" content="Stratégie, SEO, outils, cybersécurité. Basés à Clermont-Ferrand (Puy-de-Dôme), conseils concrets pour PME partout en France.">
-  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-blog.jpg">
+  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-blog.webp">
   <meta property="og:image:alt" content="Blog Luméa Communication – France">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Luméa Communication – France">
@@ -24,14 +24,10 @@
   <meta name="twitter:url" content="https://lumeacommunication.fr/fr/blog.html">
   <meta name="twitter:title" content="Blog digital PME | Clermont-Ferrand | Luméa">
   <meta name="twitter:description" content="Stratégie, SEO, outils, cybersécurité. Basés à Clermont-Ferrand (Puy-de-Dôme), conseils concrets pour PME.">
-  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-blog.jpg">
+  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-blog.webp">
   
   <link rel="canonical" href="https://lumeacommunication.fr/fr/blog.html">
-    <!-- Hreflang -->
-  <link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/blog.html">
-  <link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/blog.html">
-  <link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/blog.html">
-  <link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/blog.html">
+  <!-- Site FR-only : pas de hreflang -->
     <title>Blog digital PME | Clermont-Ferrand | Luméa</title>
   
   <!-- Favicon -->
@@ -81,7 +77,7 @@
   
   <!-- Preload critical resources -->
   <link rel="preload" href="../assets/css/styles.css" as="style">
-  <link rel="preload" href="../assets/img/photos/hero-blog.jpg" as="image" fetchpriority="high">
+  <link rel="preload" href="../assets/img/photos/hero-blog.webp" as="image" fetchpriority="high">
   
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -104,33 +100,40 @@
       <div class="nav-center">
         <ul class="navbar-menu" role="menubar">
           <li role="none"><a href="index.html" class="navbar-link" role="menuitem">Accueil</a></li>
-          <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting</a></li>
-          <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
-          <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
-          <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+          <li role="none" class="nav-dropdown">
+            <a href="services.html" class="navbar-link nav-dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav-dropdown-menu" role="menu" aria-label="Services">
+              <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+              <li role="none"><a href="consulting.html#seo" class="navbar-link" role="menuitem">Référencement / SEO</a></li>
+              <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+              <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
+              <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting / Stratégie</a></li>
+              <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
+            </ul>
+          </li>
           <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem">Réalisations</a></li>
-          <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
-          <li role="none"><a href="blog.html" class="navbar-link active" role="menuitem">Blog</a></li>
-          <li role="none"><a href="contact.html" class="navbar-link" role="menuitem">Contact</a></li>
+          <li role="none"><a href="indice-performance-digitale-locale.html" class="navbar-link" role="menuitem">Audit LVS</a></li>
+          <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <div class="country-selector-nav">
-          <a href="../ch/index.html" class="country-link" title="Suisse">🇨🇭</a>
-          <a href="index.html" class="country-link active" title="France">🇫🇷</a>
-          <a href="../es/index.html" class="country-link" title="España">🇪🇸</a>
-        </div>
+        <a href="contact.html" class="btn btn-primary navbar-cta" aria-label="Contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <div class="realisations-banner" role="banner">
-    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
-    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
-  </div>
-
   <main id="main-content" class="page-content">
-  <section class="hero" style="background-image: url('../assets/img/photos/hero-blog.jpg'); min-height: 50vh;" role="banner" aria-label="Image hero - Blog">
+  <section class="hero" style="min-height: 50vh;" role="banner" aria-label="Image hero - Blog">
+    <img
+      class="hero-bg"
+      src="../assets/img/photos/hero-blog.webp"
+      width="1200"
+      height="800"
+      alt="Blog Luméa Communication : stratégie, SEO, outils et cybersécurité pour PME"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    >
     <div class="hero-content">
       <h1 class="hero-title">Blog</h1>
       <p class="hero-subtitle">Articles et réflexions sur le digital</p>
@@ -148,7 +151,7 @@
       </div>
       <div class="grid grid-3">
         <article class="card blog-card fade-in" data-category="strategie">
-          <div style="width: 100%; height: 200px; background-image: url("../assets/img/photos/blog.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);" role="img" aria-label="Article de blog" loading="lazy" onerror="this.style.display='none';"></div>
+          <img class="card-image" src="../assets/img/photos/blog.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Illustration : Définir une stratégie digitale efficace">
           <div class="card-header">
             <span class="badge">Stratégie</span>
             <h3 class="card-title">Définir une stratégie digitale efficace</h3>
@@ -162,7 +165,7 @@
           </div>
         </article>
         <article class="card blog-card fade-in" data-category="outils">
-          <div style="width: 100%; height: 200px; background-image: url("../assets/img/photos/blog.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);" role="img" aria-label="Article de blog" loading="lazy" onerror="this.style.display='none';"></div>
+          <img class="card-image" src="../assets/img/photos/blog.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Illustration : Shopify vs WordPress – choisir la bonne plateforme">
           <div class="card-header">
             <span class="badge">Outils</span>
             <h3 class="card-title">Shopify vs WordPress : choisir la bonne plateforme</h3>
@@ -176,7 +179,7 @@
           </div>
         </article>
         <article class="card blog-card fade-in" data-category="securite">
-          <div style="width: 100%; height: 200px; background-image: url("../assets/img/photos/blog.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);" role="img" aria-label="Article de blog" loading="lazy" onerror="this.style.display='none';"></div>
+          <img class="card-image" src="../assets/img/photos/blog.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Illustration : 5 bonnes pratiques cybersécurité pour PME">
           <div class="card-header">
             <span class="badge">Sécurité</span>
             <h3 class="card-title">5 bonnes pratiques cybersécurité pour PME</h3>
@@ -190,7 +193,7 @@
           </div>
         </article>
         <article class="card blog-card fade-in" data-category="strategie">
-          <div style="width: 100%; height: 200px; background-image: url("../assets/img/photos/blog.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);" role="img" aria-label="Article de blog" loading="lazy" onerror="this.style.display='none';"></div>
+          <img class="card-image" src="../assets/img/photos/blog.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Illustration : ROI digital – comment mesurer l’impact">
           <div class="card-header">
             <span class="badge">Stratégie</span>
             <h3 class="card-title">ROI digital : comment mesurer l'impact</h3>
@@ -204,7 +207,7 @@
           </div>
         </article>
         <article class="card blog-card fade-in" data-category="outils">
-          <div style="width: 100%; height: 200px; background-image: url("../assets/img/photos/blog.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);" role="img" aria-label="Article de blog" loading="lazy" onerror="this.style.display='none';"></div>
+          <img class="card-image" src="../assets/img/photos/blog.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Illustration : Rationaliser votre stack d’outils">
           <div class="card-header">
             <span class="badge">Outils</span>
             <h3 class="card-title">Rationaliser votre stack d'outils</h3>
@@ -218,7 +221,7 @@
           </div>
         </article>
         <article class="card blog-card fade-in" data-category="securite">
-          <div style="width: 100%; height: 200px; background-image: url("../assets/img/photos/blog.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);" role="img" aria-label="Article de blog" loading="lazy" onerror="this.style.display='none';"></div>
+          <img class="card-image" src="../assets/img/photos/blog.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Illustration : Gestionnaire de mots de passe – guide pratique">
           <div class="card-header">
             <span class="badge">Sécurité</span>
             <h3 class="card-title">Gestionnaire de mots de passe : guide pratique</h3>
@@ -270,6 +273,7 @@
             <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
             <li><a href="confidentialite.html" class="footer-link">Confidentialité</a></li>
             <li><a href="cookies.html" class="footer-link">Cookies</a></li>
+            <li><a href="cgv.html" class="footer-link">CGV</a></li>
           </ul>
         </div>
         <div class="footer-col">

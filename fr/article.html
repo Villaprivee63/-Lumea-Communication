@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://lumeacommunication.fr/fr/article.html">
   <meta property="og:title" content="Définir une stratégie digitale efficace | Luméa Communication – France">
   <meta property="og:description" content="Comment définir une stratégie digitale efficace pour votre PME. Guide pratique avec les étapes clés.">
-  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-blog.jpg">
+  <meta property="og:image" content="https://lumeacommunication.fr/assets/img/photos/hero-blog.webp">
   <meta property="og:image:alt" content="Stratégie digitale efficace pour PME">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Luméa Communication – France">
@@ -30,14 +30,10 @@
   <meta name="twitter:url" content="https://lumeacommunication.fr/fr/article.html">
   <meta name="twitter:title" content="Définir une stratégie digitale efficace | Luméa Communication – France">
   <meta name="twitter:description" content="Comment définir une stratégie digitale efficace pour votre PME. Guide pratique avec les étapes clés.">
-  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-blog.jpg">
+  <meta name="twitter:image" content="https://lumeacommunication.fr/assets/img/photos/hero-blog.webp">
   
   <link rel="canonical" href="https://lumeacommunication.fr/fr/article.html">
-    <!-- Hreflang -->
-  <link rel="alternate" hreflang="fr-CH" href="https://lumeacommunication.ch/ch/article.html">
-  <link rel="alternate" hreflang="fr-FR" href="https://lumeacommunication.fr/fr/article.html">
-  <link rel="alternate" hreflang="es-ES" href="https://lumeacommunication.ch/es/articulo.html">
-  <link rel="alternate" hreflang="x-default" href="https://lumeacommunication.ch/ch/article.html">
+  <!-- Site FR-only : pas de hreflang -->
     <title>Définir une stratégie digitale efficace | Luméa Communication – France</title>
   
   <!-- Favicon -->
@@ -51,7 +47,7 @@
     "@type": "BlogPosting",
     "headline": "Définir une stratégie digitale efficace",
     "description": "Comment définir une stratégie digitale efficace pour votre PME. Guide pratique avec les étapes clés.",
-    "image": "https://lumeacommunication.fr/assets/img/photos/hero-blog.jpg",
+    "image": "https://lumeacommunication.fr/assets/img/photos/hero-blog.webp",
     "datePublished": "2024-03-15",
     "dateModified": "2024-03-15",
     "author": {
@@ -105,7 +101,7 @@
   
   <!-- Preload critical resources -->
   <link rel="preload" href="../assets/css/styles.css" as="style">
-  <link rel="preload" href="../assets/img/photos/hero-blog.jpg" as="image" fetchpriority="high">
+  <link rel="preload" href="../assets/img/photos/blog.webp" as="image" fetchpriority="high">
   
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -128,37 +124,43 @@
       <div class="nav-center">
         <ul class="navbar-menu" role="menubar">
           <li role="none"><a href="index.html" class="navbar-link" role="menuitem">Accueil</a></li>
-          <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting</a></li>
-          <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
-          <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
-          <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+          <li role="none" class="nav-dropdown">
+            <a href="services.html" class="navbar-link nav-dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav-dropdown-menu" role="menu" aria-label="Services">
+              <li role="none"><a href="sites-branding.html" class="navbar-link" role="menuitem">Sites & Branding</a></li>
+              <li role="none"><a href="consulting.html#seo" class="navbar-link" role="menuitem">Référencement / SEO</a></li>
+              <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
+              <li role="none"><a href="cybersecurite.html" class="navbar-link" role="menuitem">Cybersécurité</a></li>
+              <li role="none"><a href="consulting.html" class="navbar-link" role="menuitem">Consulting / Stratégie</a></li>
+              <li role="none"><a href="formation.html" class="navbar-link" role="menuitem">Formation</a></li>
+            </ul>
+          </li>
           <li role="none"><a href="realisations.html" class="navbar-link" role="menuitem">Réalisations</a></li>
-          <li role="none"><a href="developpement.html" class="navbar-link" role="menuitem">Développement</a></li>
-          <li role="none"><a href="blog.html" class="navbar-link active" role="menuitem">Blog</a></li>
-          <li role="none"><a href="contact.html" class="navbar-link" role="menuitem">Contact</a></li>
+          <li role="none"><a href="indice-performance-digitale-locale.html" class="navbar-link" role="menuitem">Audit LVS</a></li>
+          <li role="none"><a href="blog.html" class="navbar-link" role="menuitem">Blog</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <div class="country-selector-nav">
-          <a href="../ch/index.html" class="country-link" title="Suisse">🇨🇭</a>
-          <a href="index.html" class="country-link active" title="France">🇫🇷</a>
-          <a href="../es/index.html" class="country-link" title="España">🇪🇸</a>
-        </div>
+        <a href="contact.html" class="btn btn-primary navbar-cta" aria-label="Contact">Contact</a>
       </div>
     </div>
   </nav>
-
-  <div class="realisations-banner" role="banner">
-    <a href="realisations.html" class="realisations-banner-link" aria-label="Voir nos réalisations">Voir nos réalisations</a>
-    <a href="contact.html" class="btn btn-primary btn-banner-cta" aria-label="Entrer en contact">Entrer en contact</a>
-  </div>
 
   <main id="main-content">
   <article class="section section-large section-full">
     <div class="container">
       <div class="article-header">
         <a href="blog.html" class="btn btn-ghost" style="margin-bottom: var(--spacing-md);">← Retour au blog</a>
-        <div style="width: 100%; height: 400px; background-image: url("../assets/img/photos/blog.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-lg); margin-bottom: var(--spacing-lg);" role="img" aria-label="Image article - Stratégie digitale efficace" onerror="this.style.display='none';"></div>
+        <img
+          src="../assets/img/photos/blog.webp"
+          width="1200"
+          height="800"
+          alt="Image article : Stratégie digitale efficace"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: var(--spacing-lg);"
+        >
         <h1>Définir une stratégie digitale efficace</h1>
         <div class="article-meta">
           <span>15 mars 2024</span>
@@ -268,6 +270,7 @@
             <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
             <li><a href="confidentialite.html" class="footer-link">Confidentialité</a></li>
             <li><a href="cookies.html" class="footer-link">Cookies</a></li>
+            <li><a href="cgv.html" class="footer-link">CGV</a></li>
           </ul>
         </div>
         <div class="footer-col">
